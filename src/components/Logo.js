@@ -3,45 +3,59 @@ import { motion } from 'framer-motion';
 
 export default function Logo() {
 	const style = {
+		position: 'sticky',
+		top: '0',
 		display: 'flex',
-		height: '100vh',
+		height: '8vh',
 		width: '100vw',
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: '#000',
 	};
 
-  const changePosition = {
-    display: 'inline-block',
-    top: '10px',
-    left: '10px'
-  }
-
 	const variants = {
-		visible: { opacity: 1 },
-		hidden: { opacity: 0 },
+		fullscreen: { height: '100vh' },
+		nav: { height: '6vh' },
 	};
 
 	return (
-		<div style={style}>
+		<motion.div
+			layout={'position'}
+			style={style}
+			variants={variants}
+			initial="fullscreen"
+			animate="nav"
+			transition={{
+				ease: 'easeOut',
+				duration: 2,
+				delay: 4,
+			}}
+		>
 			<motion.h1
-				layout
-				variants={variants}
-				initial="hidden"
-				animate={['visible', changePosition]}
-				transition={{
-					duration: 4,
-					layout: {  },
+				layout={'position'}
+				initial={{ position: 'fixed', fontSize: '3rem' }}
+				animate={{
+					position: 'fixed',
+					left: '3px',
+					top: '3px',
+					fontSize: '2rem',
 				}}
+				transition={{
+					ease: 'easeInOut',
+					type: 'tween',
+					duration: 1.8,
+					delay: 1.5,
+				}}
+				transitionEnd={{}}
 				style={{
 					color: '#fff',
-					fontSize: '4rem',
+					fontSize: '3rem',
 					fontFamily: 'serif',
-					margin: '0px',
+					margin: '15px',
 				}}
 			>
 				Brett Treweek
 			</motion.h1>
-		</div>
+		</motion.div>
 	);
 }
