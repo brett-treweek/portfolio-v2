@@ -5,9 +5,10 @@ export default function Logo() {
 	const style = {
 		position: 'sticky',
 		top: '0',
+		left: '0',
 		display: 'flex',
-		height: '8vh',
-		width: '100vw',
+		height: '5vh',
+		width: '99vw',
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: '#000',
@@ -15,7 +16,7 @@ export default function Logo() {
 
 	const variants = {
 		fullscreen: { height: '100vh' },
-		nav: { height: '6vh' },
+		nav: { height: '4vh' },
 	};
 
 	return (
@@ -36,8 +37,8 @@ export default function Logo() {
 				initial={{ position: 'fixed', fontSize: '3rem' }}
 				animate={{
 					position: 'fixed',
-					left: '3px',
-					top: '3px',
+					left: '0px',
+					top: '0px',
 					fontSize: '2rem',
 				}}
 				transition={{

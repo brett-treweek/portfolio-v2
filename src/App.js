@@ -1,12 +1,21 @@
-import Logo from './components/Logo'
+import Header from './components/Header';
+import GlobalStyles from './components/styles/Global';
 
 function App() {
-  return (
-    <div className="App">
-      <Logo/>
-      <div style={{height: '5000px'}}></div>
-    </div>
-  );
+	return (
+		<>
+			<GlobalStyles />
+			<Header />
+			<div
+				style={{
+					height: '4000px',
+					backgroundColor: '#000',
+					position: 'static',
+					top: '0',
+				}}
+			/>
+		</>
+	);
 }
 
 export default App;
