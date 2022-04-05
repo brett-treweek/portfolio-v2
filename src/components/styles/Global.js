@@ -21,6 +21,7 @@ body{
 
 p, li{
     line-height: 1.6;
+    margin: 0;
 }
 
 `;
