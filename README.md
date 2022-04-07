@@ -1,6 +1,6 @@
 # Updated Portfolio 05/03/2022
 
-## Emotion
+## Styled Components- css in js
 ## MUI
 ## Framer Motion
 ## Figma
