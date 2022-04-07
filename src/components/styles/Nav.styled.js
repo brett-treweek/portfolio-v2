@@ -1,29 +1,36 @@
 import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
-	width: 100vw;
-	height: 5vh;
+	height: 7vh;
+	width: 100%;
 	position: sticky;
-    top: 0;
+	top: 0;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	background-color: ${(props) => props.theme.colors.primary.background};
 	color: ${(props) => props.theme.colors.primary.text};
+	z-index: 100;
+
+	#nav-container-inner {
+		height: 100%;
+		width: 90vw;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
 	h3 {
 		margin: 0;
-		margin-left: 2vw;
 		font-weight: 400;
 	}
 
 	ul {
 		display: flex;
 		margin: 0;
-		margin-right: 10vw;
 	}
 	li {
-		padding: 0 40px;
+		padding: 0 50px;
 		list-style: none;
 		transition: all ease 0.5s;
 	}
