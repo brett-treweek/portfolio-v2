@@ -1,8 +1,7 @@
-import { ThemeProvider } from "styled-components";
-import Header from "./components/layout/Header";
+import { ThemeProvider } from 'styled-components';
+import Header from './components/layout/Header';
 
 function App() {
-
 	const theme = {
 		colors: {
 			primary: {
@@ -13,16 +12,14 @@ function App() {
 				highlight: '#FAFF00',
 				watermark: 'rgba(255, 255, 255, 0.02)',
 			},
-		},
-		Position: {},
+		}
 	};
 
 	console.log(theme.colors.primary.background);
-	
 
 	return (
 		<ThemeProvider theme={theme}>
-		<Header/>	
+			<Header />
 		</ThemeProvider>
 	);
 }

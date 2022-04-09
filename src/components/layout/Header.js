@@ -15,8 +15,8 @@ const Header = (props) => {
 		<StyledHeader>
 			<Nav />
 			<StyledMainContainer>
-				<BackgroundAccent />
-				<HeadingAccent />
+				<BackgroundAccent right/>
+				<HeadingAccent left />
 				<Watermark src={codePng} alt="" />
 				<Title>
 					<Card>
