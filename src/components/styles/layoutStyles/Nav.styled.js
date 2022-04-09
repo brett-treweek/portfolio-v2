@@ -21,8 +21,10 @@ export const StyledNav = styled.nav`
 	}
 
 	h3 {
+		/* display: none; */
+		font-size: 20px;
 		margin: 0;
-		font-weight: 400;
+		font-weight: 300;
 	}
 
 	ul {

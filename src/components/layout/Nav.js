@@ -1,4 +1,4 @@
-import { StyledNav } from '../styles/Nav.styled';
+import { StyledNav } from '../styles/layoutStyles/Nav.styled';
 
 const Nav = () => {
 	return (

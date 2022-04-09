@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HeadingAccent = styled.div`
 	position: absolute;
-	top: 5vh;
+	top: 15vh;
     left: 0vw;
 	height: 15vh;
 	width: 0.6vw;

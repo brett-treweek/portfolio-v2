@@ -7,16 +7,14 @@ function App() {
 		colors: {
 			primary: {
 				text: '#fff',
-				faded: '#BDBDBD',
+				faded: 'rgba(255, 255, 255, 0.39)',
 				background: '#1C1C1C',
 				main: '#1D2ECA',
 				highlight: '#FAFF00',
 				watermark: 'rgba(255, 255, 255, 0.02)',
-			}
+			},
 		},
-		Position: {
-			
-		}
+		Position: {},
 	};
 
 	console.log(theme.colors.primary.background);
