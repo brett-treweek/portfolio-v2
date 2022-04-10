@@ -20,7 +20,7 @@ export const StyledNav = styled.nav`
 		align-items: center;
 	}
 
-	h3 {
+	.logo {
 		/* display: none; */
 		font-size: 20px;
 		margin: 0;
@@ -34,10 +34,10 @@ export const StyledNav = styled.nav`
 	li {
 		padding: 0 50px;
 		list-style: none;
-		transition: all ease 0.5s;
+		transition: all ease 0.6s;
 	}
 
-	h3:hover,
+	.logo:hover,
 	li:hover {
 		cursor: pointer;
 		color: ${(props) => props.theme.colors.primary.highlight};

@@ -4,7 +4,7 @@ const Nav = () => {
 	return (
 		<StyledNav>
 			<div id="nav-container-inner">
-				<h3>brett treweek</h3>
+				<h3 className='logo'>brett treweek</h3>
 				<ul>
 					<li>about</li>
 					<li>work</li>

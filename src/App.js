@@ -1,6 +1,10 @@
 import { ThemeProvider } from 'styled-components';
 import About from './components/layout/About';
 import Header from './components/layout/Header';
+import Work from './components/layout/Work';
+import Nav from './components/layout/Nav';
+import Resume from './components/layout/Resume';
+
 
 function App() {
 	const theme = {
@@ -20,8 +24,11 @@ function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
+			<Nav/>
 			<Header/>
 			<About/>
+			<Work/>
+			<Resume/>
 		</ThemeProvider>
 	);
 }
