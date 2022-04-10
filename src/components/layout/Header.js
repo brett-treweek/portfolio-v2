@@ -9,7 +9,7 @@ import { Title } from '../styles/helperStyles/Title.styled';
 const Header = (props) => {
 
 	const variants = {
-		start: { left: '-50vw' },
+		start: { left: '-39vw' },
 		end: { left: '0vh' },
 	};
 
@@ -20,15 +20,25 @@ const Header = (props) => {
 				<HeadingAccent
 					left
 					variants={variants}
-					initial='start'
-					animate='end'
+					initial="start"
+					animate="end"
 					transition={{
 						ease: 'easeOut',
 						duration: 1.5,
-						delay: 1,
+						delay: 0,
 					}}
 				>
-					<Title>im brett</Title>
+					<Title
+						initial={{opacity: 0}}
+						animate={{opacity: 1}}
+						transition={{
+							ease: 'easeIn',
+							duration: 0.5,
+							delay: 1,
+						}}
+					><span className='hello'>hello there</span>
+						im brett
+					</Title>
 				</HeadingAccent>
 			</StyledMainContainer>
 		</StyledHeader>

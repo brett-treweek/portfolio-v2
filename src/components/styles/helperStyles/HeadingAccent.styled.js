@@ -11,7 +11,7 @@ export const HeadingAccent = styled(motion.div)`
 	left: ${(props) => (props.left ? '0vw' : null)};
 	right: ${(props) => (props.right ? '0vw' : null)};
 	height: 15vh;
-	width: 40vw;
+	width: 35vw;
 	background-color: ${(props) => props.theme.colors.primary.main};
 `;
  

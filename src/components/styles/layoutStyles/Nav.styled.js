@@ -21,7 +21,7 @@ export const StyledNav = styled.nav`
 	}
 
 	.logo {
-		/* display: none; */
+		opacity: 0;
 		font-size: 20px;
 		margin: 0;
 		font-weight: 300;
