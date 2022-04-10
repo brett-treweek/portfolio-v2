@@ -1,4 +1,5 @@
 import { ThemeProvider } from 'styled-components';
+import About from './components/layout/About';
 import Header from './components/layout/Header';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<Header />
+			<Header/>
+			<About/>
 		</ThemeProvider>
 	);
 }

@@ -3,12 +3,11 @@ import { StyledMainContainer } from '../styles/helperStyles/MainContainer.styled
 import { BackgroundAccent } from '../styles/helperStyles/BackgroundAccent.styled';
 import { HeadingAccent } from '../styles/helperStyles/HeadingAccent.styled';
 import codePng from '../../assets/code.png';
-import portrait from '../../assets/brett_portrait.jpg';
 import Nav from './Nav';
-import { FlexContainer } from '../styles/helperStyles/FlexContainer.styled';
 import { Watermark } from '../styles/helperStyles/Watermark.styled';
 import { Card } from '../styles/helperStyles/Card.styled';
-import { Title } from '../styles/helperStyles/Title.styled';
+import { FlexContainer } from '../styles/helperStyles/FlexContainer.styled';
+import portrait from '../../assets/brett_portrait.jpg'
 
 const Header = (props) => {
 	return (
@@ -16,16 +15,17 @@ const Header = (props) => {
 			<Nav />
 			<StyledMainContainer>
 				<BackgroundAccent right/>
-				<HeadingAccent left />
+				<HeadingAccent left/>
 				<Watermark src={codePng} alt="" />
-				<Title>
+				<FlexContainer>
 					<Card>
 						<span>hello there</span>
 						<h1>im brett</h1>
 						<h3>Full Stack Web Developer</h3>
 						<h4>( in development )</h4>
 					</Card>
-				</Title>
+					<img src={portrait} alt="" className='brett_portrait' />
+				</FlexContainer>
 			</StyledMainContainer>
 		</StyledHeader>
 	);
