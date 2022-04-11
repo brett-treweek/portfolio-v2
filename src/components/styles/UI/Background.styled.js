@@ -5,7 +5,8 @@ export const BackgroundAccent = styled.div`
 	position: absolute;
 	left: ${(props) => (props.left ? '6vw' : null)};
 	right: ${(props) => (props.right ? '6vw' : null)};
-	height: 90%;
+	/* max-height: 100vh; */
+	height: 90vh;
 	width: 30vw;
 	max-width: 550px;
 	background-color: ${(props) => props.theme.colors.primary.main};

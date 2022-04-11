@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledContainer = styled.section`
-	height: 93vh;
+	height: 95vh;
 	width: 100%;
 	background-color: ${(props) => props.theme.colors.primary.background};
 `;
@@ -20,6 +20,7 @@ export const Title = styled.h1`
 	padding: 2rem;
 	font-size: 120px;
 	font-weight: 300;
+	background-color: ${(props) => props.theme.colors.primary.background};
 	color: ${(props) => props.theme.colors.primary.highlight};
 `;
 

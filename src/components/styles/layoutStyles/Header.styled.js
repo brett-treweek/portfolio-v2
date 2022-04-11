@@ -38,7 +38,7 @@ export const StyledHeader = styled.header`
 		color: ${(props) => props.theme.colors.primary.text};
 	}
 	img {
-		width: 100%;
-		max-width: 30vw;
+		height: 40vw;
+		max-height: 700px;
 	}
 `;
