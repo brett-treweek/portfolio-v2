@@ -1,18 +1,17 @@
-import { BackgroundAccent } from '../styles/helperStyles/BackgroundAccent.styled';
-import { HeadingAccent } from '../styles/helperStyles/HeadingAccent.styled';
-import { StyledMainContainer } from '../styles/helperStyles/MainContainer.styled';
+import {
+	BackgroundAccent,
+	HeadingAccent,
+} from '../styles/UI/Background.styled';
+import { StyledContainer, Title } from '../styles/UI/Container.styled';
 import { StyledWork } from '../styles/layoutStyles/Work.styled';
-import { Title } from '../styles/helperStyles/Title.styled';
 
 const Work = (props) => {
 	return (
 		<StyledWork>
-			<StyledMainContainer>
-				{/* <BackgroundAccent right /> */}
-				<HeadingAccent left>
-					<Title>work</Title>
-				</HeadingAccent>
-			</StyledMainContainer>
+			<BackgroundAccent right>
+				<Title>work</Title>
+			</BackgroundAccent>
+			<StyledContainer></StyledContainer>
 		</StyledWork>
 	);
 };

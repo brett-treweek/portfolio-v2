@@ -13,14 +13,12 @@ function App() {
 				text: '#fff',
 				faded: 'rgba(255, 255, 255, 0.39)',
 				background: '#1C1C1C',
-				main: '#1D2ECA',
+				main: 'blue',
 				highlight: '#FAFF00',
 				watermark: 'rgba(255, 255, 255, 0.02)',
 			},
 		}
 	};
-
-	console.log(theme.colors.primary.background);
 
 	return (
 		<ThemeProvider theme={theme}>

@@ -1,46 +1,41 @@
 import { StyledHeader } from '../styles/layoutStyles/Header.styled';
-import { StyledMainContainer } from '../styles/helperStyles/MainContainer.styled';
-import { BackgroundAccent } from '../styles/helperStyles/BackgroundAccent.styled';
-import { HeadingAccent } from '../styles/helperStyles/HeadingAccent.styled';
-import { Title } from '../styles/helperStyles/Title.styled';
-
-
+import {
+	FlexContainer,
+	StyledContainer,
+	Card,
+} from '../styles/UI/Container.styled';
+import { BackgroundAccent } from '../styles/UI/Background.styled';
+import portrait from '../../assets/brett_portrait.jpg';
 
 const Header = (props) => {
-
-	const variants = {
-		start: { left: '-39vw' },
-		end: { left: '0vh' },
-	};
-
 	return (
 		<StyledHeader>
-			<StyledMainContainer>
-				{/* <BackgroundAccent right /> */}
-				<HeadingAccent
-					left
-					variants={variants}
-					initial="start"
-					animate="end"
-					transition={{
-						ease: 'easeOut',
-						duration: 1.5,
-						delay: 0,
-					}}
-				>
-					<Title
-						initial={{opacity: 0}}
-						animate={{opacity: 1}}
-						transition={{
-							ease: 'easeIn',
-							duration: 0.5,
-							delay: 1,
-						}}
-					><span className='hello'>hello there</span>
-						im brett
-					</Title>
-				</HeadingAccent>
-			</StyledMainContainer>
+			<BackgroundAccent right />
+			<StyledContainer>
+				<FlexContainer>
+					<Card>
+						<div>
+							<span>hello there</span>
+							<h1>im brett</h1>
+						</div>
+
+						<h3>Full Stack Web Developer</h3>
+						<h4>(in development)</h4>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Dolores minus illo consequuntur! Repudiandae
+							culpa non fuga odio, quas quae suscipit dolorum
+							libero magni soluta in minus atque voluptates
+							aperiam perferendis amet animi, nostrum
+							exercitationem, adipisci ut quidem earum? Facilis,
+							reprehenderit.
+						</p>
+					</Card>
+					<Card jc="center" ai="center">
+						<img src={portrait} alt="" />
+					</Card>
+				</FlexContainer>
+			</StyledContainer>
 		</StyledHeader>
 	);
 };
