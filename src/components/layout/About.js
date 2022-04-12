@@ -9,7 +9,7 @@ import { StyledAbout } from '../styles/layoutStyles/About.styled';
 
 const About = (props) => {
 	return (
-		<StyledAbout>
+		<StyledAbout id='about'>
 			<BackgroundAccent left>
 				<Title>
 					about

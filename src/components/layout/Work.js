@@ -7,7 +7,7 @@ import { StyledWork } from '../styles/layoutStyles/Work.styled';
 
 const Work = (props) => {
 	return (
-		<StyledWork>
+		<StyledWork id='work'>
 			<BackgroundAccent right>
 				<Title>work</Title>
 			</BackgroundAccent>

@@ -35,6 +35,7 @@ export const StyledHeader = styled.header`
 		width: 100%;
 		font-weight: 300;
 		font-size: 25px;
+		line-height: 1.4;
 		color: ${(props) => props.theme.colors.primary.text};
 	}
 	img {

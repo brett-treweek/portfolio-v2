@@ -22,13 +22,7 @@ const Header = (props) => {
 						<h3>Full Stack Web Developer</h3>
 						<h4>(in development)</h4>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Dolores minus illo consequuntur! Repudiandae
-							culpa non fuga odio, quas quae suscipit dolorum
-							libero magni soluta in minus atque voluptates
-							aperiam perferendis amet animi, nostrum
-							exercitationem, adipisci ut quidem earum? Facilis,
-							reprehenderit.
+							I have just completed a certificate in web development with the University of Western Australia. I am excited and highly motivated to turn my hobby into my new career. Please check out my work and get in touch.
 						</p>
 					</Card>
 					<Card jc="center" ai="center">
