@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 export const BackgroundAccent = styled.div`
 	position: absolute;
-	left: ${(props) => (props.left ? '6vw' : null)};
-	right: ${(props) => (props.right ? '6vw' : null)};
+	left: ${(props) => (props.left ? '8vw' : null)};
+	right: ${(props) => (props.right ? '8vw' : null)};
 	/* max-height: 100vh; */
 	height: 90vh;
 	width: 30vw;
@@ -12,18 +12,18 @@ export const BackgroundAccent = styled.div`
 	background-color: ${(props) => props.theme.colors.primary.main};
 `;
 
-export const HeadingAccent = styled.div`
-	height: 100%;
-	width: 1.5%;
-	background-color: ${(props) => props.theme.colors.primary.main};
-`;
+// export const HeadingAccent = styled.div`
+// 	height: 100%;
+// 	width: 1.5%;
+// 	background-color: ${(props) => props.theme.colors.primary.main};
+// `;
 
-export const Watermark = styled.img`
-	position: absolute;
-	top: 0vh;
-	left: -5vw;
-	height: 90vh;
-	width: 70vw;
-	max-width: 1300px;
-	/* z-index: -1; */
-`;
+// export const Watermark = styled.img`
+// 	position: absolute;
+// 	top: 0vh;
+// 	left: -5vw;
+// 	height: 90vh;
+// 	width: 70vw;
+// 	max-width: 1300px;
+// 	z-index: -1;
+// `;

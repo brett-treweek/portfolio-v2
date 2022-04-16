@@ -1,8 +1,8 @@
 import { StyledHeader } from '../styles/layoutStyles/Header.styled';
 import {
 	FlexContainer,
-	StyledContainer,
 	Card,
+	Section,
 } from '../styles/UI/Container.styled';
 import { BackgroundAccent } from '../styles/UI/Background.styled';
 import portrait from '../../assets/brett_portrait.jpg';
@@ -11,8 +11,8 @@ const Header = (props) => {
 	return (
 		<StyledHeader>
 			<BackgroundAccent right />
-			<StyledContainer>
-				<FlexContainer>
+			<Section>
+				<FlexContainer ai='center' jc='space-evenly'>
 					<Card>
 						<div>
 							<span>hello there</span>
@@ -29,7 +29,7 @@ const Header = (props) => {
 						<img src={portrait} alt="" />
 					</Card>
 				</FlexContainer>
-			</StyledContainer>
+			</Section>
 		</StyledHeader>
 	);
 };

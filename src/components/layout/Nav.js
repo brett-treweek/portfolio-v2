@@ -6,24 +6,40 @@ const Nav = () => {
 	return (
 		<StyledNav>
 			<div id="nav-container-inner">
-				<h3 className="logo">brett treweek</h3>
+				<NavLink className="link" to="/" activeClassName="logo" exact>
+					brett treweek
+				</NavLink>
 				<ul>
 					<li>
-						<NavLink activeClassName='active' to='/work'>
+						<NavLink
+							className="link"
+							activeClassName="active"
+							to="/work"
+							exact
+						>
 							work
 						</NavLink>
 					</li>
 					<li>
-						<NavLink activeClassName='active' to='/resume'>
+						<NavLink
+							className="link"
+							activeClassName="active"
+							to="/resume"
+							exact
+						>
 							resume
 						</NavLink>
 					</li>
 					<li>
-						<NavLink activeClassName='active' to='/contact'>
+						<NavLink
+							className="link"
+							activeClassName="active"
+							to="/contact"
+							exact
+						>
 							contact
 						</NavLink>
 					</li>
-					
 				</ul>
 			</div>
 		</StyledNav>
