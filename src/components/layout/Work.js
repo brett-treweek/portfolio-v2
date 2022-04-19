@@ -1,7 +1,7 @@
 import {
 	BackgroundAccent,
-} from '../styles/UI/Background.styled';
-import { Section, Title } from '../styles/UI/Container.styled';
+} from '../styles/UIStyles/Background.styled';
+import { Section, Title } from '../styles/UIStyles/Container.styled';
 import { StyledWork } from '../styles/layoutStyles/Work.styled';
 
 const Work = (props) => {

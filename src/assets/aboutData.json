@@ -22,5 +22,11 @@
 		"image": "",
 		"alt": "",
 		"body": "This is some text"
+	},
+	{
+		"title": "Another Title",
+		"image": "",
+		"alt": "",
+		"body": "This is some text"
 	}
 ]

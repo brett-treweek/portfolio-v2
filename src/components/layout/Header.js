@@ -3,8 +3,8 @@ import {
 	FlexContainer,
 	Card,
 	Section,
-} from '../styles/UI/Container.styled';
-import { BackgroundAccent } from '../styles/UI/Background.styled';
+} from '../styles/UIStyles/Container.styled';
+import { BackgroundAccent } from '../styles/UIStyles/Background.styled';
 import portrait from '../../assets/brett_portrait.jpg';
 
 const Header = (props) => {
@@ -26,7 +26,7 @@ const Header = (props) => {
 						</p>
 					</Card>
 					<Card jc="center" ai="center">
-						<img src={portrait} alt="" />
+						<img src={'./Images/img6.jpg'} alt="" />
 					</Card>
 				</FlexContainer>
 			</Section>
