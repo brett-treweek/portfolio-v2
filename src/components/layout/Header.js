@@ -5,7 +5,7 @@ import {
 	Section,
 } from '../styles/UIStyles/Container.styled';
 import { BackgroundAccent } from '../styles/UIStyles/Background.styled';
-import portrait from '../../assets/brett_portrait.jpg';
+import img6 from '../../assets/Images/about/img6.jpg';
 
 const Header = (props) => {
 	return (
@@ -26,7 +26,7 @@ const Header = (props) => {
 						</p>
 					</Card>
 					<Card jc="center" ai="center">
-						<img src={'./Images/img6.jpg'} alt="" />
+						<img src={img6} alt="" />
 					</Card>
 				</FlexContainer>
 			</Section>

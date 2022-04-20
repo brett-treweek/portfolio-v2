@@ -35,9 +35,9 @@ function App() {
 				<Route path="/resume">
 					<Resume />
 				</Route>
-				<Route path="/contact">
+				{/* <Route path="/contact">
 					<Contact />
-				</Route>
+				</Route> */}
 			</Switch>
 		</ThemeProvider>
 	);
