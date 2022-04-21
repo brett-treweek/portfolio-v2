@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { StyledCarousel } from '../../styles/UIStyles/Container.styled';
+import { StyledCarousel } from '../../styles/UIStyles/UiStyles';
 import { motion } from 'framer-motion';
 
 const Carousel = ({ data }) => {

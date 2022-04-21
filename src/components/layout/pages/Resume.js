@@ -1,9 +1,10 @@
-import { StyledResume } from '../styles/layoutStyles/Resume.styled';
-import { Section, Title } from '../styles/UIStyles/Container.styled';
+import { StyledResume } from '../../styles/layoutStyles/Resume.styled';
 import {
 	BackgroundAccent,
 	HeadingAccent,
-} from '../styles/UIStyles/Background.styled';
+	Section,
+	Title,
+} from '../../styles/UIStyles/UiStyles';
 
 const Resume = (props) => {
 	return (

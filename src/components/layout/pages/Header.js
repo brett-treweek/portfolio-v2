@@ -1,11 +1,11 @@
-import { StyledHeader } from '../styles/layoutStyles/Header.styled';
+import { StyledHeader } from '../../styles/layoutStyles/Header.styled';
 import {
 	FlexContainer,
 	Card,
 	Section,
-} from '../styles/UIStyles/Container.styled';
-import { BackgroundAccent } from '../styles/UIStyles/Background.styled';
-import img6 from '../../assets/Images/about/img6.jpg';
+	BackgroundAccent,
+} from '../../styles/UIStyles/UiStyles';
+import img6 from '../../../assets/Images/about/img6.jpg';
 import { motion } from 'framer-motion';
 
 const Header = (props) => {

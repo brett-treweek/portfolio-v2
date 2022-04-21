@@ -1,11 +1,11 @@
 import { Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import About from './components/layout/About';
-import Header from './components/layout/Header';
-import Work from './components/layout/Work';
-import Nav from './components/layout/Nav';
-import Resume from './components/layout/Resume';
-import Contact from './components/layout/Contact';
+import About from './components/layout/pages/About';
+import Header from './components/layout/pages/Header';
+import Work from './components/layout/pages/Work';
+import Nav from './components/layout/pages/Nav';
+import Resume from './components/layout/pages/Resume';
+import Contact from './components/layout/pages/Contact';
 
 function App() {
 	const theme = {

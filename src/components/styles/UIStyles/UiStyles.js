@@ -63,3 +63,30 @@ export const StyledCarousel = styled(motion.div)`
 		height: 50px;
 	}
 `;
+
+export const BackgroundAccent = styled.div`
+	position: absolute;
+	left: ${(props) => (props.left ? '8vw' : null)};
+	right: ${(props) => (props.right ? '8vw' : null)};
+	/* max-height: 100vh; */
+	height: 90vh;
+	width: 30vw;
+	max-width: 550px;
+	background-color: ${(props) => props.theme.colors.primary.main};
+`;
+
+// export const HeadingAccent = styled.div`
+// 	height: 100%;
+// 	width: 1.5%;
+// 	background-color: ${(props) => props.theme.colors.primary.main};
+// `;
+
+// export const Watermark = styled.img`
+// 	position: absolute;
+// 	top: 0vh;
+// 	left: -5vw;
+// 	height: 90vh;
+// 	width: 70vw;
+// 	max-width: 1300px;
+// 	z-index: -1;
+// `;
