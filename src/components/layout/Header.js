@@ -6,6 +6,7 @@ import {
 } from '../styles/UIStyles/Container.styled';
 import { BackgroundAccent } from '../styles/UIStyles/Background.styled';
 import img6 from '../../assets/Images/about/img6.jpg';
+import { motion } from 'framer-motion';
 
 const Header = (props) => {
 	return (
@@ -16,7 +17,7 @@ const Header = (props) => {
 					<Card>
 						<div>
 							<span>hello there</span>
-							<h1>im brett</h1>
+							<motion.h1 animate={{opacity: 1}} transition={{ease: 'linear', duration: 1.5}}>im brett</motion.h1>
 						</div>
 
 						<h3>Full Stack Web Developer</h3>

@@ -38,30 +38,28 @@ export const Card = styled.div`
 	z-index: 10;
 `;
 
-export const StyledSlider = styled(motion.div)`
+export const StyledCarousel = styled(motion.div)`
 	position: relative;
-	overflow: hidden;
-	/* border: 2px solid red; */
-	cursor: grab;
-	background-color: transparent;
-	margin: 0 10%;
-	
+	width: 100%;
+	height: 100%;
 
-	.inner-slider {
+	.carousel-container {
+		height: 100%;
 		display: flex;
-		background-color: transparent;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.item {
-		min-height: 40rem;
-		min-width: 30rem;
-		padding: 20px;
+		opacity: 0;
 	}
 
 	.item img {
-		width: 100%;
-		height: 100%;
-		border-radius: 20px;
-		pointer-events: none;
+		max-width: 400px;
+	}
+
+	.arrow {
+		width: 150px;
+		height: 50px;
 	}
 `;

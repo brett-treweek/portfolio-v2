@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledHeader = styled.header`
 	h1 {
 		font-size: 120px;
+		opacity: 0;
 		font-weight: 300;
 		color: ${(props) => props.theme.colors.primary.highlight};
 		margin-bottom: 50px;
