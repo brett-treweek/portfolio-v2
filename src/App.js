@@ -12,10 +12,10 @@ function App() {
 		colors: {
 			primary: {
 				text: '#fff',
-				faded: 'rgba(255, 255, 255, 0.39)',
-				background: '#1C1C1C',
-				main: '#016098',
-				highlight: '#CE7F30 ',
+				faded: 'grey',
+				background: 'black',
+				main: 'blue',
+				highlight: 'yellow',
 				watermark: 'rgba(255, 255, 255, 0.02)',
 			},
 		},
@@ -27,7 +27,9 @@ function App() {
 			<Switch>
 				<Route path="/" exact>
 					<Header />
-					<About/>
+				</Route>
+				<Route path="/about" exact>
+					<About />
 				</Route>
 				<Route path="/work" >
 					<Work />
@@ -35,9 +37,9 @@ function App() {
 				<Route path="/resume">
 					<Resume />
 				</Route>
-				{/* <Route path="/contact">
+				<Route path="/contact">
 					<Contact />
-				</Route> */}
+				</Route>
 			</Switch>
 		</ThemeProvider>
 	);

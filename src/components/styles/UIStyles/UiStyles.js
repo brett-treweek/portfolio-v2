@@ -10,7 +10,8 @@ export const Section = styled.section`
 export const FlexContainer = styled.div`
 	display: flex;
 	height: 100%;
-	width: 100%;
+	/* width: 100%; */
+	gap: 10rem;
 	align-items: ${({ ai }) => ai};
 	justify-content: ${({ jc }) => jc};
 	flex-direction: ${({ reverse }) => reverse && 'row-reverse'};
@@ -22,7 +23,7 @@ export const Title = styled.h1`
 	padding: 2rem;
 	font-size: 120px;
 	font-weight: 300;
-	background-color: ${(props) => props.theme.colors.primary.background};
+	background-color: transparent;
 	color: ${(props) => props.theme.colors.primary.highlight};
 `;
 
@@ -35,19 +36,32 @@ export const Card = styled.div`
 	height: 60vh;
 	width: 40vw;
 	max-width: 600px;
+	color: white;
 	z-index: 10;
+
+	img {
+		width: 40vw;
+		max-width: 500px;
+	}
 `;
 
 export const StyledCarousel = styled(motion.div)`
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
 	height: 100%;
+	/* z-index: 2; */
 
 	.carousel-container {
-		height: 100%;
+		height: 70vh;
+		width: 90vw;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		background-color: transparent;
+		z-index: 10;
 	}
 
 	.item {
@@ -55,12 +69,12 @@ export const StyledCarousel = styled(motion.div)`
 	}
 
 	.item img {
-		max-width: 400px;
+		height: 60vh;
+		width: 30vw;
 	}
 
 	.arrow {
-		width: 150px;
-		height: 50px;
+		margin: 1rem;
 	}
 `;
 

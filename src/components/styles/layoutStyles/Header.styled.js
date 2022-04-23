@@ -39,8 +39,8 @@ export const StyledHeader = styled.header`
 		line-height: 1.4;
 		color: ${(props) => props.theme.colors.primary.text};
 	}
-	img {
+	/* img {
 		height: 40vw;
 		max-height: 700px;
-	}
+	} */
 `;

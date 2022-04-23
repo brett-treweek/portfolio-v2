@@ -1,6 +1,9 @@
 import { useState } from 'react';
-import { StyledCarousel } from '../../styles/UIStyles/UiStyles';
+import { FlexContainer, StyledCarousel, Card }  from '../../styles/UIStyles/UiStyles';
 import { motion } from 'framer-motion';
+import  leftArrow  from '../../../assets/Images/leftArrow.svg';
+import rightArrow from '../../../assets/Images/rightArrow.svg';
+
 
 const Carousel = ({ data }) => {
 	const [current, setCurrent] = useState(0);
@@ -21,27 +24,31 @@ const Carousel = ({ data }) => {
 
 	return (
 		<StyledCarousel>
-			<button className="arrow" onClick={prevSlide}>
-				left
-			</button>
-			<button className="arrow" onClick={nextSlide}>
-				right
-			</button>
 			<div className="carousel-container">
+				<img src={leftArrow} alt='left-arrow' className="arrow" onClick={prevSlide}/>
 				{data.map((item, index) => (
-					<motion.div key={index}>
+					<div key={index}>
 						{index === current && (
 							<motion.div
 								className="item"
-								animate={{ opacity: 1, scale: 1.2 }}
-								transition={{ duration: 0.5 }}
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1, scale: 1 }}
+								transition={{ duration: 1 }}
 							>
-								<h1>{item.title}</h1>
-								<motion.img src={item.image} alt="" />
+								<FlexContainer>
+									<Card>
+										<h1>{item.title}</h1>
+										<h2>This is frustrating</h2>
+										<p>{item.body}</p>
+									</Card>
+									<motion.img src={item.image} alt="" />
+								</FlexContainer>
 							</motion.div>
 						)}
-					</motion.div>
+					</div>
 				))}
+
+				<img src={rightArrow} alt='right-arrow' className="arrow" onClick={nextSlide}/>
 			</div>
 		</StyledCarousel>
 	);

@@ -5,7 +5,7 @@ import {
 	Section,
 	BackgroundAccent,
 } from '../../styles/UIStyles/UiStyles';
-import img6 from '../../../assets/Images/about/img6.jpg';
+import img5 from '../../../assets/Images/about/img6.jpg';
 import { motion } from 'framer-motion';
 
 const Header = (props) => {
@@ -13,11 +13,11 @@ const Header = (props) => {
 		<StyledHeader>
 			<BackgroundAccent right />
 			<Section>
-				<FlexContainer ai='center' jc='space-evenly'>
-					<Card>
+				<FlexContainer ai='center' jc='center'>
+					<Card jc='space-between'>
 						<div>
 							<span>hello there</span>
-							<motion.h1 animate={{opacity: 1}} transition={{ease: 'linear', duration: 1.5}}>im brett</motion.h1>
+							<motion.h1 animate={{opacity: 1}} transition={{ease: 'linear', duration: 2.5}}>im brett</motion.h1>
 						</div>
 
 						<h3>Full Stack Web Developer</h3>
@@ -27,7 +27,7 @@ const Header = (props) => {
 						</p>
 					</Card>
 					<Card jc="center" ai="center">
-						<img src={img6} alt="" />
+						<img src={img5} alt="" />
 					</Card>
 				</FlexContainer>
 			</Section>
