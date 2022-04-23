@@ -7,11 +7,10 @@ import { StyledWork } from '../../styles/layoutStyles/Work.styled';
 
 const Work = (props) => {
 	return (
-		<StyledWork id='work'>
-			<BackgroundAccent right>
+		<StyledWork id="work">
+			<Section>
 				<Title>work</Title>
-			</BackgroundAccent>
-			<Section></Section>
+			</Section>
 		</StyledWork>
 	);
 };

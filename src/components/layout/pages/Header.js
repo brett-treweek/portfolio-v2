@@ -13,8 +13,8 @@ const Header = (props) => {
 		<StyledHeader>
 			<BackgroundAccent right />
 			<Section>
-				<FlexContainer ai='center' jc='center'>
-					<Card jc='space-between'>
+				<FlexContainer ai='center' jc='center' gap='10rem'>
+					<Card>
 						<div>
 							<span>hello there</span>
 							<motion.h1 animate={{opacity: 1}} transition={{ease: 'linear', duration: 2.5}}>im brett</motion.h1>

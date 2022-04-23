@@ -10,17 +10,16 @@ export const Section = styled.section`
 export const FlexContainer = styled.div`
 	display: flex;
 	height: 100%;
-	/* width: 100%; */
-	gap: 10rem;
+	width: 100%;
+	gap: ${({ gap }) => gap || '4rem'};
 	align-items: ${({ ai }) => ai};
 	justify-content: ${({ jc }) => jc};
 	flex-direction: ${({ reverse }) => reverse && 'row-reverse'};
-	overflow: hidden;
 `;
 
 export const Title = styled.h1`
-	text-align: center;
 	padding: 2rem;
+	margin-left: 2rem;
 	font-size: 120px;
 	font-weight: 300;
 	background-color: transparent;
@@ -45,23 +44,21 @@ export const Card = styled.div`
 	}
 `;
 
-export const StyledCarousel = styled(motion.div)`
+export const StyledCarousel = styled.div`
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
 	height: 100%;
-	/* z-index: 2; */
 
 	.carousel-container {
-		height: 70vh;
-		width: 90vw;
+		height: 100%;
+		width: 100%;
 		display: flex;
-		align-items: center;
+		align-items: start;
 		justify-content: center;
 		background-color: transparent;
-		z-index: 10;
 	}
 
 	.item {
@@ -69,13 +66,42 @@ export const StyledCarousel = styled(motion.div)`
 	}
 
 	.item img {
-		height: 60vh;
-		width: 30vw;
+		max-width: 500px;
 	}
 
 	.arrow {
-		margin: 1rem;
+		position: absolute;
+		top: 30%;
+		cursor: pointer;
 	}
+
+	.arrow:hover{
+		color: pink;
+	}
+
+	.left{
+		left: 35px
+	}
+	.right{
+		right: 35px
+	}
+`;
+
+export const StyledDots = styled.div`
+	width: 100%;
+	height: 2rem;
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+`;
+export const Dot = styled.span`
+	padding: ${(props) => (props.active ? '15px' : '12px')};
+	margin: 10px;
+	border-radius: 50%;
+	background-color: ${(props) =>
+		props.active ? 'yellow' : props.theme.colors.primary.main};
+	cursor: pointer;
 `;
 
 export const BackgroundAccent = styled.div`

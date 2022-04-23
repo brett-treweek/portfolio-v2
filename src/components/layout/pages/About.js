@@ -1,6 +1,5 @@
 import {
 	BackgroundAccent,
-	FlexContainer,
 	Section,
 	Title,
 } from '../../styles/UIStyles/UiStyles';
@@ -13,10 +12,8 @@ const About = (props) => {
 
 	return (
 		<StyledAbout id="about">
-			<BackgroundAccent right>
-				<Title>about</Title>
-			</BackgroundAccent>
 			<Section>
+				<Title>about</Title>
 				<Carousel data={aboutData} />
 			</Section>
 		</StyledAbout>
