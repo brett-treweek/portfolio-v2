@@ -39,7 +39,7 @@ const Carousel = ({ data }) => {
 					onClick={prevSlide}
 				/>
 				{data.map((item, index) => (
-					<div key={index}>
+					<div key={index} className="item-container">
 						{index === current && (
 							<>
 								<motion.div
@@ -66,7 +66,6 @@ const Carousel = ({ data }) => {
 						)}
 					</div>
 				))}
-
 				<img
 					src={rightArrow}
 					alt="right-arrow"

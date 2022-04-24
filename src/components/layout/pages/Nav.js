@@ -2,7 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { StyledNav } from '../../styles/layoutStyles/Nav.styled';
 
-const Nav = () => {
+const Nav = (props) => {
+	
+
 	return (
 		<StyledNav>
 			<div id="nav-container-inner">
@@ -50,6 +52,7 @@ const Nav = () => {
 							contact
 						</NavLink>
 					</li>
+					<button onClick={props.changeColor}>COLOR</button>
 				</ul>
 			</div>
 		</StyledNav>

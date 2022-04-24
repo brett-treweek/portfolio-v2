@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const Section = styled.section`
+export const Section = styled.div`
 	height: 93vh;
 	width: 100%;
 	background-color: ${(props) => props.theme.colors.primary.background};
@@ -49,19 +49,27 @@ export const StyledCarousel = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	height: 100%;
+	/* width: 100%; */
 
 	.carousel-container {
+		position: relative;
 		height: 100%;
-		width: 100%;
+		width: 95vw;
+		max-width: 1500px;
 		display: flex;
 		align-items: start;
 		justify-content: center;
 		background-color: transparent;
 	}
 
+	.item-container {
+		/* display: flex;
+		align-items: center;
+		justify-content: center; */
+	}
+
 	.item {
+		max-width: 1200px;
 		opacity: 0;
 	}
 
@@ -71,19 +79,23 @@ export const StyledCarousel = styled.div`
 
 	.arrow {
 		position: absolute;
-		top: 30%;
+		top: 45%;
 		cursor: pointer;
+		filter: invert(14%) sepia(69%) saturate(4320%) hue-rotate(230deg)
+			brightness(78%) contrast(125%);
+		/* transition: 0.1s ease; */
 	}
 
-	.arrow:hover{
-		color: pink;
+	.arrow:hover {
+		filter: invert(95%) sepia(58%) saturate(2134%) hue-rotate(317deg)
+			brightness(117%) contrast(108%);
 	}
 
-	.left{
-		left: 35px
+	.left {
+		left: 0;
 	}
-	.right{
-		right: 35px
+	.right {
+		right: 0;
 	}
 `;
 
@@ -100,8 +112,15 @@ export const Dot = styled.span`
 	margin: 10px;
 	border-radius: 50%;
 	background-color: ${(props) =>
-		props.active ? 'yellow' : props.theme.colors.primary.main};
+		props.active
+			? props.theme.colors.primary.highlight
+			: props.theme.colors.primary.main};
 	cursor: pointer;
+	transition: 0.3s ease;
+
+	&:hover {
+		background-color: ${(props) => props.theme.colors.primary.highlight};
+	}
 `;
 
 export const BackgroundAccent = styled.div`
