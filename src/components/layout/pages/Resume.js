@@ -1,7 +1,5 @@
 import { StyledResume } from '../../styles/layoutStyles/Resume.styled';
 import {
-	BackgroundAccent,
-	HeadingAccent,
 	Section,
 	Title,
 } from '../../styles/UIStyles/UiStyles';
@@ -9,10 +7,9 @@ import {
 const Resume = (props) => {
 	return (
 		<StyledResume>
-			<BackgroundAccent left>
+			<Section>
 				<Title>resume</Title>
-			</BackgroundAccent>
-			<Section></Section>
+			</Section>
 		</StyledResume>
 	);
 };

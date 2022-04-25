@@ -106,6 +106,7 @@ export const StyledDots = styled.div`
 	align-items: center;
 	justify-content: center;
 `;
+
 export const Dot = styled.span`
 	padding: ${(props) => (props.active ? '15px' : '12px')};
 	margin: 10px;

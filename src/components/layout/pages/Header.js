@@ -3,7 +3,6 @@ import {
 	FlexContainer,
 	Card,
 	Section,
-	BackgroundAccent,
 } from '../../styles/UIStyles/UiStyles';
 import img5 from '../../../assets/Images/about/img6.jpg';
 import { motion } from 'framer-motion';
@@ -11,7 +10,6 @@ import { motion } from 'framer-motion';
 const Header = (props) => {
 	return (
 		<StyledHeader>
-			<BackgroundAccent right />
 			<Section>
 				<FlexContainer ai='center' jc='center' gap='10rem'>
 					<Card>
