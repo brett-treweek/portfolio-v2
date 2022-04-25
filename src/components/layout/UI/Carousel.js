@@ -23,8 +23,6 @@ const Carousel = ({ data }) => {
 		setCurrent(index);
 	};
 
-	console.log(current);
-
 	if (!Array.isArray(data) || data.length <= 0) {
 		return null;
 	}

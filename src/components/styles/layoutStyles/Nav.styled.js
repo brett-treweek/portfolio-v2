@@ -8,7 +8,7 @@ export const StyledNav = styled.nav`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: ${(props) => props.theme.colors.primary.background};
+	background-color: ${(props) => props.theme.background};
 	z-index: 100;
 
 	#nav-container-inner {
@@ -31,20 +31,20 @@ export const StyledNav = styled.nav`
 
 	.link {
 		text-decoration: none;
-		color: ${({ theme }) => theme.colors.primary.text};
+		color: ${({ theme }) => theme.text};
 		transition: all ease 0.6s;
 	}
 
 	.link:hover {
 		cursor: pointer;
-		color: ${(props) => props.theme.colors.primary.highlight};
+		color: ${(props) => props.theme.highlight};
 	}
 
 	.active {
-		color: ${({ theme }) => theme.colors.primary.highlight};
+		color: ${({ theme }) => theme.highlight};
 	}
 
 	.logo {
-		color: ${({ theme }) => theme.colors.primary.text};
+		color: ${({ theme }) => theme.text};
 	}
 `;

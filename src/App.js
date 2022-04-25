@@ -7,48 +7,32 @@ import Work from './components/layout/pages/Work';
 import Nav from './components/layout/pages/Nav';
 import Resume from './components/layout/pages/Resume';
 import Contact from './components/layout/pages/Contact';
+import themeData from './assets/themeData';
+
 
 function App() {
-	const [currentTheme, setCurrentTheme] = useState(0)
+	const [themeIndex, setThemeIndex] = useState(0);
+	const length = themeData.length;
 
-	const theme = {
-		colors: {
-			primary: {
-				text: '#fff',
-				faded: 'grey',
-				background: '#111111',
-				main: '#0018A2',
-				highlight: '#F7FF00',
-				watermark: 'rgba(255, 255, 255, 0.02)',
-			},
-			secondary: {
-				text: '#000',
-				faded: 'grey',
-				background: 'white',
-				main: 'red',
-				highlight: 'green',
-				watermark: 'rgba(255, 255, 255, 0.02)',
-			},
-		},
-	};
 
 	const changeColor = () => {
-		console.log(theme.colors);
+		setThemeIndex(themeIndex === length - 1 ? 0 : themeIndex + 1);
+		console.log(themeIndex);
 	};
 
 	return (
-		<ThemeProvider theme={theme}>
+		<ThemeProvider theme={themeData[themeIndex]}>
 			<Nav changeColor={changeColor}/>
 			<Switch>
 				<Route path="/" exact>
 					<Header />
-					<About/>
-					<Work/>
+					<About />
+					<Work />
 				</Route>
 				<Route path="/about" exact>
 					<About />
 				</Route>
-				<Route path="/work" >
+				<Route path="/work">
 					<Work />
 				</Route>
 				<Route path="/resume">

@@ -1,5 +1,4 @@
 import {
-	BackgroundAccent,
 	Section,
 	Title,
 } from '../../styles/UIStyles/UiStyles';

@@ -5,24 +5,24 @@ export const StyledHeader = styled.header`
 		font-size: 120px;
 		opacity: 0;
 		font-weight: 300;
-		color: ${(props) => props.theme.colors.primary.highlight};
+		color: ${(props) => props.theme.highlight};
 		margin-bottom: 50px;
 	}
 	h2 {
 		font-size: 65px;
 		font-weight: 300;
-		color: ${(props) => props.theme.colors.primary.text};
+		color: ${(props) => props.theme.text};
 	}
 	h3 {
 		font-size: 45px;
 		font-weight: 300;
-		color: ${(props) => props.theme.colors.primary.text};
+		color: ${(props) => props.theme.text};
 	}
 	h4 {
 		font-size: 40px;
 		font-weight: 300;
 		margin-bottom: 50px;
-		color: ${(props) => props.theme.colors.primary.faded};
+		color: ${(props) => props.theme.faded};
 	}
 	span {
 		position: relative;
@@ -30,13 +30,13 @@ export const StyledHeader = styled.header`
 		top: 20px;
 		font-size: 30px;
 		font-weight: 300;
-		color: ${(props) => props.theme.colors.primary.text};
+		color: ${(props) => props.theme.text};
 	}
 	p {
 		width: 100%;
 		font-weight: 300;
 		font-size: 25px;
 		line-height: 1.4;
-		color: ${(props) => props.theme.colors.primary.text};
+		color: ${(props) => props.theme.text};
 	}
 `;

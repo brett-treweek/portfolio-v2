@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 export const Section = styled.div`
 	height: 93vh;
 	width: 100%;
-	background-color: ${(props) => props.theme.colors.primary.background};
+	background-color: ${(props) => props.theme.background};
 `;
 
 export const FlexContainer = styled.div`
@@ -23,7 +22,7 @@ export const Title = styled.h1`
 	font-size: 120px;
 	font-weight: 300;
 	background-color: transparent;
-	color: ${(props) => props.theme.colors.primary.highlight};
+	color: ${(props) => props.theme.highlight};
 `;
 
 export const Card = styled.div`
@@ -113,13 +112,13 @@ export const Dot = styled.span`
 	border-radius: 50%;
 	background-color: ${(props) =>
 		props.active
-			? props.theme.colors.primary.highlight
-			: props.theme.colors.primary.main};
+			? props.theme.highlight
+			: props.theme.main};
 	cursor: pointer;
 	transition: 0.3s ease;
 
 	&:hover {
-		background-color: ${(props) => props.theme.colors.primary.highlight};
+		background-color: ${(props) => props.theme.highlight};
 	}
 `;
 
@@ -131,13 +130,13 @@ export const BackgroundAccent = styled.div`
 	height: 90vh;
 	width: 30vw;
 	max-width: 550px;
-	background-color: ${(props) => props.theme.colors.primary.main};
+	background-color: ${(props) => props.theme.main};
 `;
 
 // export const HeadingAccent = styled.div`
 // 	height: 100%;
 // 	width: 1.5%;
-// 	background-color: ${(props) => props.theme.colors.primary.main};
+// 	background-color: ${(props) => props.theme.main};
 // `;
 
 // export const Watermark = styled.img`

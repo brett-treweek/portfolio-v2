@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { StyledNav } from '../../styles/layoutStyles/Nav.styled';
 
 const Nav = (props) => {
-	
 
 	return (
 		<StyledNav>
@@ -52,7 +51,7 @@ const Nav = (props) => {
 							contact
 						</NavLink>
 					</li>
-					<button onClick={props.changeColor}>COLOR</button>
+					<button onClick={props.changeColor}>theme</button>
 				</ul>
 			</div>
 		</StyledNav>
