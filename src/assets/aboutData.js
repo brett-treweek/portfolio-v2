@@ -11,13 +11,15 @@ import img6 from './Images/about/img6.jpg';
 
 const aboutData = [
 	{
-		title: 'Varied Experience',
+		title: 'Work experience',
+		subTitle: 'I have varied experience',
 		image: `${img1}`,
 		alt: '',
 		body: 'I have varied experience Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ratione placeat odit nisi eius voluptas amet asperiores. Similique, ex ipsa repellendus voluptates quae doloremque quis doloribus fugit tempore accusamus! Alias.',
 	},
 	{
 		title: 'Hobbies',
+		subTitle: 'past and present',
 		image: `${img2}`,
 		alt: '',
 		body: 'I have varied experience Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ratione placeat odit nisi eius voluptas amet asperiores. Similique, ex ipsa repellendus voluptates quae doloremque quis doloribus fugit tempore accusamus! Alias.',

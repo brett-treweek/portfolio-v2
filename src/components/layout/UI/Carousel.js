@@ -42,17 +42,17 @@ const Carousel = ({ data }) => {
 							<>
 								<motion.div
 									className="item"
-									initial={{ opacity: 0, scale: 0.95 }}
-									animate={{ opacity: 1, scale: 1 }}
+									initial={{ opacity: 0, scale: 0.65, x: '-200px' }}
+									animate={{ opacity: 1, scale: 1, x: 0 }}
 									transition={{ duration: 0.7 }}
 								>
-									<FlexContainer reverse={item.flex}>
-										<Card>
-											<h1>{item.title}</h1>
-											<h2>This is frustrating</h2>
+									<FlexContainer reverse={index % 2 === 0}>
+										<Card bc={(props) => props.theme.secondary} bs >
+											<h2>{item.title}</h2>
+											<h3>{item.subTitle}</h3>
 											<p>{item.body}</p>
 										</Card>
-										<motion.img src={item.image} alt="" />
+										<img src={item.image} alt="" />
 									</FlexContainer>
 								</motion.div>
 								<Dots

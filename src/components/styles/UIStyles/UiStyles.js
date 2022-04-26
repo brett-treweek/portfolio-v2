@@ -19,7 +19,7 @@ export const FlexContainer = styled.div`
 export const Title = styled.h1`
 	padding: 2rem;
 	margin-left: 2rem;
-	font-size: 120px;
+	font-size: clamp(5vh, 10vh, 10vh);
 	font-weight: 300;
 	background-color: transparent;
 	color: ${(props) => props.theme.highlight};
@@ -29,18 +29,16 @@ export const Card = styled.div`
 	display: flex;
 	align-items: ${({ ai }) => ai};
 	justify-content: ${({ jc }) => jc};
+	background-color: ${({ bc }) => bc || 'transparent'};
+	box-shadow: ${({ bs }) => bs ? '0 0 10px rgba(0, 0, 0, 0.25)' : 'none'};
 	flex-direction: column;
 	padding: 2rem;
-	height: 60vh;
+	max-height: 60vh;
 	width: 40vw;
 	max-width: 600px;
 	color: white;
 	z-index: 10;
 
-	img {
-		width: 40vw;
-		max-width: 500px;
-	}
 `;
 
 export const StyledCarousel = styled.div`
@@ -73,7 +71,9 @@ export const StyledCarousel = styled.div`
 	}
 
 	.item img {
-		max-width: 500px;
+		width: 40vw;
+		max-width: 600px;
+		height: 700px;
 	}
 
 	.arrow {
@@ -108,7 +108,7 @@ export const StyledDots = styled.div`
 `;
 
 export const Dot = styled.span`
-	padding: ${(props) => (props.active ? '15px' : '12px')};
+	padding: 8px;
 	margin: 10px;
 	border-radius: 50%;
 	background-color: ${(props) =>

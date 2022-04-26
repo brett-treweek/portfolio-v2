@@ -39,4 +39,9 @@ export const StyledHeader = styled.header`
 		line-height: 1.4;
 		color: ${(props) => props.theme.text};
 	}
+
+	img {
+		width: 40vw;
+		max-width: 600px;
+	}
 `;
