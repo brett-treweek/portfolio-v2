@@ -15,8 +15,8 @@ export const FlexContainer = styled.div`
 	align-items: ${({ ai }) => ai};
 	justify-content: ${({ jc }) => jc};
 	flex-direction: ${({ fd }) => fd || 'column'};
-	height: ${({ height }) => height}; 
-	
+	height: ${({ height }) => height};
+
 	h1 {
 		font-size: clamp(1.5rem, 5vw + 1rem, 8rem);
 		opacity: 0;
@@ -27,6 +27,7 @@ export const FlexContainer = styled.div`
 	h2 {
 		font-size: clamp(0.5rem, 2vw + 1rem, 3rem);
 		font-weight: 300;
+		margin-bottom: 1rem;
 		color: ${(props) => props.theme.text};
 	}
 	h3 {
@@ -52,18 +53,24 @@ export const FlexContainer = styled.div`
 		width: 100%;
 		font-weight: 200;
 		font-size: clamp(0.6rem, 1vw + 0.6rem, 1.4rem);
-		line-height: 1.9rem;
+		margin-top: 1rem;
+		line-height: 1.4rem;
 		letter-spacing: 0.05ch;
 		color: ${(props) => props.theme.text};
 	}
 
 	img {
-		width: clamp(70vw, 70vw + 5vw, 70vw);
+		width: clamp(50vw, 70vw, 90vw);
+		overflow: hidden;
 		/* max-height: 60vh; */
 	}
 
 	@media (min-width: 1000px) {
 		flex-direction: row;
+
+		p{
+			line-height: 1.9rem;
+		}
 
 		img {
 			width: clamp(20vw, 30vw + 5vw, 35vw);
@@ -81,8 +88,6 @@ export const Card = motion(styled.div`
 	flex-direction: column;
 	padding: 1rem;
 	width: clamp(30vw, 80vw + 5vw, 90vw);
-	/* height: 30vh; */
-	max-height: 40vh;
 	color: white;
 	z-index: 10;
 
@@ -155,8 +160,8 @@ export const StyledCarousel = styled.div`
 	@media (min-width: 1000px) {
 		height: 70%;
 		.item img {
-			width: clamp(20vw, 20vw + 5vw, 25vw);
-			max-width: 600px;
+			width: clamp(20vw, 15vw + 5vw, 20vw);
+			max-width: 500px;
 		}
 	}
 `;

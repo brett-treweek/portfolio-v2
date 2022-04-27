@@ -7,7 +7,7 @@ const Header = (props) => {
 	return (
 		<StyledHeader>
 			<Section>
-				<FlexContainer ai="center" jc="space-evenly">
+				<FlexContainer ai="center" jc="center" gap='5rem'>
 					<Card dis='block'>
 						<div>
 							<span>hello there</span>
