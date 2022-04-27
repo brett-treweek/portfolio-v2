@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
 	height: 7vh;
-	width: 100%;
+	width: 100vw;
 	position: sticky;
 	top: 0;
 	display: flex;
@@ -46,5 +46,9 @@ export const StyledNav = styled.nav`
 
 	.logo {
 		color: ${({ theme }) => theme.text};
+	}
+
+	@media (max-width: 1000px) {
+		display: none;
 	}
 `;

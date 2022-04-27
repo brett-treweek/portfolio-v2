@@ -26,8 +26,7 @@ function App() {
 			<Switch>
 				<Route path="/" exact>
 					<Header />
-					<About />
-					<Work />
+					<About/>
 				</Route>
 				<Route path="/about" exact>
 					<About />

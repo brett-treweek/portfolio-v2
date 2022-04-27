@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.div`
-	height: 93vh;
+	height: 100%;
 	width: 100%;
 	background-color: ${(props) => props.theme.background};
 `;
@@ -10,19 +10,63 @@ export const FlexContainer = styled.div`
 	display: flex;
 	height: 100%;
 	width: 100%;
-	gap: ${({ gap }) => gap || '4rem'};
+	gap: ${({ gap }) => gap || '2rem'};
 	align-items: ${({ ai }) => ai};
 	justify-content: ${({ jc }) => jc};
-	flex-direction: ${({ reverse }) => reverse && 'row-reverse'};
-`;
+	flex-direction: ${({ fd }) => fd || 'column'};
 
-export const Title = styled.h1`
-	padding: 2rem;
-	margin-left: 2rem;
-	font-size: clamp(5vh, 10vh, 10vh);
-	font-weight: 300;
-	background-color: transparent;
-	color: ${(props) => props.theme.highlight};
+	h1 {
+		font-size: clamp(1.5rem, 5vw + 1rem, 8rem);
+		opacity: 0;
+		font-weight: 300;
+		color: ${(props) => props.theme.highlight};
+		margin-bottom: 2rem;
+	}
+	h2 {
+		font-size: clamp(0.5rem, 2vw + 1rem, 3rem);
+		font-weight: 300;
+		color: ${(props) => props.theme.text};
+	}
+	h3 {
+		font-size: clamp(0.5rem, 2vw + 1rem, 3rem);
+		font-weight: 300;
+		color: ${(props) => props.theme.text};
+	}
+	h4 {
+		font-size: clamp(0.4rem, 1vw + 1rem, 2rem);
+		font-weight: 300;
+		margin-bottom: 2rem;
+		color: ${(props) => props.theme.faded};
+	}
+	span {
+		position: relative;
+		left: 30px;
+		top: 10px;
+		font-size: clamp(0.6rem, 1vw + 0.7rem, 2rem);
+		font-weight: 300;
+		color: ${(props) => props.theme.text};
+	}
+	p {
+		width: 100%;
+		font-weight: 300;
+		font-size: clamp(0.6rem, 1vw + 0.6rem, 1.4rem);
+		line-height: 1.4rem;
+		color: ${(props) => props.theme.text};
+	}
+
+	img {
+		width: clamp(80vw, 75vw + 5vw, 80vw);
+		max-height: 90vh;
+	}
+
+	@media (min-width: 1000px) {
+		flex-direction: row;
+
+		img {
+			width: clamp(20vw, 40vw + 10vw, 30vw);
+			max-width: 600px;
+		}
+	}
 `;
 
 export const Card = styled.div`
@@ -30,15 +74,27 @@ export const Card = styled.div`
 	align-items: ${({ ai }) => ai};
 	justify-content: ${({ jc }) => jc};
 	background-color: ${({ bc }) => bc || 'transparent'};
-	box-shadow: ${({ bs }) => bs ? '0 0 10px rgba(0, 0, 0, 0.25)' : 'none'};
+	box-shadow: ${({ bs }) => (bs ? '0 0 10px rgba(0, 0, 0, 0.25)' : 'none')};
 	flex-direction: column;
 	padding: 2rem;
-	max-height: 60vh;
-	width: 40vw;
-	max-width: 600px;
+	width: clamp(80vw, 75vw + 5vw, 80vw);
+	max-height: 70vh;
 	color: white;
 	z-index: 10;
 
+	@media (min-width: 1000px) {
+		width: clamp(20vw, 40vw + 10vw, 30vw);
+		max-width: 600px;
+	}
+`;
+
+export const Title = styled.h1`
+	padding: 2rem;
+	margin-left: 2rem;
+	font-size: clamp(1.5rem, 5vw + 1rem, 8rem);
+	font-weight: 300;
+	background-color: transparent;
+	color: ${(props) => props.theme.highlight};
 `;
 
 export const StyledCarousel = styled.div`
@@ -54,7 +110,7 @@ export const StyledCarousel = styled.div`
 		width: 95vw;
 		max-width: 1500px;
 		display: flex;
-		align-items: start;
+		/* align-items: center; */
 		justify-content: center;
 		background-color: transparent;
 	}
@@ -71,14 +127,14 @@ export const StyledCarousel = styled.div`
 	}
 
 	.item img {
-		width: 40vw;
-		max-width: 600px;
-		height: 700px;
+			width: clamp(30vw, 40vw + 5vw, 60vw);
+			max-height: 90vh;
 	}
 
 	.arrow {
+		z-index: 100;
 		position: absolute;
-		top: 45%;
+		top: 40%;
 		cursor: pointer;
 		filter: invert(14%) sepia(69%) saturate(4320%) hue-rotate(230deg)
 			brightness(78%) contrast(125%);
@@ -101,7 +157,7 @@ export const StyledCarousel = styled.div`
 export const StyledDots = styled.div`
 	width: 100%;
 	height: 2rem;
-	margin-top: 2rem;
+	margin: 2rem 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -112,9 +168,7 @@ export const Dot = styled.span`
 	margin: 10px;
 	border-radius: 50%;
 	background-color: ${(props) =>
-		props.active
-			? props.theme.highlight
-			: props.theme.main};
+		props.active ? props.theme.highlight : props.theme.main};
 	cursor: pointer;
 	transition: 0.3s ease;
 
