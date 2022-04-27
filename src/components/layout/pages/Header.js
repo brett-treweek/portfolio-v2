@@ -7,13 +7,13 @@ const Header = (props) => {
 	return (
 		<StyledHeader>
 			<Section>
-				<FlexContainer ai="center" jc="center">
-					<Card>
+				<FlexContainer ai="center" jc="space-evenly">
+					<Card dis='block'>
 						<div>
 							<span>hello there</span>
 							<motion.h1
 								animate={{ opacity: 1 }}
-								transition={{ ease: 'linear', duration: 2.5 }}
+								transition={{ duration: 2.5 }}
 							>
 								im brett
 							</motion.h1>
