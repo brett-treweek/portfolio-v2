@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
 	height: 7vh;
-	width: 100vw;
+	/* width: 100vw; */
 	position: sticky;
 	top: 0;
 	display: flex;
