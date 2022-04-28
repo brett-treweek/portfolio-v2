@@ -35,7 +35,8 @@ export const StyledNav = styled.nav`
 		transition: all ease 0.6s;
 	}
 
-	.link:hover {
+	.link:hover,
+	.theme-change:hover {
 		cursor: pointer;
 		color: ${(props) => props.theme.highlight};
 	}
@@ -46,6 +47,13 @@ export const StyledNav = styled.nav`
 
 	.logo {
 		color: ${({ theme }) => theme.text};
+	}
+
+	.theme-change {
+		font-size: 1rem;
+		border: none;
+		color: ${({ theme }) => theme.text};
+		background-color: transparent;
 	}
 
 	@media (max-width: 1000px) {

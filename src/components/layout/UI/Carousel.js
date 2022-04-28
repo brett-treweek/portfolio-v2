@@ -6,12 +6,11 @@ import {
 } from '../../styles/UIStyles/UiStyles';
 import Dots from './Dots';
 import { motion } from 'framer-motion';
-import leftArrow from '../../../assets/Images/leftArrow.svg';
-import rightArrow from '../../../assets/Images/rightArrow.svg';
+import { Icon } from '@iconify/react';
 
-const Carousel = ({ data }) => {
+const Carousel = (props) => {
 	const [current, setCurrent] = useState(0);
-	const length = data.length;
+	const length = props.data.length;
 
 	const prevSlide = () => {
 		setCurrent(current === 0 ? length - 1 : current - 1);
@@ -23,32 +22,23 @@ const Carousel = ({ data }) => {
 		setCurrent(index);
 	};
 
-	if (!Array.isArray(data) || data.length <= 0) {
+	if (!Array.isArray(props.data) || props.data.length <= 0) {
 		return null;
 	}
 
 	return (
 		<StyledCarousel>
 			<div className="carousel-container">
-				{/* <img
-					src={leftArrow}
-					alt="left-arrow"
-					className="arrow left"
-					onClick={prevSlide}
-				/> */}
-				{data.map((item, index) => (
+				{props.data.map((item, index) => (
 					<div key={index} className="item-container">
 						{index === current && (
 							<>
 								<div className="item">
-									<FlexContainer
-										reverse={index % 2 === 0}
-										ai="center"
-									>
+									<FlexContainer ai="center" jc="center">
 										<Card
-											bc={(props) =>
-												props.theme.secondary
-											}
+											// bc={(props) =>
+											// 	props.theme.secondary
+											// }
 											bs
 											initial={{
 												opacity: 0,
@@ -63,6 +53,18 @@ const Carousel = ({ data }) => {
 											<h2>{item.title}</h2>
 											<h3>{item.subTitle}</h3>
 											<p>{item.body}</p>
+											<Icon
+												icon="eva:arrow-ios-back-fill"
+												height="25"
+												onClick={prevSlide}
+												className="arrow left"
+											/>
+											<Icon
+												icon="eva:arrow-ios-forward-fill"
+												height="25"
+												onClick={nextSlide}
+												className="arrow right"
+											/>
 										</Card>
 										<motion.img
 											src={item.image}
@@ -75,12 +77,15 @@ const Carousel = ({ data }) => {
 												opacity: 1,
 												scale: 1,
 											}}
-											transition={{ duration: 1, delay:0.8 }}
+											transition={{
+												duration: 1,
+												delay: 0.8,
+											}}
 										/>
 									</FlexContainer>
 								</div>
 								<Dots
-									data={data}
+									data={props.data}
 									dotClick={dotClick}
 									active={current}
 								/>
@@ -88,12 +93,6 @@ const Carousel = ({ data }) => {
 						)}
 					</div>
 				))}
-				{/* <img
-					src={rightArrow}
-					alt="right-arrow"
-					className="arrow right"
-					onClick={nextSlide}
-				/> */}
 			</div>
 		</StyledCarousel>
 	);

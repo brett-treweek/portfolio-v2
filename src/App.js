@@ -22,7 +22,7 @@ function App() {
 
 	return (
 		<ThemeProvider theme={themeData[themeIndex]}>
-			<Nav changeColor={changeColor}/>
+			<Nav changeColor={changeColor} theme={themeData[themeIndex]}/>
 			<Switch>
 				<Route path="/" exact>
 					<Header />

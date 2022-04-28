@@ -11,14 +11,14 @@ export const FlexContainer = styled.div`
 	display: flex;
 	height: 100%;
 	width: 100%;
-	gap: ${({ gap }) => gap || '2rem'};
+	gap: ${({ gap }) => gap || '3rem'};
 	align-items: ${({ ai }) => ai};
 	justify-content: ${({ jc }) => jc};
 	flex-direction: ${({ fd }) => fd || 'column'};
 	height: ${({ height }) => height};
 
 	h1 {
-		font-size: clamp(1.5rem, 5vw + 1rem, 8rem);
+		font-size: clamp(1.5rem, 5vw + 1rem, 7.9rem);
 		opacity: 0;
 		font-weight: 400;
 		color: ${(props) => props.theme.highlight};
@@ -87,14 +87,14 @@ export const Card = motion(styled.div`
 	box-shadow: ${({ bs }) => (bs ? '0 0 10px rgba(0, 0, 0, 0.25)' : 'none')};
 	flex-direction: column;
 	padding: 1rem;
-	width: clamp(30vw, 80vw + 5vw, 90vw);
+	width: clamp(30vw, 70vw + 5vw, 75vw);
+	max-width: 500px;
 	color: white;
 	z-index: 10;
 
 	@media (min-width: 1000px) {
-		width: clamp(20vw, 30vw + 5vw, 35vw);;
-		height: auto;
-		max-width: 600px;
+		width: clamp(20vw, 35vw + 5vw, 40vw);
+		height: 60vh;
 	}
 `);
 
@@ -112,14 +112,15 @@ export const StyledCarousel = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: 100%;
 
 	.carousel-container {
 		position: relative;
 		height: 100%;
-		width: 95%;
 		max-width: 1500px;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 	}
 
 	.item-container {
@@ -131,37 +132,40 @@ export const StyledCarousel = styled.div`
 		max-width: 1200px;
 	}
 
-	.item img {
-		width: clamp(30vw, 80vw + 5vw, 90vw);
-		max-height: 40vh;
+	.item div {
+		position: relative;
 	}
 
-	.arrow {
+	.item img {
+		width: clamp(30vw, 70vw + 5vw, 75vw);
+		height: auto;
+		max-height: 60vh;
+		max-width: 500px;
+	}
+
+	.item .arrow {
+		color: ${(props) => props.theme.highlight};
+		width: clamp(0.5rem, 1vw + 1rem, 5rem);
 		z-index: 100;
 		position: absolute;
-		top: 40%;
+		bottom: -2.5rem;
 		cursor: pointer;
-		filter: invert(14%) sepia(69%) saturate(4320%) hue-rotate(230deg)
-			brightness(78%) contrast(125%);
 	}
 
 	.arrow:hover {
-		filter: invert(95%) sepia(58%) saturate(2134%) hue-rotate(317deg)
-			brightness(117%) contrast(108%);
+		color: ${(props) => props.theme.text};
 	}
 
 	.left {
-		left: 0;
+		left: 40%;
 	}
 	.right {
-		right: 0;
+		right: 40%;
 	}
 
 	@media (min-width: 1000px) {
-		height: 70%;
-		.item img {
-			width: clamp(20vw, 15vw + 5vw, 20vw);
-			max-width: 500px;
+		.item .arrow {
+			bottom: 1rem;
 		}
 	}
 `;
@@ -180,25 +184,25 @@ export const Dot = styled.span`
 	margin: 10px;
 	border-radius: 50%;
 	background-color: ${(props) =>
-		props.active ? props.theme.highlight : props.theme.main};
+		props.active ? props.theme.highlight : props.theme.faded};
 	cursor: pointer;
 	transition: 0.3s ease;
 
 	&:hover {
-		background-color: ${(props) => props.theme.highlight};
+		background-color: ${(props) => props.theme.text};
 	}
 `;
 
-export const BackgroundAccent = styled.div`
-	position: absolute;
-	left: ${(props) => (props.left ? '8vw' : null)};
-	right: ${(props) => (props.right ? '8vw' : null)};
-	/* max-height: 100vh; */
-	height: 90vh;
-	width: 30vw;
-	max-width: 550px;
-	background-color: ${(props) => props.theme.main};
-`;
+// export const BackgroundAccent = styled.div`
+// 	position: absolute;
+// 	left: ${(props) => (props.left ? '8vw' : null)};
+// 	right: ${(props) => (props.right ? '8vw' : null)};
+// 	max-height: 100vh;
+// 	height: 90vh;
+// 	width: 30vw;
+// 	max-width: 550px;
+// 	background-color: ${(props) => props.theme.main};
+// `;
 
 // export const HeadingAccent = styled.div`
 // 	height: 100%;
