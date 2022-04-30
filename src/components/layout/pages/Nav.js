@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 
 const Nav = (props) => {
 
-	console.log(props);
+	// console.log(props);
 	const color = props.theme.highlight;
 	return (
 		<StyledNav>

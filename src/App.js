@@ -11,13 +11,17 @@ import themeData from './assets/themeData';
 
 
 function App() {
+	let lastTheme = parseInt(localStorage.getItem('localTheme'));
 	const [themeIndex, setThemeIndex] = useState(0);
 	const length = themeData.length;
+	
+	console.log('theme-index', themeIndex);
 
 
 	const changeColor = () => {
 		setThemeIndex(themeIndex === length - 1 ? 0 : themeIndex + 1);
-		console.log(themeIndex);
+		localStorage.setItem('localTheme', themeIndex)
+		console.log(themeIndex, localStorage.localTheme);
 	};
 
 	return (
