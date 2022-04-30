@@ -2,13 +2,17 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Section = styled.div`
+	border: yellow solid 2px;
 	height: 100%;
 	width: 100%;
 	background-color: ${(props) => props.theme.background};
 `;
 
 export const FlexContainer = styled.div`
+	border: solid blue 2px;
+	/* max-width: 1500px; */
 	display: flex;
+	flex-wrap: wrap;
 	height: 100%;
 	width: 100%;
 	gap: ${({ gap }) => gap || '3rem'};
@@ -55,7 +59,6 @@ export const FlexContainer = styled.div`
 		font-size: clamp(0.6rem, 1vw + 0.6rem, 1.4rem);
 		margin-top: 1rem;
 		line-height: 1.4rem;
-		letter-spacing: 0.05ch;
 		color: ${(props) => props.theme.text};
 	}
 
@@ -68,8 +71,9 @@ export const FlexContainer = styled.div`
 	@media (min-width: 1000px) {
 		flex-direction: row;
 
-		p{
+		p {
 			line-height: 1.9rem;
+			letter-spacing: 0.05ch;
 		}
 
 		img {
@@ -80,15 +84,17 @@ export const FlexContainer = styled.div`
 `;
 
 export const Card = motion(styled.div`
+	border: red solid 2px;
 	display: ${({ dis }) => dis || 'flex'};
 	align-items: ${({ ai }) => ai};
 	justify-content: ${({ jc }) => jc};
+	flex: ${({flex}) => flex};
 	background-color: ${({ bc }) => bc || 'transparent'};
-	box-shadow: ${({ bs }) => (bs ? '0 0 10px rgba(0, 0, 0, 0.25)' : 'none')};
+	box-shadow: ${({ bs }) => bs ? '0 0 10px rgba(0, 0, 0, 0.25)' : 'none'};
 	flex-direction: column;
 	padding: 1rem;
 	width: clamp(30vw, 70vw + 5vw, 75vw);
-	max-width: 500px;
+	max-width: ${({mw}) => mw || '500px'};
 	color: white;
 	z-index: 10;
 
@@ -99,6 +105,7 @@ export const Card = motion(styled.div`
 `);
 
 export const Title = styled.h1`
+	border: solid green 2px;
 	padding: 2rem;
 	text-align: center ;
 	font-size: clamp(1.5rem, 5vw + 1rem, 8rem);
@@ -108,6 +115,7 @@ export const Title = styled.h1`
 `;
 
 export const StyledCarousel = styled.div`
+	border: orange solid 2px;
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -115,6 +123,7 @@ export const StyledCarousel = styled.div`
 	height: 100%;
 
 	.carousel-container {
+		border: pink solid 2px;
 		position: relative;
 		height: 100%;
 		max-width: 1500px;

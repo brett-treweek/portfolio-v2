@@ -1,3 +1,4 @@
 import styled from 'styled-components';
 
-export const StyledWork = styled.section``;
+export const StyledWork = styled.section`
+`;
