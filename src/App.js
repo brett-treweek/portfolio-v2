@@ -30,6 +30,7 @@ function App() {
 			<Switch>
 				<Route path="/" exact>
 					<Header />
+					<Work/>
 					<About/>
 				</Route>
 				<Route path="/about" exact>

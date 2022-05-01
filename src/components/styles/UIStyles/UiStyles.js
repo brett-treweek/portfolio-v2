@@ -2,31 +2,21 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Section = styled.div`
-	border: yellow solid 2px;
-	height: 100%;
-	width: 100%;
-	background-color: ${(props) => props.theme.background};
-`;
-
-export const FlexContainer = styled.div`
-	border: solid blue 2px;
-	/* max-width: 1500px; */
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* border: yellow solid 2px; */
 	height: 100%;
 	width: 100%;
-	gap: ${({ gap }) => gap || '3rem'};
-	align-items: ${({ ai }) => ai};
-	justify-content: ${({ jc }) => jc};
-	flex-direction: ${({ fd }) => fd || 'column'};
-	height: ${({ height }) => height};
+	padding: 1rem;
+	background-color: ${(props) => props.theme.background};
 
 	h1 {
-		font-size: clamp(1.5rem, 5vw + 1rem, 7.9rem);
-		opacity: 0;
-		font-weight: 400;
+		font-size: clamp(1.5rem, 5vw + 1rem, 6rem);
+		font-weight: 300;
 		color: ${(props) => props.theme.highlight};
-		margin-bottom: 2rem;
+		margin: 2rem;
 	}
 	h2 {
 		font-size: clamp(0.5rem, 2vw + 1rem, 3rem);
@@ -65,11 +55,13 @@ export const FlexContainer = styled.div`
 	img {
 		width: clamp(50vw, 70vw, 90vw);
 		overflow: hidden;
-		/* max-height: 60vh; */
+		z-index: 1;
 	}
 
 	@media (min-width: 1000px) {
-		flex-direction: row;
+		height: 93vh;
+		/* flex-direction: row; */
+		/* padding-top: 5rem; */
 
 		p {
 			line-height: 1.9rem;
@@ -83,18 +75,35 @@ export const FlexContainer = styled.div`
 	}
 `;
 
+export const FlexContainer = styled.div`
+	/* border: solid blue 4px; */
+	display: flex;
+	flex-wrap: wrap;
+	/* height: 100%; */
+	width: 100%;
+	gap: ${({ gap }) => gap || '3rem'};
+	align-items: ${({ ai }) => ai || 'center'};
+	justify-content: ${({ jc }) => jc || 'center'};
+	/* flex-direction: ${({ fd }) => fd || 'column'}; */
+	height: ${({ height }) => height};
+
+	@media (min-width: 1000px) {
+		flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
+	}
+`;
+
 export const Card = motion(styled.div`
-	border: red solid 2px;
+	/* border: red solid 2px; */
 	display: ${({ dis }) => dis || 'flex'};
 	align-items: ${({ ai }) => ai};
 	justify-content: ${({ jc }) => jc};
-	flex: ${({flex}) => flex};
+	flex: ${({ flex }) => flex};
 	background-color: ${({ bc }) => bc || 'transparent'};
-	box-shadow: ${({ bs }) => bs ? '0 0 10px rgba(0, 0, 0, 0.25)' : 'none'};
+	box-shadow: ${({ bs }) => (bs ? '0 0 10px rgba(0, 0, 0, 0.25)' : 'none')};
 	flex-direction: column;
 	padding: 1rem;
 	width: clamp(30vw, 70vw + 5vw, 75vw);
-	max-width: ${({mw}) => mw || '500px'};
+	max-width: ${({ mw }) => mw || '500px'};
 	color: white;
 	z-index: 10;
 
@@ -105,9 +114,9 @@ export const Card = motion(styled.div`
 `);
 
 export const Title = styled.h1`
-	border: solid green 2px;
+	/* border: solid green 2px; */
 	padding: 2rem;
-	text-align: center ;
+	text-align: center;
 	font-size: clamp(1.5rem, 5vw + 1rem, 8rem);
 	font-weight: 300;
 	background-color: transparent;
@@ -115,7 +124,7 @@ export const Title = styled.h1`
 `;
 
 export const StyledCarousel = styled.div`
-	border: orange solid 2px;
+	/* border: orange solid 2px; */
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -123,7 +132,7 @@ export const StyledCarousel = styled.div`
 	height: 100%;
 
 	.carousel-container {
-		border: pink solid 2px;
+		/* border: pink solid 2px; */
 		position: relative;
 		height: 100%;
 		max-width: 1500px;
@@ -153,7 +162,7 @@ export const StyledCarousel = styled.div`
 	}
 
 	.item .arrow {
-		color: ${(props) => props.theme.highlight};
+		color: ${(props) => props.theme.text};
 		width: clamp(0.5rem, 1vw + 1rem, 5rem);
 		z-index: 100;
 		position: absolute;
@@ -162,7 +171,7 @@ export const StyledCarousel = styled.div`
 	}
 
 	.arrow:hover {
-		color: ${(props) => props.theme.text};
+		color: ${(props) => props.theme.highlight};
 	}
 
 	.left {
@@ -182,49 +191,50 @@ export const StyledCarousel = styled.div`
 export const StyledDots = styled.div`
 	width: 100%;
 	height: 2rem;
-	margin: 2rem 0;
+	/* margin: 2rem 0; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 `;
 
 export const Dot = styled.span`
-	padding: 8px;
+	padding: 5px;
 	margin: 10px;
 	border-radius: 50%;
 	background-color: ${(props) =>
-		props.active ? props.theme.highlight : props.theme.faded};
+		props.active ? props.theme.text : props.theme.faded};
 	cursor: pointer;
 	transition: 0.3s ease;
 
 	&:hover {
-		background-color: ${(props) => props.theme.text};
+		background-color: ${(props) => props.theme.highlight};
 	}
 `;
 
-// export const BackgroundAccent = styled.div`
-// 	position: absolute;
-// 	left: ${(props) => (props.left ? '8vw' : null)};
-// 	right: ${(props) => (props.right ? '8vw' : null)};
-// 	max-height: 100vh;
-// 	height: 90vh;
-// 	width: 30vw;
-// 	max-width: 550px;
-// 	background-color: ${(props) => props.theme.main};
-// `;
+export const BackgroundAccent = styled.div`
+	position: absolute;
+	left: ${(props) => (props.left ? '8vw' : null)};
+	right: ${(props) => (props.right ? '8vw' : null)};
+	max-height: 100vh;
+	height: 90vh;
+	width: 30vw;
+	max-width: 550px;
+	background-color: ${(props) => props.theme.main};
+	z-index: 0;
+`;
 
-// export const HeadingAccent = styled.div`
-// 	height: 100%;
-// 	width: 1.5%;
-// 	background-color: ${(props) => props.theme.main};
-// `;
+export const HeadingAccent = styled.div`
+	height: 100%;
+	width: 1.5%;
+	background-color: ${(props) => props.theme.main};
+`;
 
-// export const Watermark = styled.img`
-// 	position: absolute;
-// 	top: 0vh;
-// 	left: -5vw;
-// 	height: 90vh;
-// 	width: 70vw;
-// 	max-width: 1300px;
-// 	z-index: -1;
-// `;
+export const Watermark = styled.img`
+	position: absolute;
+	top: 0vh;
+	left: -5vw;
+	height: 90vh;
+	width: 70vw;
+	max-width: 1300px;
+	z-index: -1;
+`;

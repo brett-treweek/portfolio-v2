@@ -1,5 +1,5 @@
 import { StyledHeader } from '../../styles/layoutStyles/Header.styled';
-import { FlexContainer, Card, Section } from '../../styles/UIStyles/UiStyles';
+import { FlexContainer, Card, Section, BackgroundAccent } from '../../styles/UIStyles/UiStyles';
 import img5 from '../../../assets/Images/about/img6.jpg';
 import { motion } from 'framer-motion';
 
@@ -7,13 +7,16 @@ const Header = (props) => {
 	return (
 		<StyledHeader>
 			<Section>
-				<FlexContainer ai="center" jc="center" gap='5rem'>
+			{/* <BackgroundAccent right/> */}
+				<FlexContainer ai="center" jc="center" gap='4rem'>
 					<Card dis='block'>
 						<div>
 							<span>hello there</span>
 							<motion.h1
+								className='brett'
+								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
-								transition={{ duration: 2.5 }}
+								transition={{ duration: 2 }}
 							>
 								im brett
 							</motion.h1>

@@ -36,9 +36,9 @@ const Carousel = (props) => {
 								<div className="item">
 									<FlexContainer ai="center" jc="center">
 										<Card
-											// bc={(props) =>
-											// 	props.theme.secondary
-											// }
+											bc={(props) =>
+												props.theme.secondary
+											}
 											bs
 											initial={{
 												opacity: 0,

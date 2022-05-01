@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
 	height: 7vh;
-	/* width: 100vw; */
 	position: sticky;
 	top: 0;
 	display: flex;
@@ -32,7 +31,7 @@ export const StyledNav = styled.nav`
 	.link {
 		text-decoration: none;
 		color: ${({ theme }) => theme.text};
-		transition: all ease 0.6s;
+		transition: all ease 0.3s;
 	}
 
 	.link:hover,

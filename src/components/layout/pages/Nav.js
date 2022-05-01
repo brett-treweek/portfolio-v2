@@ -5,8 +5,6 @@ import { Icon } from '@iconify/react';
 
 const Nav = (props) => {
 
-	// console.log(props);
-	const color = props.theme.highlight;
 	return (
 		<StyledNav>
 			<div id="nav-container-inner">
@@ -14,6 +12,16 @@ const Nav = (props) => {
 					brett treweek
 				</NavLink>
 				<ul>
+					<li>
+						<NavLink
+							className="link"
+							activeClassName="active"
+							to="/work"
+							exact
+						>
+							projects
+						</NavLink>
+					</li>
 					<li>
 						<NavLink
 							className="link"
@@ -28,26 +36,6 @@ const Nav = (props) => {
 						<NavLink
 							className="link"
 							activeClassName="active"
-							to="/work"
-							exact
-						>
-							work
-						</NavLink>
-					</li>
-					<li>
-						<NavLink
-							className="link"
-							activeClassName="active"
-							to="/resume"
-							exact
-						>
-							resume
-						</NavLink>
-					</li>
-					<li>
-						<NavLink
-							className="link"
-							activeClassName="active"
 							to="/contact"
 							exact
 						>
@@ -55,12 +43,12 @@ const Nav = (props) => {
 						</NavLink>
 					</li>
 					<li>
-							<Icon
+						<Icon
+							className="theme-change"
 							onClick={props.changeColor}
-								icon="eos-icons:arrow-rotate"
-								color={color}
-								height="25"
-							/>
+							icon="eos-icons:arrow-rotate"
+							height="25"
+						/>
 					</li>
 				</ul>
 			</div>
