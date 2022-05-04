@@ -9,7 +9,7 @@ export const StyledAbout = styled.section`
 		align-self: flex-start;
 	}
 
-	@media (min-width: 1000px) {
+	@media (min-width: 1200px) {
 		height: 93vh;
 	}
 `;

@@ -55,7 +55,7 @@ export const StyledNav = styled.nav`
 		background-color: transparent;
 	}
 
-	@media (max-width: 1000px) {
+	@media (max-width: 1200px) {
 		display: none;
 	}
 `;

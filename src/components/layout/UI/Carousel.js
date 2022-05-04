@@ -42,13 +42,13 @@ const Carousel = (props) => {
 											bs
 											initial={{
 												opacity: 0,
-												y: '50px',
+												y: '10px',
 											}}
 											animate={{
 												opacity: 1,
 												y: 0,
 											}}
-											transition={{ duration: 1 }}
+											transition={{ duration: 0.7 }}
 										>
 											<h2>{item.title}</h2>
 											<h3>{item.subTitle}</h3>
@@ -78,8 +78,8 @@ const Carousel = (props) => {
 												scale: 1,
 											}}
 											transition={{
-												duration: 1,
-												delay: 0.8,
+												duration: 0.7,
+												delay: 0.4,
 											}}
 										/>
 									</FlexContainer>

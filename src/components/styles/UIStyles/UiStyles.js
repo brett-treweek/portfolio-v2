@@ -58,8 +58,9 @@ export const Section = styled.div`
 		z-index: 1;
 	}
 
-	@media (min-width: 1000px) {
+	@media (min-width: 1200px) {
 		height: 93vh;
+		width: 100%;
 		/* flex-direction: row; */
 		/* padding-top: 5rem; */
 
@@ -87,7 +88,7 @@ export const FlexContainer = styled.div`
 	/* flex-direction: ${({ fd }) => fd || 'column'}; */
 	height: ${({ height }) => height};
 
-	@media (min-width: 1000px) {
+	@media (min-width: 1200px) {
 		flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
 	}
 `;
@@ -99,7 +100,7 @@ export const Card = motion(styled.div`
 	justify-content: ${({ jc }) => jc};
 	flex: ${({ flex }) => flex};
 	background-color: ${({ bc }) => bc || 'transparent'};
-	box-shadow: ${({ bs }) => (bs ? '0 0 10px rgba(0, 0, 0, 0.25)' : 'none')};
+	box-shadow: ${(props) => (props.bs ? props.theme.boxShadow : 'none')};
 	flex-direction: column;
 	padding: 1rem;
 	width: clamp(30vw, 70vw + 5vw, 75vw);
@@ -107,7 +108,7 @@ export const Card = motion(styled.div`
 	color: white;
 	z-index: 10;
 
-	@media (min-width: 1000px) {
+	@media (min-width: 1200px) {
 		width: clamp(20vw, 35vw + 5vw, 40vw);
 		height: 60vh;
 	}
@@ -181,7 +182,7 @@ export const StyledCarousel = styled.div`
 		right: 40%;
 	}
 
-	@media (min-width: 1000px) {
+	@media (min-width: 1200px) {
 		.item .arrow {
 			bottom: 1rem;
 		}
