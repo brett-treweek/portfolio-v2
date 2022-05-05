@@ -30,9 +30,20 @@ const Work = (props) => {
 										animate={{ opacity: 1 }}
 										transition={{ duration: 1.5 }}
 									>
-										<div>
-											<h3>{item.title}</h3>
+										<div className="content-container">
+											<h3 className="card-title">
+												{item.title}
+											</h3>
 											<p>{item.subtitle}</p>
+											<p>{item.body}</p>
+											<div className="button-container">
+												<button className="btn">
+													learn more
+												</button>
+												<button className="btn">
+													git hub
+												</button>
+											</div>
 										</div>
 									</motion.div>
 								);

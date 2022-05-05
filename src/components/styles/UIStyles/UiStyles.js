@@ -2,21 +2,22 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const Section = styled.div`
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	/* border: yellow solid 2px; */
+	user-select: none;
 	height: 100%;
 	width: 100%;
 	padding: 1rem;
 	background-color: ${(props) => props.theme.background};
 
 	h1 {
+		margin-bottom: 2.5rem;
 		font-size: clamp(1.5rem, 5vw + 1rem, 6rem);
 		font-weight: 300;
 		color: ${(props) => props.theme.highlight};
-		margin: 2rem;
 	}
 	h2 {
 		font-size: clamp(0.5rem, 2vw + 1rem, 3rem);
@@ -55,14 +56,13 @@ export const Section = styled.div`
 	img {
 		width: clamp(50vw, 70vw, 90vw);
 		overflow: hidden;
+		border-radius: 1rem;
 		z-index: 1;
 	}
 
 	@media (min-width: 1200px) {
 		height: 93vh;
 		width: 100%;
-		/* flex-direction: row; */
-		/* padding-top: 5rem; */
 
 		p {
 			line-height: 1.9rem;
@@ -77,15 +77,12 @@ export const Section = styled.div`
 `;
 
 export const FlexContainer = styled.div`
-	/* border: solid blue 4px; */
 	display: flex;
 	flex-wrap: wrap;
-	/* height: 100%; */
 	width: 100%;
 	gap: ${({ gap }) => gap || '3rem'};
 	align-items: ${({ ai }) => ai || 'center'};
 	justify-content: ${({ jc }) => jc || 'center'};
-	/* flex-direction: ${({ fd }) => fd || 'column'}; */
 	height: ${({ height }) => height};
 
 	@media (min-width: 1200px) {
@@ -94,7 +91,6 @@ export const FlexContainer = styled.div`
 `;
 
 export const Card = motion(styled.div`
-	/* border: red solid 2px; */
 	display: ${({ dis }) => dis || 'flex'};
 	align-items: ${({ ai }) => ai};
 	justify-content: ${({ jc }) => jc};
@@ -106,6 +102,7 @@ export const Card = motion(styled.div`
 	width: clamp(30vw, 70vw + 5vw, 75vw);
 	max-width: ${({ mw }) => mw || '500px'};
 	color: white;
+	border-radius: 0.7rem;
 	z-index: 10;
 
 	@media (min-width: 1200px) {
@@ -115,7 +112,6 @@ export const Card = motion(styled.div`
 `);
 
 export const Title = styled.h1`
-	/* border: solid green 2px; */
 	padding: 2rem;
 	text-align: center;
 	font-size: clamp(1.5rem, 5vw + 1rem, 8rem);
@@ -125,7 +121,6 @@ export const Title = styled.h1`
 `;
 
 export const StyledCarousel = styled.div`
-	/* border: orange solid 2px; */
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -133,7 +128,6 @@ export const StyledCarousel = styled.div`
 	height: 100%;
 
 	.carousel-container {
-		/* border: pink solid 2px; */
 		position: relative;
 		height: 100%;
 		max-width: 1500px;
@@ -158,6 +152,7 @@ export const StyledCarousel = styled.div`
 	.item img {
 		width: clamp(30vw, 70vw + 5vw, 75vw);
 		height: auto;
+		border-radius: 0.7rem;
 		max-height: 60vh;
 		max-width: 500px;
 	}
@@ -192,7 +187,6 @@ export const StyledCarousel = styled.div`
 export const StyledDots = styled.div`
 	width: 100%;
 	height: 2rem;
-	/* margin: 2rem 0; */
 	display: flex;
 	align-items: center;
 	justify-content: center;

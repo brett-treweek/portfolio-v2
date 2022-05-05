@@ -9,6 +9,8 @@ export const StyledNav = styled.nav`
 	align-items: center;
 	background-color: ${(props) => props.theme.background};
 	z-index: 100;
+	user-select: none;
+	box-shadow: ${(props) => props.theme.boxShadow};
 
 	#nav-container-inner {
 		height: 100%;
@@ -26,16 +28,20 @@ export const StyledNav = styled.nav`
 		padding: 10px 50px;
 		margin: 0 10px;
 		list-style: none;
+		transition: all ease 0.5s;
 	}
 
 	.link {
 		text-decoration: none;
 		color: ${({ theme }) => theme.text};
-		transition: all ease 0.3s;
+		transition: all ease 0.2s;
 	}
 
 	.link:hover,
-	.theme-change:hover {
+	.theme-change:hover,
+	li:hover,
+	.logo:hover {
+		transform: scale(1.1);
 		cursor: pointer;
 		color: ${(props) => props.theme.highlight};
 	}
@@ -46,6 +52,7 @@ export const StyledNav = styled.nav`
 
 	.logo {
 		color: ${({ theme }) => theme.text};
+		transition: all ease 0.5s;
 	}
 
 	.theme-change {
@@ -53,6 +60,7 @@ export const StyledNav = styled.nav`
 		border: none;
 		color: ${({ theme }) => theme.text};
 		background-color: transparent;
+		transition: all ease 0.5s;
 	}
 
 	@media (max-width: 1200px) {

@@ -5,7 +5,6 @@ export const StyledWork = styled.section`
 
 	.work-grid {
 		padding: 2rem;
-		/* border: solid 4px greenyellow; */
 		display: flex;
 		flex-direction: column;
 		gap: 2.5rem;
@@ -15,40 +14,112 @@ export const StyledWork = styled.section`
 
 	.work {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 1.5rem 0;
-		border-radius: 10px;
-		box-shadow: ${({ theme }) => theme.boxShadow};
+		align-items: end;
+		border-radius: 0.7rem;
+		overflow: hidden;
+		box-shadow: ${(props) => props.theme.boxShadow};
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
-		cursor: pointer;
+		user-select: none;
 		height: 20rem;
 		width: 70vw;
+		transition: transform 500ms ease;
 	}
 
-	.work div {
-		width: 100%;
-		background-color: ${(props) => props.theme.secondary};
-		padding: 1rem;
-		text-align: center;
+	.work:hover,
+	.work:focus-within {
+		transform: scale(1.08);
 	}
 
-	.work h3 {
+	.content-container {
+		padding: 1.5rem;
 		width: 100%;
-		color: ${(props) => props.theme.highlight};
-		font-weight: 400;
-		font-size: 1.5rem;
+		background: linear-gradient(
+			hsl(0 0% 0% / 0.5),
+			hsl(0 0% 0% / 0.7) 10%,
+			hsl(0 0% 0% / 1)
+		);
+		transform: translateY(75%);
+		transition: transform 500ms ease;
+	}
+
+	.work:focus-within .content-container {
+		transition: 0ms;
+	}
+
+	.content-container > *:not(.card-title) {
+		opacity: 0;
+		transition: opacity 500ms linear;
+	}
+
+	.work:hover .content-container > *:not(.card-title),
+	.work:focus-within .content-container > *:not(.card-title) {
+		opacity: 1;
+		transition-delay: 800ms;
+	}
+
+	.work:hover .content-container,
+	.work:focus-within .content-container {
+		transform: translateY(0);
+		transition-delay: 500ms;
+	}
+
+	.card-title {
+		margin-bottom: 1.5rem;
+		position: relative;
+		width: max-content;
+		max-width: 100%;
+		color: white;
+		font-weight: 500;
+		font-size: 1.3rem;
+	}
+
+	.card-title::after {
+		content: '';
+		position: absolute;
+		height: 2px;
+		left: -1.5rem;
+		bottom: -0.3rem;
+		background-color: ${({ theme }) => theme.highlight};
+		width: calc(100% + 1.5rem);
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 500ms ease;
+	}
+
+	.work:hover .card-title::after,
+	.work:focus-within .card-title::after {
+		transform: scaleX(1);
 	}
 
 	.work p {
 		font-weight: 300;
 		font-size: 1rem;
+		line-height: 1.2;
+		color: white;
+	}
+
+	.btn {
+		padding: 0.4rem 0.5rem;
+		margin: 0.5rem 0.5rem 0 0;
+		border: none;
+		background-color: green;
+		color: white;
+		border-radius: 5px;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.btn:hover,
+	.btn:focus {
+		background-color: lightgreen;
+		color: black;
 	}
 
 	h1 {
 		align-self: flex-start;
+		margin-left: 15vw;
 	}
 
 	@media (min-width: 1200px) {
