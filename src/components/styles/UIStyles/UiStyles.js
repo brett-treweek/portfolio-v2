@@ -56,7 +56,7 @@ export const Section = styled.div`
 	img {
 		width: clamp(50vw, 70vw, 90vw);
 		overflow: hidden;
-		border-radius: 1rem;
+		/* border-radius: 1rem; */
 		z-index: 1;
 	}
 

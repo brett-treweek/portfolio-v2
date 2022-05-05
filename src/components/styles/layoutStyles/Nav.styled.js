@@ -39,10 +39,15 @@ export const StyledNav = styled.nav`
 
 	.link:hover,
 	.theme-change:hover,
+	.logo:hover {
+		cursor: pointer;
+	}
+
+	.link:hover,
+	.theme-change:hover,
 	li:hover,
 	.logo:hover {
 		transform: scale(1.1);
-		cursor: pointer;
 		color: ${(props) => props.theme.highlight};
 	}
 
