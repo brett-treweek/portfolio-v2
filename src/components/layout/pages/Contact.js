@@ -1,6 +1,5 @@
 import {
-	Section,
-	Title,
+	Section
 } from '../../styles/UIStyles/UiStyles';
 import { StyledWork } from '../../styles/layoutStyles/Work.styled';
 
@@ -8,7 +7,7 @@ const Contact = (props) => {
 	return (
 		<StyledWork id="work">
 			<Section>
-				<Title>contact</Title>
+				<h1>contact</h1>
 			</Section>
 		</StyledWork>
 	);

@@ -1,8 +1,6 @@
 import {
 	Section,
-	Title,
 	FlexContainer,
-	Card,
 } from '../../styles/UIStyles/UiStyles';
 import workData from '../../../assets/workData';
 import { StyledWork } from '../../styles/layoutStyles/Work.styled';
@@ -14,7 +12,6 @@ const Work = (props) => {
 			<Section>
 				<h1>projects</h1>
 				<FlexContainer>
-					<div>
 						<div className="work-grid">
 							{workData.map((item, index) => {
 								return (
@@ -49,7 +46,6 @@ const Work = (props) => {
 								);
 							})}
 						</div>
-					</div>
 				</FlexContainer>
 			</Section>
 		</StyledWork>

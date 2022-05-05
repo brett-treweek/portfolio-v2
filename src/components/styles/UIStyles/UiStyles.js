@@ -10,8 +10,7 @@ export const Section = styled.div`
 	user-select: none;
 	height: 100%;
 	width: 100%;
-	padding: 1rem;
-	background-color: ${(props) => props.theme.background};
+	padding: 2rem;
 
 	h1 {
 		margin-bottom: 2.5rem;
@@ -55,14 +54,13 @@ export const Section = styled.div`
 
 	img {
 		width: clamp(50vw, 70vw, 90vw);
+		max-width: 500px;
 		overflow: hidden;
-		/* border-radius: 1rem; */
 		z-index: 1;
 	}
 
-	@media (min-width: 1200px) {
+	@media (min-width: 1000px) {
 		height: 93vh;
-		width: 100%;
 
 		p {
 			line-height: 1.9rem;
@@ -71,21 +69,21 @@ export const Section = styled.div`
 
 		img {
 			width: clamp(20vw, 30vw + 5vw, 35vw);
-			max-width: 600px;
 		}
 	}
 `;
 
 export const FlexContainer = styled.div`
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	width: 100%;
+	height: 100%;
 	gap: ${({ gap }) => gap || '3rem'};
 	align-items: ${({ ai }) => ai || 'center'};
 	justify-content: ${({ jc }) => jc || 'center'};
 	height: ${({ height }) => height};
 
-	@media (min-width: 1200px) {
+	@media (min-width: 1000px) {
 		flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
 	}
 `;
@@ -99,112 +97,19 @@ export const Card = motion(styled.div`
 	box-shadow: ${(props) => (props.bs ? props.theme.boxShadow : 'none')};
 	flex-direction: column;
 	padding: 1rem;
-	width: clamp(30vw, 70vw + 5vw, 75vw);
+	width: clamp(10vw, 70vw + 5vw, 75vw);
 	max-width: ${({ mw }) => mw || '500px'};
 	color: white;
-	border-radius: 0.7rem;
 	z-index: 10;
 
-	@media (min-width: 1200px) {
+	@media (min-width: 1000px) {
 		width: clamp(20vw, 35vw + 5vw, 40vw);
 		height: 60vh;
 	}
 `);
 
-export const Title = styled.h1`
-	padding: 2rem;
-	text-align: center;
-	font-size: clamp(1.5rem, 5vw + 1rem, 8rem);
-	font-weight: 300;
-	background-color: transparent;
-	color: ${(props) => props.theme.highlight};
-`;
 
-export const StyledCarousel = styled.div`
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
 
-	.carousel-container {
-		position: relative;
-		height: 100%;
-		max-width: 1500px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.item-container {
-		height: 100%;
-	}
-
-	.item {
-		height: 100%;
-		max-width: 1200px;
-	}
-
-	.item div {
-		position: relative;
-	}
-
-	.item img {
-		width: clamp(30vw, 70vw + 5vw, 75vw);
-		height: auto;
-		border-radius: 0.7rem;
-		max-height: 60vh;
-		max-width: 500px;
-	}
-
-	.item .arrow {
-		color: ${(props) => props.theme.text};
-		width: clamp(0.5rem, 1vw + 1rem, 5rem);
-		z-index: 100;
-		position: absolute;
-		bottom: -2.5rem;
-		cursor: pointer;
-	}
-
-	.arrow:hover {
-		color: ${(props) => props.theme.highlight};
-	}
-
-	.left {
-		left: 40%;
-	}
-	.right {
-		right: 40%;
-	}
-
-	@media (min-width: 1200px) {
-		.item .arrow {
-			bottom: 1rem;
-		}
-	}
-`;
-
-export const StyledDots = styled.div`
-	width: 100%;
-	height: 2rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-`;
-
-export const Dot = styled.span`
-	padding: 5px;
-	margin: 10px;
-	border-radius: 50%;
-	background-color: ${(props) =>
-		props.active ? props.theme.text : props.theme.faded};
-	cursor: pointer;
-	transition: 0.3s ease;
-
-	&:hover {
-		background-color: ${(props) => props.theme.highlight};
-	}
-`;
 
 export const BackgroundAccent = styled.div`
 	position: absolute;

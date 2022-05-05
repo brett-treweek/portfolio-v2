@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import {
 	FlexContainer,
-	StyledCarousel,
 	Card,
 } from '../../styles/UIStyles/UiStyles';
+import { StyledCarousel } from '../../styles/layoutStyles/About.styled';
 import Dots from './Dots';
 import { motion } from 'framer-motion';
 import { Icon } from '@iconify/react';

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
+	background-color: ${(props) => props.theme.background};
 	height: 100%;
 	width: 100%;
 
@@ -12,7 +13,7 @@ export const StyledHeader = styled.header`
 		color: ${(props) => props.theme.highlight};
 	}
 
-	@media (min-width: 1200px) {
+	@media (min-width: 1000px) {
 		height: 93vh;
 	}
 `;

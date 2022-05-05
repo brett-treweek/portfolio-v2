@@ -1,4 +1,4 @@
-import { Dot, StyledDots } from '../../styles/UIStyles/UiStyles';
+import { Dot, StyledDots } from '../../styles/layoutStyles/About.styled';
 
 const Dots = ({ data, dotClick, active }) => (
 	<StyledDots>

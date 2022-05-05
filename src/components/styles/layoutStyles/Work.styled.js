@@ -1,21 +1,19 @@
 import styled from 'styled-components';
 
 export const StyledWork = styled.section`
-	background-color: ${(props) => props.theme.background};
+	background-color: brown;
 
 	.work-grid {
-		padding: 2rem;
 		display: flex;
 		flex-direction: column;
 		gap: 2.5rem;
-		height: 100%;
-		width: 100%;
+		height: auto;
+		width: auto;
 	}
 
 	.work {
 		display: flex;
 		align-items: end;
-		border-radius: 0.7rem;
 		overflow: hidden;
 		box-shadow: ${(props) => props.theme.boxShadow};
 		background-position: center;
@@ -118,26 +116,30 @@ export const StyledWork = styled.section`
 	}
 
 	h1 {
-		align-self: flex-start;
-		margin-left: 15vw;
+		align-self: center;
 	}
 
-	@media (min-width: 1200px) {
-		height: 93vh;
+	@media (min-width: 1000px) {
+		/* height: 100%; */
 
 		.work-grid {
-			/* border: solid 4px greenyellow; */
 			display: grid;
 			gap: 2rem;
 			grid-template-columns: repeat(8, 115px);
-			grid-template-rows: repeat(7, 110px);
-			height: 100%;
-			width: 100%;
+			grid-template-rows: repeat(6, 110px);
+			height: auto;
+			width: auto;
 		}
 
 		.work {
 			height: auto;
 			width: auto;
+		}
+
+		h1 {
+			/* position: relative;
+			top: 10vh;
+			left: 10vw; */
 		}
 
 		.work:nth-child(1) {

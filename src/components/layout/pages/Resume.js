@@ -1,14 +1,13 @@
 import { StyledResume } from '../../styles/layoutStyles/Resume.styled';
 import {
-	Section,
-	Title,
+	Section
 } from '../../styles/UIStyles/UiStyles';
 
 const Resume = (props) => {
 	return (
 		<StyledResume>
 			<Section>
-				<Title>resume</Title>
+				<h1>resume</h1>
 			</Section>
 		</StyledResume>
 	);

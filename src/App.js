@@ -12,7 +12,7 @@ import themeData from './assets/themeData';
 
 function App() {
 	let lastTheme = parseInt(localStorage.getItem('localTheme'));
-	const [themeIndex, setThemeIndex] = useState(lastTheme);
+	const [themeIndex, setThemeIndex] = useState(lastTheme || 0);
 	const length = themeData.length;
 	
 	console.log('theme-index', themeIndex);
