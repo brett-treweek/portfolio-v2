@@ -14,6 +14,6 @@ export const StyledHeader = styled.header`
 	}
 
 	@media (min-width: 1000px) {
-		height: 93vh;
+		/* height: 93vh; */
 	}
 `;

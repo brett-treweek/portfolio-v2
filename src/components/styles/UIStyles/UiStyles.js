@@ -60,7 +60,7 @@ export const Section = styled.div`
 	}
 
 	@media (min-width: 1000px) {
-		height: 93vh;
+		/* height: 93vh; */
 
 		p {
 			line-height: 1.9rem;

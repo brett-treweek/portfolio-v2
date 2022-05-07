@@ -10,7 +10,7 @@ export const StyledAbout = styled.section`
 	}
 
 	@media (min-width: 1000px) {
-		height: 93vh;
+		/* height: 93vh; */
 	}
 
 	

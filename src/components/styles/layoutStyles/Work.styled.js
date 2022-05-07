@@ -7,7 +7,7 @@ export const StyledWork = styled.section`
 		display: flex;
 		flex-direction: column;
 		gap: 2.5rem;
-		height: auto;
+		height: 100%;
 		width: auto;
 	}
 
@@ -120,20 +120,22 @@ export const StyledWork = styled.section`
 	}
 
 	@media (min-width: 1000px) {
-		/* height: 100%; */
+		height: 100%;
 
 		.work-grid {
+			border: solid 2px green;
 			display: grid;
 			gap: 2rem;
-			grid-template-columns: repeat(8, 115px);
-			grid-template-rows: repeat(6, 110px);
-			height: auto;
-			width: auto;
+			grid-template-columns: repeat(8, 0.8fr);
+			grid-template-rows: repeat(6, 0.8fr);
+			height: 100%;
+			width: 100%;
+			max-width: 1300px;
 		}
 
 		.work {
-			height: auto;
-			width: auto;
+			height: 100%;
+			width: 100%;
 		}
 
 		h1 {
