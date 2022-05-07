@@ -28,26 +28,27 @@ export const StyledNav = styled.nav`
 		padding: 10px 50px;
 		margin: 0 10px;
 		list-style: none;
-		transition: all ease 0.5s;
+		transition: all ease 0.3s;
 	}
 
 	.link {
 		text-decoration: none;
 		color: ${({ theme }) => theme.text};
-		transition: all ease 0.2s;
+		transition: all ease 0.3s;
+		cursor: pointer;
 	}
 
-	.link:hover,
+	/* .link:hover,
 	.theme-change:hover,
 	.logo:hover {
 		cursor: pointer;
-	}
+	} */
 
 	.link:hover,
 	.theme-change:hover,
 	li:hover,
 	.logo:hover {
-		color: ${(props) => props.theme.main};
+		color: ${(props) => props.theme.highlight};
 	}
 
 	.active {
@@ -56,7 +57,8 @@ export const StyledNav = styled.nav`
 
 	.logo {
 		color: ${({ theme }) => theme.text};
-		transition: all ease 0.5s;
+		transition: all ease 0.3s;
+		cursor: pointer;
 	}
 
 	.theme-change {
@@ -64,7 +66,8 @@ export const StyledNav = styled.nav`
 		border: none;
 		color: ${({ theme }) => theme.text};
 		background-color: transparent;
-		transition: all linear 0.5s;
+		transition: all linear 0.3s;
+		cursor: pointer;
 	}
 
 	@media (max-width: 1000px) {

@@ -36,9 +36,7 @@ const Carousel = (props) => {
 								<div className="item">
 									<FlexContainer ai="center" jc="center">
 										<Card
-											bc={(props) =>
-												props.theme.card
-											}
+											bc={(props) => props.theme.card}
 											bs
 											initial={{
 												opacity: 0,
@@ -53,18 +51,6 @@ const Carousel = (props) => {
 											<h2>{item.title}</h2>
 											<h3>{item.subTitle}</h3>
 											<p>{item.body}</p>
-											<Icon
-												icon="eva:arrow-ios-back-fill"
-												height="25"
-												onClick={prevSlide}
-												className="arrow left"
-											/>
-											<Icon
-												icon="eva:arrow-ios-forward-fill"
-												height="25"
-												onClick={nextSlide}
-												className="arrow right"
-											/>
 										</Card>
 										<motion.img
 											src={item.image}
@@ -84,6 +70,7 @@ const Carousel = (props) => {
 										/>
 									</FlexContainer>
 								</div>
+
 								<Dots
 									data={props.data}
 									dotClick={dotClick}
@@ -94,6 +81,18 @@ const Carousel = (props) => {
 					</div>
 				))}
 			</div>
+			<Icon
+				icon="eva:arrow-ios-back-fill"
+				height="25"
+				onClick={prevSlide}
+				className="arrow left"
+			/>
+			<Icon
+				icon="eva:arrow-ios-forward-fill"
+				height="25"
+				onClick={nextSlide}
+				className="arrow right"
+			/>
 		</StyledCarousel>
 	);
 };

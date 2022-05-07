@@ -76,9 +76,9 @@ export const StyledWork = styled.section`
 		transition: all linear 0.2;
 	}
 
-	.work:hover .card-title {
-		color: ${({ theme }) => theme.secondary};
-	}
+	/* .work:hover .card-title {
+		color: ${({ theme }) => theme.highlight};
+	} */
 
 	.card-title::after {
 		content: '';

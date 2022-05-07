@@ -13,19 +13,19 @@ export const Section = styled.div`
 	h1 {
 		margin-bottom: 2.5rem;
 		font-size: clamp(1.5rem, 5vw + 1rem, 6rem);
-		font-weight: 300;
+		font-weight: 400;
 		color: ${(props) => props.theme.highlight};
 	}
 	h2 {
 		font-size: clamp(0.5rem, 2vw + 1rem, 3rem);
-		font-weight: 300;
+		font-weight: 400;
 		margin-bottom: 1rem;
 		color: ${(props) => props.theme.main};
 	}
 	h3 {
 		font-size: clamp(0.5rem, 1vw + 0.8rem, 1.8rem);
-		font-weight: 300;
-		color: ${(props) => props.theme.secondary};
+		font-weight: 400;
+		color: ${(props) => props.theme.text};
 	}
 	h4 {
 		font-size: clamp(0.4rem, 1vw + 0.7rem, 1.7rem);
@@ -43,7 +43,7 @@ export const Section = styled.div`
 	}
 	p {
 		width: 100%;
-		font-weight: 200;
+		font-weight: 300;
 		font-size: clamp(0.6rem, 1vw + 0.6rem, 1.4rem);
 		margin-top: 1rem;
 		line-height: 1.4rem;

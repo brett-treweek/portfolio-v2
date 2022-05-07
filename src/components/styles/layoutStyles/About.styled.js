@@ -49,33 +49,48 @@ export const StyledCarousel = styled.div`
 
 	.item img {
 		width: clamp(10vw, 70vw + 5vw, 75vw);
+		box-shadow: ${({ theme }) => theme.boxShadow};
 		height: auto;
 		max-width: 500px;
 	}
 
-	.item .arrow {
-		color: ${(props) => props.theme.text};
-		width: clamp(0.5rem, 1vw + 1rem, 5rem);
+	.arrow {
+		color: ${({ theme }) => theme.highlight};
+		background-color: ${({ theme }) => theme.watermarkLight};
+		border-radius: 100%;
+		width: 50px;
+		height: 50px;
 		z-index: 100;
 		position: absolute;
-		bottom: -2.5rem;
+		transform: translateY(-50%);
+		top: 50%;
 		cursor: pointer;
+		transition: all linear 0.2s;
 	}
 
-	.arrow:hover {
-		color: ${(props) => props.theme.highlight};
+	.arrow:hover,
+	.arrow:focus {
+		background-color: ${({ theme }) => theme.watermark};
 	}
 
 	.left {
-		left: 40%;
+		left: -15%;
 	}
 	.right {
-		right: 40%;
+		right: -15%;
 	}
 
 	@media (min-width: 1000px) {
-		.item .arrow {
-			bottom: 1rem;
+		.arrow {
+			width: 70px;
+			height: 70px;
+		}
+
+		.left {
+			left: -3%;
+		}
+		.right {
+			right: -3%;
 		}
 
 		.item img {
@@ -87,22 +102,23 @@ export const StyledCarousel = styled.div`
 
 export const StyledDots = styled.div`
 	width: 100%;
-	height: 2rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 `;
 
 export const Dot = styled.span`
-	padding: 5px;
+	/* transform: translateY(100%); */
+	transform: translateX(-100%);
+	padding: 7px;
 	margin: 10px;
-	border-radius: 50%;
+	border-radius: 100%;
 	background-color: ${(props) =>
-		props.active ? props.theme.text : props.theme.faded};
+		props.active ? props.theme.highlight : props.theme.text};
 	cursor: pointer;
-	transition: 0.3s ease;
+	transition: all 0.3s ease;
 
 	&:hover {
-		background-color: ${(props) => props.theme.highlight};
+		background-color: ${(props) => props.theme.main};
 	}
 `;

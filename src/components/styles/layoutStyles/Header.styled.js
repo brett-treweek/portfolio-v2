@@ -7,7 +7,7 @@ export const StyledHeader = styled.header`
 		text-align: start;
 		margin: 0;
 		font-size: clamp(1.5rem, 5vw + 1rem, 7.8rem);
-		font-weight: 400;
+		font-weight: 500;
 		color: ${(props) => props.theme.highlight};
 	}
 
