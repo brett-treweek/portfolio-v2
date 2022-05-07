@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
 	background-color: ${(props) => props.theme.background};
-	height: 100%;
-	width: 100%;
 
 	.brett {
 		text-align: start;
@@ -14,6 +12,9 @@ export const StyledHeader = styled.header`
 	}
 
 	@media (min-width: 1000px) {
-		/* height: 93vh; */
+		min-height: 93vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 `;

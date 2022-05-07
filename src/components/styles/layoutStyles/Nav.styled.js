@@ -47,12 +47,11 @@ export const StyledNav = styled.nav`
 	.theme-change:hover,
 	li:hover,
 	.logo:hover {
-		transform: scale(1.1);
-		color: ${(props) => props.theme.highlight};
+		color: ${(props) => props.theme.main};
 	}
 
 	.active {
-		color: ${({ theme }) => theme.highlight};
+		color: ${({ theme }) => theme.main};
 	}
 
 	.logo {
@@ -65,10 +64,10 @@ export const StyledNav = styled.nav`
 		border: none;
 		color: ${({ theme }) => theme.text};
 		background-color: transparent;
-		transition: all ease 0.5s;
+		transition: all linear 0.5s;
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: 1000px) {
 		display: none;
 	}
 `;

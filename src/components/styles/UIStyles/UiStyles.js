@@ -8,8 +8,6 @@ export const Section = styled.div`
 	align-items: center;
 	justify-content: center;
 	user-select: none;
-	height: 100%;
-	width: 100%;
 	padding: 2rem;
 
 	h1 {
@@ -22,12 +20,12 @@ export const Section = styled.div`
 		font-size: clamp(0.5rem, 2vw + 1rem, 3rem);
 		font-weight: 300;
 		margin-bottom: 1rem;
-		color: ${(props) => props.theme.text};
+		color: ${(props) => props.theme.main};
 	}
 	h3 {
 		font-size: clamp(0.5rem, 1vw + 0.8rem, 1.8rem);
 		font-weight: 300;
-		color: ${(props) => props.theme.text};
+		color: ${(props) => props.theme.secondary};
 	}
 	h4 {
 		font-size: clamp(0.4rem, 1vw + 0.7rem, 1.7rem);
@@ -60,7 +58,6 @@ export const Section = styled.div`
 	}
 
 	@media (min-width: 1000px) {
-		/* height: 93vh; */
 
 		p {
 			line-height: 1.9rem;
@@ -76,8 +73,8 @@ export const Section = styled.div`
 export const FlexContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	height: 100%;
+	/* width: 100%; */
+	/* height: 100%; */
 	gap: ${({ gap }) => gap || '3rem'};
 	align-items: ${({ ai }) => ai || 'center'};
 	justify-content: ${({ jc }) => jc || 'center'};
@@ -104,7 +101,7 @@ export const Card = motion(styled.div`
 
 	@media (min-width: 1000px) {
 		width: clamp(20vw, 35vw + 5vw, 40vw);
-		height: 60vh;
+		height: clamp(300px, 800px, 800px);
 	}
 `);
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledAbout = styled.section`
-	background-color: blue;
+	background-color: ${(props) => props.theme.background};
 	height: 100%;
 	width: 100%;
 
@@ -10,10 +10,11 @@ export const StyledAbout = styled.section`
 	}
 
 	@media (min-width: 1000px) {
-		/* height: 93vh; */
+		min-height: 93vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
-
-	
 `;
 
 export const StyledCarousel = styled.div`
@@ -78,7 +79,8 @@ export const StyledCarousel = styled.div`
 		}
 
 		.item img {
-			height: 60vh;
+			width: clamp(200px, 450px + 1vw, 500px);
+			height: clamp(300px, 800px, 800px);
 		}
 	}
 `;

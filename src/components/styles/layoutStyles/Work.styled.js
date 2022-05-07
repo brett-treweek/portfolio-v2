@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledWork = styled.section`
-	background-color: brown;
+	background-color: ${(props) => props.theme.background};
 
 	.work-grid {
 		display: flex;
@@ -16,7 +16,8 @@ export const StyledWork = styled.section`
 		align-items: end;
 		overflow: hidden;
 		box-shadow: ${(props) => props.theme.boxShadow};
-		background-position: center;
+		border-radius: 1rem;
+		background-position: top;
 		background-size: cover;
 		background-repeat: no-repeat;
 		user-select: none;
@@ -68,15 +69,21 @@ export const StyledWork = styled.section`
 		position: relative;
 		width: max-content;
 		max-width: 100%;
-		color: white;
+		color: #fff;
 		font-weight: 500;
 		font-size: 1.3rem;
+		letter-spacing: 0.05ch;
+		transition: all linear 0.2;
+	}
+
+	.work:hover .card-title {
+		color: ${({ theme }) => theme.secondary};
 	}
 
 	.card-title::after {
 		content: '';
 		position: absolute;
-		height: 2px;
+		height: 3px;
 		left: -1.5rem;
 		bottom: -0.3rem;
 		background-color: ${({ theme }) => theme.highlight};
@@ -102,7 +109,7 @@ export const StyledWork = styled.section`
 		padding: 0.4rem 0.5rem;
 		margin: 0.5rem 0.5rem 0 0;
 		border: none;
-		background-color: green;
+		background-color: ${({ theme }) => theme.secondary};
 		color: white;
 		border-radius: 5px;
 		text-decoration: none;
@@ -111,8 +118,7 @@ export const StyledWork = styled.section`
 
 	.btn:hover,
 	.btn:focus {
-		background-color: lightgreen;
-		color: black;
+		background-color: ${({ theme }) => theme.main};
 	}
 
 	h1 {
@@ -120,17 +126,19 @@ export const StyledWork = styled.section`
 	}
 
 	@media (min-width: 1000px) {
-		height: 100%;
+		min-height: 93vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
 		.work-grid {
-			border: solid 2px green;
 			display: grid;
 			gap: 2rem;
 			grid-template-columns: repeat(8, 0.8fr);
 			grid-template-rows: repeat(6, 0.8fr);
 			height: 100%;
 			width: 100%;
-			max-width: 1300px;
+			max-width: 1200px;
 		}
 
 		.work {

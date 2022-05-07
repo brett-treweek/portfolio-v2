@@ -1,8 +1,8 @@
-import img1 from './Images/work/roundReport.PNG';
-import img2 from './Images/work/warzone.png';
-import img3 from './Images/work/weatherScreenshot.PNG';
+import img1 from './Images/work/homepage02.webp';
+import img2 from './Images/work/stats2.png';
+import img3 from './Images/work/weather.jpg';
 import img4 from './Images/work/insomnia.PNG';
-import img5 from './Images/work/stats2.png';
+import img5 from './Images/work/techBlogScreenshot.PNG';
 import img6 from './Images/work/liamsSite.png';
 
 const workData = [
@@ -10,6 +10,13 @@ const workData = [
 		title: 'Round Report',
 		subtitle: 'A fullstack hazard tracking web app',
 		img: `${img1}`,
+		alt: '',
+		body: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+	},
+	{
+		title: 'Tech Blog',
+		subtitle: 'node app',
+		img: `${img5}`,
 		alt: '',
 		body: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
 	},
@@ -28,23 +35,16 @@ const workData = [
 		body: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
 	},
 	{
-		title: 'E-Commerce Backend',
-		subtitle: 'ecommerce backend',
-		img: `${img4}`,
-		alt: '',
-		body: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-	},
-	{
-		title: 'Profile generator',
-		subtitle: 'node app',
-		img: `${img5}`,
-		alt: '',
-		body: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-	},
-	{
 		title: 'Weather App',
 		subtitle: 'Website using',
 		img: `${img3}`,
+		alt: '',
+		body: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+	},
+	{
+		title: 'E-Commerce Backend',
+		subtitle: 'ecommerce backend',
+		img: `${img4}`,
 		alt: '',
 		body: 'Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
 	},
