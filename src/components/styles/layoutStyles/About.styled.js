@@ -2,15 +2,18 @@ import styled from 'styled-components';
 
 export const StyledAbout = styled.section`
 	background-color: ${(props) => props.theme.background};
+	/* border-bottom: solid grey 1px; */
 	height: 100%;
 	width: 100%;
+	padding: 2rem;
 
 	h1 {
 		align-self: center;
 	}
 
 	@media (min-width: 1000px) {
-		min-height: 93vh;
+		/* min-height: 93vh; */
+		padding-top: 8rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -94,7 +97,7 @@ export const StyledCarousel = styled.div`
 		}
 
 		.item img {
-			width: clamp(200px, 450px + 1vw, 500px);
+			width: clamp(200px, 500px, 500px);
 			height: clamp(300px, 800px, 800px);
 		}
 	}

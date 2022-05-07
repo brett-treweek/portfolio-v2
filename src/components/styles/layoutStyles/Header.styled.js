@@ -11,10 +11,23 @@ export const StyledHeader = styled.header`
 		color: ${(props) => props.theme.highlight};
 	}
 
+	img {
+		width: clamp(50vw, 70vw, 90vw);
+		max-width: 500px;
+		overflow: hidden;
+		z-index: 1;
+	}
+
 	@media (min-width: 1000px) {
 		min-height: 93vh;
+		/* padding-top: 10rem; */
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		img {
+			width: clamp(20vw, 30vw + 5vw, 35vw);
+			/* align-self: start; */
+		}
 	}
 `;

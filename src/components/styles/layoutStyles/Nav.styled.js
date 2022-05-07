@@ -8,7 +8,7 @@ export const StyledNav = styled.nav`
 	justify-content: center;
 	align-items: center;
 	background-color: ${(props) => props.theme.background};
-	z-index: 100;
+	z-index: 1000;
 	user-select: none;
 	box-shadow: ${(props) => props.theme.boxShadow};
 

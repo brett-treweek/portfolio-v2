@@ -50,31 +50,23 @@ export const Section = styled.div`
 		color: ${(props) => props.theme.text};
 	}
 
-	img {
-		width: clamp(50vw, 70vw, 90vw);
-		max-width: 500px;
-		overflow: hidden;
-		z-index: 1;
-	}
+	
 
 	@media (min-width: 1000px) {
-
 		p {
 			line-height: 1.9rem;
 			letter-spacing: 0.05ch;
 		}
 
-		img {
-			width: clamp(20vw, 30vw + 5vw, 35vw);
-		}
+		
 	}
 `;
 
 export const FlexContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	/* width: 100%; */
-	/* height: 100%; */
+	width: 100%;
+	height: 100%;
 	gap: ${({ gap }) => gap || '3rem'};
 	align-items: ${({ ai }) => ai || 'center'};
 	justify-content: ${({ jc }) => jc || 'center'};
@@ -101,7 +93,7 @@ export const Card = motion(styled.div`
 
 	@media (min-width: 1000px) {
 		width: clamp(20vw, 35vw + 5vw, 40vw);
-		height: clamp(300px, 800px, 800px);
+		height: ${({ height }) => height || '100%' };
 	}
 `);
 

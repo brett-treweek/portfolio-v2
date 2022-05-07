@@ -34,6 +34,7 @@ function App() {
 					<Header />
 					<Work/>
 					<About/>
+					<Contact/>
 				</Route>
 				<Route path="/about" exact>
 					<About />

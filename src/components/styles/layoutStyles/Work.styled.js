@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledWork = styled.section`
+	padding: 2rem;
 	background-color: ${(props) => props.theme.background};
+	/* border-bottom: solid grey 1px; */
 
 	.work-grid {
 		display: flex;
@@ -15,14 +17,15 @@ export const StyledWork = styled.section`
 		display: flex;
 		align-items: end;
 		overflow: hidden;
-		box-shadow: ${(props) => props.theme.boxShadow};
-		border-radius: 1rem;
+		/* box-shadow: ${(props) => props.theme.boxShadow}; */
+		/* border-radius: 1rem; */
 		background-position: top;
 		background-size: cover;
 		background-repeat: no-repeat;
 		user-select: none;
 		height: 20rem;
 		width: 70vw;
+		max-width: 500px;
 		transition: transform 500ms ease;
 	}
 
@@ -76,10 +79,6 @@ export const StyledWork = styled.section`
 		transition: all linear 0.2;
 	}
 
-	/* .work:hover .card-title {
-		color: ${({ theme }) => theme.highlight};
-	} */
-
 	.card-title::after {
 		content: '';
 		position: absolute;
@@ -126,7 +125,7 @@ export const StyledWork = styled.section`
 	}
 
 	@media (min-width: 1000px) {
-		min-height: 93vh;
+		/* min-height: 93vh; */
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -144,12 +143,6 @@ export const StyledWork = styled.section`
 		.work {
 			height: 100%;
 			width: 100%;
-		}
-
-		h1 {
-			/* position: relative;
-			top: 10vh;
-			left: 10vw; */
 		}
 
 		.work:nth-child(1) {
