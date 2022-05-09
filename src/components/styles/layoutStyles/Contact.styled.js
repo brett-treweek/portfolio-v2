@@ -9,15 +9,15 @@ export const StyledContact = styled.section`
 	align-items: center;
 
 	@media (min-width: 1000px) {
-		padding: 4rem;
+		padding: 6rem;
 		/* min-height: 93vh; */
 	}
 `;
 
 export const StyledForm = styled.div`
 	width: 1048px;
-	max-width: 95vw;
-	padding: 40px;
+	max-width: 90vw;
+	padding: 1rem;
 	box-shadow: ${({ theme }) => theme.boxShadow};
 	background-color: ${({ theme }) => theme.card};
 
@@ -28,7 +28,7 @@ export const StyledForm = styled.div`
 
 	h1 {
 		text-align: center;
-		font-size: clamp(0.5rem, 2vw + 1rem, 3rem);
+		font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
 		color: ${({ theme }) => theme.highlight};
 		font-weight: 400;
 		margin: 0 0 2rem;
@@ -36,10 +36,34 @@ export const StyledForm = styled.div`
 
 	h2,
 	h3,
-	p {
+	h4,
+	.link-container,
+	.phone-container {
 		color: ${({ theme }) => theme.text};
 		font-weight: 400;
-		margin-bottom: 0.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.phone-container,
+	.link-container {
+		display: inline-flex;
+		gap: 1rem;
+		align-items: center;
+		justify-content: start;
+	}
+
+	.link {
+		color: ${({ theme }) => theme.secondary};
+		text-decoration: none;
+	}
+
+	.link:hover {
+		color: ${({theme}) => theme.main}
+	} 
+	
+	.icon a {
+		width: max-content;
+		margin-right: 1rem;
 	}
 
 	.textField {
@@ -47,9 +71,6 @@ export const StyledForm = styled.div`
 		color: #fff;
 		border-radius: 4px;
 		background-color: #fff;
-	}
-
-	.textField label {
 	}
 
 	#btn {
@@ -63,5 +84,9 @@ export const StyledForm = styled.div`
 	#alert {
 		color: #fff;
 		background-color: green;
+	}
+
+	@media (min-width: 1000px) {
+		padding: 3rem;
 	}
 `;

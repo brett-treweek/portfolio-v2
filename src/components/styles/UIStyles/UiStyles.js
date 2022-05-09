@@ -8,7 +8,7 @@ export const Section = styled.div`
 	align-items: center;
 	justify-content: center;
 	user-select: none;
-	padding: 2rem;
+	/* padding: 2rem; */
 
 	h1 {
 		margin-bottom: 2.5rem;

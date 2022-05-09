@@ -3,12 +3,18 @@ import workData from '../../../assets/workData';
 import { StyledWork } from '../../styles/layoutStyles/Work.styled';
 import { motion } from 'framer-motion';
 import { Icon } from '@iconify/react';
+import projectImage from '../../../assets/Images/projects.svg';
 
 const Work = (props) => {
 	return (
 		<StyledWork id="work">
 			<Section>
-				<h1>projects</h1>
+				<img
+					src={projectImage}
+					alt="title projects with github logo"
+					className="projects-github"
+				>
+				</img>
 				<FlexContainer>
 					<div className="work-grid">
 						{workData.map((item, index) => {

@@ -5,6 +5,7 @@ import {
 	StyledForm,
 } from '../../styles/layoutStyles/Contact.styled';
 import { Card, FlexContainer } from '../../styles/UIStyles/UiStyles';
+import { Icon } from '@iconify/react';
 // import emailjs from 'emailjs-com';
 
 const Contact = () => {
@@ -46,10 +47,53 @@ const Contact = () => {
 					<Card height="100%" className="contact-card">
 						<h2>Brett Treweek</h2>
 						<h3>Perth, Western Australia</h3>
-						<h3>0401 043 178</h3>
-						<p>bretttrew@gmail.com</p>
-						<p>Github</p>
-						<p>Linkedin</p>
+						<div className="phone-container">
+							<Icon
+								className="icon"
+								icon="el:phone-alt"
+								height="30"
+							/>
+							<div>
+								<p>0401 043 178</p>
+							</div>
+						</div>
+						<div className="link-container">
+							<Icon
+								className="icon"
+								icon="dashicons:email-alt"
+								height="30"
+							/>
+							<a
+								href="mailto:bretttrew@gmail.com"
+								className="link"
+							>
+								bretttrew@gmail.com
+							</a>
+						</div>
+						<div className="link-container icon">
+							<a
+								href="https://github.com/brett-treweek"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<Icon
+									className="link"
+									icon="fa:github"
+									width="30"
+								/>
+							</a>
+							<a
+								href="https://linkedin.com/in/brett-treweek"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<Icon
+									className="link"
+									icon="akar-icons:linkedin-box-fill"
+									height="30"
+								/>
+							</a>
+						</div>
 					</Card>
 					<Box component="form" Validate onSubmit={sendEmail} sx={{}}>
 						<TextField

@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
 export const StyledWork = styled.section`
-	padding: 2rem;
+	padding: 6rem 0 2rem;
 	background-color: ${(props) => props.theme.background};
+
+	.projects-github {
+		width: clamp(100px, 100px + 20vw, 500px);
+		filter: ${(props) => props.theme.filter};
+		margin-bottom: 2rem;
+	}
 
 	.work-grid {
 		display: flex;
@@ -23,7 +29,8 @@ export const StyledWork = styled.section`
 		height: 20rem;
 		width: 70vw;
 		max-width: 500px;
-		transition: all 300ms ease;
+		box-shadow: ${({ theme }) => theme.boxShadow};
+		transition: all 200ms ease;
 	}
 
 	.work:hover {
@@ -38,7 +45,7 @@ export const StyledWork = styled.section`
 			hsl(0 0% 0% / 0.85) 10%,
 			hsl(0 0% 0% / 1)
 		);
-		transform: translateY(77%);
+		transform: translateY(75%);
 		transition: transform 500ms ease;
 	}
 
@@ -149,12 +156,13 @@ export const StyledWork = styled.section`
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding: 0 1rem;
 
 		.work-grid {
 			display: grid;
 			gap: 2rem;
-			grid-template-columns: repeat(8, 0.8fr);
-			grid-template-rows: repeat(6, 0.8fr);
+			grid-template-columns: repeat(8, 1fr);
+			grid-template-rows: repeat(6, 1fr);
 			height: 100%;
 			width: 100%;
 			max-width: 1200px;
