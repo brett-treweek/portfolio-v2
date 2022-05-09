@@ -32,25 +32,26 @@ const Work = (props) => {
 										<p>{item.subtitle}</p>
 										<p>{item.body}</p>
 										<div className="button-container">
-											<button
-												className="btn"
-												href={item.link}
+											<button className="btn">
+												<a
+													href={item.link}
+													target="_blank"
+													rel="noreferrer"
+												>
+													View
+												</a>
+											</button>
+
+											<a
+												href={item.gitHub}
 												target="_blank"
 												rel="noreferrer"
 											>
-												See Work
-											</button>
-
-											<Icon
-												className="github"
-												icon="fa:github"
-											>
-												<a
-													href={item.gitHub}
-													target="_blank"
-													rel="noreferrer"
-												></a>
-											</Icon>
+												<Icon
+													className="github"
+													icon="fa:github"
+												/>
+											</a>
 										</div>
 									</div>
 								</motion.div>

@@ -23,23 +23,22 @@ export const StyledWork = styled.section`
 		height: 20rem;
 		width: 70vw;
 		max-width: 500px;
-		transition: transform 500ms ease;
+		transition: all 300ms ease;
 	}
 
-	.work:hover,
-	.work:focus-within {
-		transform: scale(1.08);
+	.work:hover {
+		transform: scale(1.05);
 	}
 
 	.content-container {
 		padding: 1.5rem;
 		width: 100%;
 		background: linear-gradient(
-			hsl(0 0% 0% / 0.5),
-			hsl(0 0% 0% / 0.7) 10%,
+			hsl(0 0% 0% / 0.6),
+			hsl(0 0% 0% / 0.85) 10%,
 			hsl(0 0% 0% / 1)
 		);
-		/* transform: translateY(75%); */
+		transform: translateY(77%);
 		transition: transform 500ms ease;
 	}
 
@@ -48,7 +47,7 @@ export const StyledWork = styled.section`
 	}
 
 	.content-container > *:not(.card-title) {
-		/* opacity: 0; */
+		opacity: 0;
 		transition: opacity 500ms linear;
 	}
 
@@ -72,8 +71,8 @@ export const StyledWork = styled.section`
 		color: #fff;
 		font-weight: 500;
 		font-size: 1.3rem;
-		letter-spacing: 0.05ch;
-		transition: all linear 0.2;
+		letter-spacing: 0.07ch;
+		/* transition: all linear 0.2; */
 	}
 
 	.card-title::after {
@@ -95,10 +94,11 @@ export const StyledWork = styled.section`
 	}
 
 	.work p {
-		font-weight: 300;
+		font-weight: 200;
 		font-size: 1rem;
 		line-height: 1.2;
 		color: white;
+		letter-spacing: 0.07ch;
 	}
 
 	.button-container {
@@ -106,37 +106,38 @@ export const StyledWork = styled.section`
 		height: 100%;
 		display: inline-flex;
 		justify-content: start;
-		align-items: start;
-	}
-
-	.button-container a {
-		/* width: 100%;
-		height: 100%; */
+		align-items: flex-start;
+		gap: 1rem;
+		margin-top: 1rem;
 	}
 
 	.btn {
 		padding: 0.5rem 1rem;
-		margin: 2rem 0.5rem 0 0;
 		border: none;
 		background-color: ${({ theme }) => theme.secondary};
-		color: white;
 		border-radius: 5px;
-		text-decoration: none;
 		cursor: pointer;
 	}
 
-	.btn:hover,
-	.github:hover .btn:focus,
-	.github:focus {
-		background-color: ${({ theme }) => theme.main};
+	.btn a {
+		text-decoration: none;
+		color: white;
 	}
 
 	.github {
 		color: ${({ theme }) => theme.secondary};
-		height: 35px;
-		width: 35px;
-		transform: translateY(50%);
-		margin: 1.5rem;
+		height: 32px;
+		width: 32px;
+	}
+
+	.github:hover,
+	.github:focus {
+		color: ${({ theme }) => theme.main};
+	}
+
+	.btn:hover,
+	.btn:focus {
+		background-color: ${({ theme }) => theme.main};
 	}
 
 	h1 {
@@ -189,13 +190,4 @@ export const StyledWork = styled.section`
 			grid-row: 4 / 6;
 		}
 	}
-`;
-
-export const StyledModal = styled.div`
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0,0,0, 0.7);
 `;

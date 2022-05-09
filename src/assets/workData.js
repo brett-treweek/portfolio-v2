@@ -48,8 +48,8 @@ const workData = [
 		img: `${img3}`,
 		alt: 'weather app',
 		link: 'https://brett-treweek.github.io/Simple-Weather-App/',
-		gitHub: 'https://github.com/brett-treweek',
-		body: 'Built with HTML, CSS, Javascript. This purely frontend web app makes API calls to get weather data and uses local storage to save search history. Bootcamp Project.',
+		gitHub: 'https://github.com/brett-treweek/Simple-Weather-App',
+		body: 'Built with HTML, CSS, Javascript. This web app makes API calls to get weather data and uses local storage to save search history. Bootcamp Project.',
 	},
 	{
 		title: 'E-Commerce Backend',
