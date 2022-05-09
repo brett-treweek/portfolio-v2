@@ -46,6 +46,10 @@ export const StyledCarousel = styled.div`
 		max-width: 1200px;
 	}
 
+	.about-card {
+		/* styling of about content here */
+	}
+
 	.item div {
 		position: relative;
 	}

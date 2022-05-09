@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Snackbar, Alert, Box, TextField, Button, Slide } from '@mui/material';
 import {
 	StyledContact,
@@ -6,10 +6,11 @@ import {
 } from '../../styles/layoutStyles/Contact.styled';
 import { Card, FlexContainer } from '../../styles/UIStyles/UiStyles';
 import { Icon } from '@iconify/react';
-// import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 	const [open, setOpen] = useState(false);
+	const form = useRef()
 
 	const handleClose = () => {
 		setOpen(false);
@@ -18,22 +19,22 @@ const Contact = () => {
 	const sendEmail = (event) => {
 		event.preventDefault();
 		setOpen(true);
-		// emailjs
-		// 	.sendForm(
-		// 		'service_r1o1bg2',
-		// 		'template_lff938p',
-		// 		event.target,
-		// 		'user_EUQIT1kNZJfWl6ouFWojf'
-		// 	)
-		// 	.then(
-		// 		(result) => {
-		// 			setOpen(true);
-		// 			console.log(result.text);
-		// 		},
-		// 		(error) => {
-		// 			console.log(error.text);
-		// 		}
-		// 	);
+		emailjs
+			.sendForm(
+				'service_r1o1bg2',
+				'template_jtdh9at',
+				form.current,
+				'user_EUQIT1kNZJfWl6ouFWojf'
+			)
+			.then(
+				(result) => {
+					setOpen(true);
+					console.log(result);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
 		event.target.reset();
 
 		console.log('you sucssefully submited email');
@@ -95,7 +96,7 @@ const Contact = () => {
 							</a>
 						</div>
 					</Card>
-					<Box component="form" Validate onSubmit={sendEmail} sx={{}}>
+					<Box ref={form} component="form" Validate onSubmit={sendEmail} sx={{}}>
 						<TextField
 							name="name"
 							className="textField"

@@ -1,6 +1,6 @@
 import { StyledHeader } from '../../styles/layoutStyles/Header.styled';
 import { FlexContainer, Card, Section } from '../../styles/UIStyles/UiStyles';
-import img5 from '../../../assets/Images/about/img6.jpg';
+import img1 from '../../../assets/Images/about/img1.jpg';
 import { motion } from 'framer-motion';
 
 const Header = (props) => {
@@ -36,7 +36,7 @@ const Header = (props) => {
 							</p>
 						</motion.div>
 					</Card>
-					<img src={img5} alt="" />
+					<img src={img1} alt="portrait of brett on charles bridge" />
 				</FlexContainer>
 			</Section>
 		</StyledHeader>

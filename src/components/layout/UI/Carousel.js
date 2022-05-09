@@ -36,6 +36,7 @@ const Carousel = (props) => {
 								<div className="item">
 									<FlexContainer ai="center" jc="center">
 										<Card
+											className='about-card'
 											height="clamp(300px, 800px, 800px)"
 											bc={(props) => props.theme.card}
 											bs
@@ -51,7 +52,23 @@ const Carousel = (props) => {
 										>
 											<h2>{item.title}</h2>
 											<h3>{item.subTitle}</h3>
-											<p>{item.body}</p>
+											<p>{item.body1}</p>
+											<p>{item.body2}</p>
+											<p>{item.body3}</p>
+											{item.body4 && <p>{item.body4}</p>}
+											{item.bodyArray && (
+												<ul>
+													{item.bodyArray.map(
+														(interest) => {
+															return (
+																<li>
+																	{interest}
+																</li>
+															);
+														}
+													)}
+												</ul>
+											)}
 										</Card>
 										<motion.img
 											src={item.image}
