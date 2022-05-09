@@ -1,10 +1,8 @@
-import {
-	Section,
-	FlexContainer,
-} from '../../styles/UIStyles/UiStyles';
+import { Section, FlexContainer } from '../../styles/UIStyles/UiStyles';
 import workData from '../../../assets/workData';
 import { StyledWork } from '../../styles/layoutStyles/Work.styled';
 import { motion } from 'framer-motion';
+import { Icon } from '@iconify/react';
 
 const Work = (props) => {
 	return (
@@ -12,40 +10,53 @@ const Work = (props) => {
 			<Section>
 				<h1>projects</h1>
 				<FlexContainer>
-						<div className="work-grid">
-							{workData.map((item, index) => {
-								return (
-									<motion.div
-										className="work"
-										key={index}
-										bgimg={item.img}
-										style={{
-											backgroundImage:
-												'url(' + item.img + ')',
-										}}
-										initial={{ opacity: 0 }}
-										animate={{ opacity: 1 }}
-										transition={{ duration: 1.5 }}
-									>
-										<div className="content-container">
-											<h3 className="card-title">
-												{item.title}
-											</h3>
-											<p>{item.subtitle}</p>
-											<p>{item.body}</p>
-											<div className="button-container">
-												<button className="btn">
-													learn more
-												</button>
-												<button className="btn">
-													git hub
-												</button>
-											</div>
+					<div className="work-grid">
+						{workData.map((item, index) => {
+							return (
+								<motion.div
+									className="work"
+									key={index}
+									bgimg={item.img}
+									style={{
+										backgroundImage:
+											'url(' + item.img + ')',
+									}}
+									initial={{ opacity: 0 }}
+									animate={{ opacity: 1 }}
+									transition={{ duration: 1.5 }}
+								>
+									<div className="content-container">
+										<h3 className="card-title">
+											{item.title}
+										</h3>
+										<p>{item.subtitle}</p>
+										<p>{item.body}</p>
+										<div className="button-container">
+											<button
+												className="btn"
+												href={item.link}
+												target="_blank"
+												rel="noreferrer"
+											>
+												See Work
+											</button>
+
+											<Icon
+												className="github"
+												icon="fa:github"
+											>
+												<a
+													href={item.gitHub}
+													target="_blank"
+													rel="noreferrer"
+												></a>
+											</Icon>
 										</div>
-									</motion.div>
-								);
-							})}
-						</div>
+									</div>
+								</motion.div>
+							);
+						})}
+					</div>
 				</FlexContainer>
 			</Section>
 		</StyledWork>

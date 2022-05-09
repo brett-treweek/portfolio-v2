@@ -57,7 +57,6 @@ const Contact = () => {
 							className="textField"
 							label="Name"
 							variant="filled"
-							focussed
 							fullWidth
 							required
 						/>
@@ -83,7 +82,7 @@ const Contact = () => {
 							className="textField"
 							label="Message"
 							variant="filled"
-							rows={6}
+							rows={10}
 							multiline
 							fullWidth
 						/>
