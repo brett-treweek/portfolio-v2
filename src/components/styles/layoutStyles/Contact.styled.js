@@ -15,8 +15,8 @@ export const StyledContact = styled.section`
 `;
 
 export const StyledForm = styled.div`
-	width: 1048px;
-	max-width: 90vw;
+	width: 500px;
+	max-width: 95vw;
 	padding: 1rem;
 	box-shadow: ${({ theme }) => theme.boxShadow};
 	background-color: ${({ theme }) => theme.card};
@@ -88,5 +88,6 @@ export const StyledForm = styled.div`
 
 	@media (min-width: 1000px) {
 		padding: 3rem;
+		width: 1048px
 	}
 `;

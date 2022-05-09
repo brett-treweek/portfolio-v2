@@ -4,7 +4,6 @@ import { StyledNav } from '../../styles/layoutStyles/Nav.styled';
 import { Icon } from '@iconify/react';
 
 const Nav = (props) => {
-
 	return (
 		<StyledNav>
 			<div id="nav-container-inner">
