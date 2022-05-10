@@ -3,21 +3,20 @@ export const StyledContact = styled.section`
 	background-color: ${(props) => props.theme.background};
 	height: 100%;
 	width: 100%;
-	padding: 2rem;
+	padding: 3rem 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
 	@media (min-width: 1000px) {
-		padding: 6rem;
-		/* min-height: 93vh; */
+		padding: 10rem 0;
 	}
 `;
 
 export const StyledForm = styled.div`
 	width: 500px;
-	max-width: 95vw;
-	padding: 1rem;
+	max-width: 90vw;
+	padding: 2rem 1rem;
 	box-shadow: ${({ theme }) => theme.boxShadow};
 	background-color: ${({ theme }) => theme.card};
 

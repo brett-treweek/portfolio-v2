@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const StyledWork = styled.section`
-	padding: 6rem 0 2rem;
+	padding: 3rem 0;
 	background-color: ${(props) => props.theme.background};
 
 	.projects-github {
-		width: clamp(100px, 100px + 20vw, 500px);
+		width: clamp(160px, 160px + 20vw, 450px);
 		filter: ${(props) => props.theme.filter};
-		margin-bottom: 2rem;
+		margin-bottom: 2.5rem;
 	}
 
 	.work-grid {
@@ -27,7 +27,7 @@ export const StyledWork = styled.section`
 		background-repeat: no-repeat;
 		user-select: none;
 		height: 20rem;
-		width: 70vw;
+		width: clamp(10vw, 75vw + 2rem, 90vw);
 		max-width: 500px;
 		box-shadow: ${({ theme }) => theme.boxShadow};
 		transition: all 200ms ease;
@@ -38,14 +38,14 @@ export const StyledWork = styled.section`
 	}
 
 	.content-container {
-		padding: 1.5rem;
+		padding: 1rem;
 		width: 100%;
 		background: linear-gradient(
 			hsl(0 0% 0% / 0.6),
 			hsl(0 0% 0% / 0.85) 10%,
 			hsl(0 0% 0% / 1)
 		);
-		transform: translateY(75%);
+		transform: translateY(79%);
 		transition: transform 500ms ease;
 	}
 
@@ -101,11 +101,11 @@ export const StyledWork = styled.section`
 	}
 
 	.work p {
-		font-weight: 200;
-		font-size: 1rem;
+		font-weight: 300;
+		font-size: clamp(0.9rem, 1vw + 0.3rem, 1rem);
 		line-height: 1.2;
 		color: white;
-		letter-spacing: 0.07ch;
+		letter-spacing: 0.04ch;
 	}
 
 	.button-container {
@@ -152,20 +152,20 @@ export const StyledWork = styled.section`
 	}
 
 	@media (min-width: 1000px) {
-		/* min-height: 93vh; */
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 0 1rem;
+		padding: 0 1rem 1rem;
 
 		.work-grid {
 			display: grid;
 			gap: 2rem;
 			grid-template-columns: repeat(8, 1fr);
-			grid-template-rows: repeat(6, 1fr);
+			grid-template-rows: repeat(6, 0.7fr);
 			height: 100%;
 			width: 100%;
 			max-width: 1200px;
+			max-height: 800px;
 		}
 
 		.work {

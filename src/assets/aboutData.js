@@ -1,8 +1,7 @@
 import img1 from './Images/about/about1.png';
 import img2 from './Images/about/about2.png';
-import img3 from './Images/about/about3.png';
-import img4 from './Images/about/about4.png';
-import img5 from './Images/about/about5.png';
+import img3 from './Images/about/about3.webp';
+
 
 const aboutData = [
 	{
@@ -12,7 +11,7 @@ const aboutData = [
 		alt: '',
 		body1: 'All of my spare time is currently spent learning web development and levelling up. My goal is to become a developer.',
 		body2: 'I love the problem solving and creative aspects of coding, and I enjoy the process of continuous learning. I wish I had discovered this passion sooner.',
-		body3: 'Technologies of current focus include:',
+		body3: 'Technologies of current focus include',
 		bodyArray: [
 			'Javascript',
 			'HTML and CSS',
@@ -33,18 +32,18 @@ const aboutData = [
 		subTitle: 'Past and Present',
 		image: `${img2}`,
 		alt: '',
-		body1: 'I am currently a postie and have worked at Australia Post for ten years. I have enjoyed my time with post, delivering the mail in both Melbourne and Perth.',
-		body2: 'I have previously worked as a croupier at Crown Casino, and as a Cook at a busy Italian resturant in Fremantle.',
+		body1: 'I am currently a postie and have worked at Australia Post for ten years. I have enjoyed my time with post, working in both Melbourne and Perth.',
+		body2: 'I have previously worked as a croupier at Crown Casino, and as a Cook in a busy Italian resturant in Fremantle.',
 		body3: 'I studied Biology for two years at Murdoch University - If only I had enrolled in computer science...',
 		body4: 'References are available upon request.',
 	},
 	{
-		title: 'Hobbies and Passtimes',
+		title: 'Passtimes',
 		image: `${img3}`,
 		alt: '',
 		body1: 'I am a new father so I love to spend time with my fiancee and daughter.',
-		body2: 'My hobbies and interests include:',
-		body3: '',
+		body2: '',
+		body3: 'My hobbies and interests include',
 		bodyArray: [
 			'Web Development, coding and computers',
 			'Reading science fiction and fantasy',

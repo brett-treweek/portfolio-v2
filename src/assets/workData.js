@@ -13,7 +13,7 @@ const workData = [
 		alt: 'round report',
 		link: 'https://round-report.herokuapp.com/',
 		gitHub: 'https://github.com/brett-treweek/Round-Report',
-		body: 'Designed to identify and communicate hazards for posties at Australia Post. Currently under further development in order to demo to Australia Post management next month. Personal Project',
+		body: 'Designed to identify and communicate hazards for posties at Australia Post. Currently under further development in order to demo and trial at the request of Australia Post management. Personal Project',
 	},
 	{
 		title: 'Tech Blog',
@@ -22,7 +22,7 @@ const workData = [
 		alt: 'tech blog',
 		link: 'https://fullstack-tech-blog.herokuapp.com/',
 		gitHub: 'https://github.com/brett-treweek',
-		body: 'Blog site using Node.js backend, Express server, Mysql database, and Handlebars templating. Bootcamp Project.',
+		body: 'Blog site using Node.js backend, Express server, MySQL database, Handlebars templating, HTML, CSS and Javascript. Bootcamp Project.',
 	},
 	{
 		title: 'Session Stats',
@@ -31,7 +31,7 @@ const workData = [
 		alt: 'warzone stats discord bot',
 		link: 'https://github.com/brett-treweek/friday-night-warzone-stats',
 		gitHub: 'https://github.com/brett-treweek/friday-night-warzone-stats',
-		body: 'Built in node.js with discord.js to provide realtime stats of Call of Duty Warzone games. Designed to give an overview of performance over the night/session. API requests used to get game data. Personal Project.',
+		body: 'Built in node.js with discord.js to provide realtime stats of Call of Duty Warzone games. Designed to give an overview of performance over the night/session. Rest API requests used to fetch game data. Personal Project.',
 	},
 	{
 		title: 'Liams Landing',
@@ -40,16 +40,16 @@ const workData = [
 		alt: 'liams landing page',
 		link: 'https://ownahomewa.com',
 		gitHub: 'https://github.com/brett-treweek/liams-website',
-		body: 'This website was designed in Figma and built with React, using Styled Compnents, Material UI, Email.js. Personal Project.',
+		body: 'This website was designed in Figma and built with React, using Styled Compnents, Material UI and Email.js. Personal Project.',
 	},
 	{
 		title: 'Weather App',
-		subtitle: 'Frontend website with API calls.',
+		subtitle: 'Frontend website with REST API requests.',
 		img: `${img3}`,
 		alt: 'weather app',
 		link: 'https://brett-treweek.github.io/Simple-Weather-App/',
 		gitHub: 'https://github.com/brett-treweek/Simple-Weather-App',
-		body: 'Built with HTML, CSS, Javascript. This web app makes API calls to get weather data and uses local storage to save search history. Bootcamp Project.',
+		body: 'Built with HTML, CSS, Javascript. This web app makes API requests to get weather data and uses local storage to save search history. Bootcamp Project.',
 	},
 	{
 		title: 'E-Commerce Backend',
@@ -58,7 +58,7 @@ const workData = [
 		alt: 'e-commerce back end',
 		link: 'https://drive.google.com/file/d/1FCYHqZUdpDvJH5w-hsaiwWO633WRc6Pq/view',
 		gitHub: 'https://github.com/brett-treweek/Easy-E-Commerce-Back-End',
-		body: 'Built with Express.js, MySQL and Sequelize to query and interact with a database. Insomnia is used to test various requests. Bootcamp Project.',
+		body: 'API built with Express.js, MySQL and Sequelize to query and interact with a database. Insomnia is used to test various requests. Bootcamp Project.',
 	},
 ];
 

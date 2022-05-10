@@ -59,9 +59,9 @@ const Carousel = (props) => {
 											{item.bodyArray && (
 												<ul>
 													{item.bodyArray.map(
-														(interest) => {
+														(interest, i) => {
 															return (
-																<li>
+																<li key={i}>
 																	{interest}
 																</li>
 															);

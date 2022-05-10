@@ -12,7 +12,7 @@ export const Section = styled.div`
 
 	h1 {
 		margin-bottom: 2.5rem;
-		font-size: clamp(1.5rem, 5vw + 1rem, 6rem);
+		font-size: clamp(3.5rem, 5vw + 2rem, 6rem);
 		font-weight: 400;
 		color: ${(props) => props.theme.highlight};
 	}
@@ -44,9 +44,9 @@ export const Section = styled.div`
 	p {
 		width: 100%;
 		font-weight: 300;
-		font-size: clamp(0.6rem, 1vw + 0.6rem, 1.4rem);
+		font-size: clamp(1rem, 1.2vw + 0.3rem, 1.3rem);
 		margin-top: 1rem;
-		line-height: 1.4rem;
+		line-height: 1.2rem;
 		color: ${(props) => props.theme.text};
 	}
 
@@ -54,8 +54,8 @@ export const Section = styled.div`
 
 	@media (min-width: 1000px) {
 		p {
-			line-height: 1.9rem;
-			letter-spacing: 0.05ch;
+			line-height: 1.5rem;
+			letter-spacing: 0.02ch;
 		}
 
 		
@@ -86,7 +86,7 @@ export const Card = motion(styled.div`
 	box-shadow: ${(props) => (props.bs ? props.theme.boxShadow : 'none')};
 	flex-direction: column;
 	padding: 1rem;
-	width: clamp(10vw, 70vw + 5vw, 75vw);
+	width: clamp(10vw, 75vw + 2rem, 90vw);
 	max-width: ${({ mw }) => mw || '500px'};
 	color: white;
 	z-index: 10;

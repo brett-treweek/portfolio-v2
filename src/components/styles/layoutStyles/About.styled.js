@@ -2,18 +2,16 @@ import styled from 'styled-components';
 
 export const StyledAbout = styled.section`
 	background-color: ${(props) => props.theme.background};
-	/* border-bottom: solid grey 1px; */
 	height: 100%;
 	width: 100%;
-	padding: 2rem;
+	padding: 3rem 0;
 
 	h1 {
 		align-self: center;
 	}
 
 	@media (min-width: 1000px) {
-		/* min-height: 93vh; */
-		padding-top: 8rem;
+		padding: 10rem 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -46,8 +44,17 @@ export const StyledCarousel = styled.div`
 		max-width: 1200px;
 	}
 
-	.about-card {
-		/* styling of about content here */
+	.about-card ul{
+		padding: 1rem;
+	}
+
+	.about-card li {
+		/* margin: 1rem; */
+		font-size: clamp(0.8rem, 1vw + 0.3rem, 1.1rem);
+		color: ${({ theme }) => theme.text};
+		font-weight: 300;
+		line-height: 1.3;
+		list-style: none;
 	}
 
 	.item div {
@@ -55,7 +62,7 @@ export const StyledCarousel = styled.div`
 	}
 
 	.item img {
-		width: clamp(10vw, 70vw + 5vw, 75vw);
+		width: clamp(10vw, 75vw + 2rem, 90vw);
 		box-shadow: ${({ theme }) => theme.boxShadow};
 		height: auto;
 		max-width: 500px;
@@ -70,7 +77,7 @@ export const StyledCarousel = styled.div`
 		z-index: 100;
 		position: absolute;
 		transform: translateY(-50%);
-		top: 50%;
+		top: 42%;
 		cursor: pointer;
 		transition: all linear 0.2s;
 	}
@@ -81,14 +88,19 @@ export const StyledCarousel = styled.div`
 	}
 
 	.left {
-		left: -15%;
+		left: -8%;
 	}
 	.right {
-		right: -15%;
+		right: -8%;
 	}
 
 	@media (min-width: 1000px) {
+		.about-card {
+			padding: 3rem;
+		}
+
 		.arrow {
+			top: 50%;
 			width: 70px;
 			height: 70px;
 		}
@@ -115,7 +127,6 @@ export const StyledDots = styled.div`
 `;
 
 export const Dot = styled.span`
-	/* transform: translateY(100%); */
 	transform: translateX(-100%);
 	padding: 7px;
 	margin: 10px;
