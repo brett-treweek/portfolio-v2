@@ -1,9 +1,9 @@
 import img1 from './Images/work/homepage02.webp';
-import img2 from './Images/work/stats2.png';
-import img3 from './Images/work/weather.jpg';
-import img4 from './Images/work/insomnia.PNG';
-import img5 from './Images/work/techBlogScreenshot.PNG';
-import img6 from './Images/work/liamsSite.png';
+import img2 from './Images/work/newPost.PNG';
+import img3 from './Images/work/stats2.png';
+import img4 from './Images/work/liamsSite.png';
+import img5 from './Images/work/weather.jpg';
+import img6 from './Images/work/insomnia.PNG';
 
 const workData = [
 	{
@@ -18,7 +18,7 @@ const workData = [
 	{
 		title: 'Tech Blog',
 		subtitle: 'Fullstack Blogging Site.',
-		img: `${img5}`,
+		img: `${img2}`,
 		alt: 'tech blog',
 		link: 'https://fullstack-tech-blog.herokuapp.com/',
 		gitHub: 'https://github.com/brett-treweek',
@@ -27,7 +27,7 @@ const workData = [
 	{
 		title: 'Session Stats',
 		subtitle: 'Discord bot to track game stats.',
-		img: `${img2}`,
+		img: `${img3}`,
 		alt: 'warzone stats discord bot',
 		link: 'https://github.com/brett-treweek/friday-night-warzone-stats',
 		gitHub: 'https://github.com/brett-treweek/friday-night-warzone-stats',
@@ -36,7 +36,7 @@ const workData = [
 	{
 		title: 'Liams Landing',
 		subtitle: 'Landing page for a friend.',
-		img: `${img6}`,
+		img: `${img4}`,
 		alt: 'liams landing page',
 		link: 'https://ownahomewa.com',
 		gitHub: 'https://github.com/brett-treweek/liams-website',
@@ -45,7 +45,7 @@ const workData = [
 	{
 		title: 'Weather App',
 		subtitle: 'Frontend website with REST API requests.',
-		img: `${img3}`,
+		img: `${img5}`,
 		alt: 'weather app',
 		link: 'https://brett-treweek.github.io/Simple-Weather-App/',
 		gitHub: 'https://github.com/brett-treweek/Simple-Weather-App',
@@ -54,7 +54,7 @@ const workData = [
 	{
 		title: 'E-Commerce Backend',
 		subtitle: 'E-Commerce Backend with CRUD functionality.',
-		img: `${img4}`,
+		img: `${img6}`,
 		alt: 'e-commerce back end',
 		link: 'https://drive.google.com/file/d/1FCYHqZUdpDvJH5w-hsaiwWO633WRc6Pq/view',
 		gitHub: 'https://github.com/brett-treweek/Easy-E-Commerce-Back-End',

@@ -9,7 +9,7 @@ const themeData = [
 		card: '#000',
 		watermark: 'hsl(0, 0%, 100%, 0.3)',
 		watermarkLight: 'hsl(0, 0%, 100%, 0.1)',
-		boxShadow: '0px 0px 15px hsl(0, 0%, 100%, 0.3)',
+		boxShadow: '0px 0px 10px hsl(0, 0%, 100%, 0.5)',
 		filter: 'invert(68%) sepia(100%) saturate(244%) hue-rotate(3deg) brightness(93%) contrast(100%)',
 	},
 	{
@@ -22,7 +22,7 @@ const themeData = [
 		card: '#fff',
 		watermark: 'hsl(0, 0%, 0%, 0.5)',
 		watermarkLight: 'hsl(0, 0%, 0%, 0.2)',
-		boxShadow: '0px 0px 15px hsl(0, 0%, 0%, 0.7)',
+		boxShadow: '0px 0px 10px hsl(0, 0%, 0%, 0.7)',
 		filter: 'invert(42%) sepia(20%) saturate(5286%) hue-rotate(165deg) brightness(92%) contrast(101%)',
 	},
 	{
@@ -35,7 +35,7 @@ const themeData = [
 		card: '#0e0e0e',
 		watermark: 'hsl(0, 0%, 100%, 0.3)',
 		watermarkLight: 'hsl(0, 0%, 100%, 0.1)',
-		boxShadow: '0px 0px 15px hsl(0, 0%, 100%, 0.3)',
+		boxShadow: '0px 0px 10px hsl(0, 0%, 100%, 0.5)',
 		filter: 'invert(44%) sepia(78%) saturate(2705%) hue-rotate(12deg) brightness(108%) contrast(103%)',
 	},
 ];
