@@ -2,7 +2,7 @@ import img1 from './Images/work/homepage02.webp';
 import img2 from './Images/work/newPost.PNG';
 import img3 from './Images/work/stats2.png';
 import img4 from './Images/work/liamsSite.png';
-import img5 from './Images/work/weather.jpg';
+import img5 from './Images/work/weather.webp';
 import img6 from './Images/work/insomnia.PNG';
 
 const workData = [

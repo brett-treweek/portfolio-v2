@@ -30,7 +30,7 @@ export const StyledWork = styled.section`
 		width: clamp(10vw, 75vw + 2rem, 90vw);
 		max-width: 500px;
 		box-shadow: ${({ theme }) => theme.boxShadow};
-		transition: all 200ms ease;
+		transition: all 300ms ease;
 	}
 
 	.work:hover {
@@ -45,7 +45,7 @@ export const StyledWork = styled.section`
 			hsl(0 0% 0% / 0.85) 10%,
 			hsl(0 0% 0% / 1)
 		);
-		transform: translateY(79%);
+		transform: translateY(75%);
 		transition: transform 500ms ease;
 	}
 
@@ -79,17 +79,16 @@ export const StyledWork = styled.section`
 		font-weight: 500;
 		font-size: 1.3rem;
 		letter-spacing: 0.07ch;
-		/* transition: all linear 0.2; */
 	}
 
 	.card-title::after {
 		content: '';
 		position: absolute;
-		height: 3px;
-		left: -1.5rem;
+		height: 2px;
+		left: -1rem;
 		bottom: -0.3rem;
 		background-color: ${({ theme }) => theme.highlight};
-		width: calc(100% + 1.5rem);
+		width: calc(100% + 1rem);
 		transform: scaleX(0);
 		transform-origin: left;
 		transition: transform 500ms ease;
@@ -132,6 +131,7 @@ export const StyledWork = styled.section`
 	}
 
 	.github {
+		align-self: flex-end;
 		color: ${({ theme }) => theme.secondary};
 		height: 32px;
 		width: 32px;
@@ -171,6 +171,10 @@ export const StyledWork = styled.section`
 		.work {
 			height: 100%;
 			width: 100%;
+		}
+
+		.content-container {
+			height: 100%;
 		}
 
 		.work:nth-child(1) {
