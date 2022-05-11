@@ -129,7 +129,7 @@ export const StyledDots = styled.div`
 export const Dot = styled.span`
 	transform: translateX(-100%);
 	padding: 7px;
-	margin: 10px;
+	margin: 20px;
 	border-radius: 100%;
 	background-color: ${(props) =>
 		props.active ? props.theme.highlight : props.theme.text};

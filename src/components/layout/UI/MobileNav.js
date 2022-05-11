@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import styled from 'styled-components';
 import { Hamburger } from './Hamburger';
+import { Logo } from './Logo';
 
 const NavLinksContainer = styled.div`
 	width: 100%;
@@ -60,15 +61,7 @@ export const MobileNavLinks = (props) => {
 
 	return (
 		<NavLinksContainer>
-			<NavLink
-				className="logo"
-				to="/"
-				activeClassName="active"
-				exact
-				onClick={() => setOpen(false)}
-			>
-				brett treweek
-			</NavLink>
+			<Logo/>
 			<Hamburger isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
 			{isOpen && (
 				<LinksWrapper>

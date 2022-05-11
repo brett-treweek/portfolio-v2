@@ -8,6 +8,7 @@ import Nav from './components/layout/pages/Nav';
 import Resume from './components/layout/pages/Resume';
 import Contact from './components/layout/pages/Contact';
 import themeData from './assets/themeData';
+import {Footer} from './components/layout/pages/Footer';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
 					<Work/>
 					<About/>
 					<Contact/>
+					<Footer/>
 				</Route>
 				<Route path="/about" exact>
 					<About />

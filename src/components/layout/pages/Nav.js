@@ -3,14 +3,13 @@ import { NavLink } from 'react-router-dom';
 import { StyledNav, DesktopNav } from '../../styles/layoutStyles/Nav.styled';
 import { Icon } from '@iconify/react';
 import { MobileNavLinks } from '../UI/MobileNav';
+import { Logo } from '../UI/Logo';
 
 const Nav = (props) => {
 	return (
 		<StyledNav>
 			<DesktopNav>
-				<NavLink className="link" to="/" activeClassName="logo" exact>
-					brett treweek
-				</NavLink>
+				<Logo/>
 				<ul>
 					<li>
 						<NavLink
