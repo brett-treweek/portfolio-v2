@@ -10,12 +10,18 @@ const Header = (props) => {
 				<FlexContainer ai="center" jc="center" gap="4rem">
 					<Card dis="block">
 						<div>
-							<span>hello there</span>
+							<motion.span
+								initial={{ opacity: 0, scale: 0.95 }}
+								animate={{ opacity: 1, scale: 1 }}
+								transition={{ delay: 0.3, duration: 0.4 }}
+							>
+								hello there
+							</motion.span>
 							<motion.h6
 								className="brett"
-								initial={{ opacity: 0 }}
-								animate={{ opacity: 1 }}
-								transition={{ duration: 2 }}
+								initial={{ opacity: 0, scale: 0.5 }}
+								animate={{ opacity: 1, scale: [1, 1.05, 1] }}
+								transition={{ delay: 1, duration: 0.7 }}
 							>
 								im brett
 							</motion.h6>
@@ -23,7 +29,7 @@ const Header = (props) => {
 						<motion.div
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
-							transition={{ duration: 1, delay: 1 }}
+							transition={{ delay: 1.7, duration: 1 }}
 						>
 							<h3>Full Stack Web Developer</h3>
 							<h4>(in development)</h4>
@@ -36,7 +42,13 @@ const Header = (props) => {
 							</p>
 						</motion.div>
 					</Card>
-					<img src={img1} alt="portrait of brett on charles bridge" />
+					<motion.img
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ delay: 2, duration: 1 }}
+						src={img1}
+						alt="portrait of brett on charles bridge"
+					/>
 				</FlexContainer>
 			</Section>
 		</StyledHeader>

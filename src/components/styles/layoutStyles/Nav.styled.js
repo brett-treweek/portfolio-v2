@@ -12,13 +12,33 @@ export const StyledNav = styled.nav`
 	user-select: none;
 	box-shadow: ${(props) => props.theme.boxShadow};
 
-	#nav-container-inner {
-		height: 100%;
-		width: 90vw;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+
+	.logo {
+		color: ${({ theme }) => theme.text};
+		transition: all ease 0.3s;
+		cursor: pointer;
 	}
+
+	.theme-change {
+		font-size: 1rem;
+		border: none;
+		color: ${({ theme }) => theme.text};
+		background-color: transparent;
+		transition: all linear 0.3s;
+		cursor: pointer;
+	}
+
+	@media (min-width: 1000px) {
+		
+	}
+`;
+
+export const DesktopNav = styled.div`
+	height: 100%;
+	width: 90vw;
+	display: none;
+	justify-content: space-between;
+	align-items: center;
 
 	ul {
 		display: flex;
@@ -38,12 +58,6 @@ export const StyledNav = styled.nav`
 		cursor: pointer;
 	}
 
-	/* .link:hover,
-	.theme-change:hover,
-	.logo:hover {
-		cursor: pointer;
-	} */
-
 	.link:hover,
 	.theme-change:hover,
 	li:hover,
@@ -55,22 +69,7 @@ export const StyledNav = styled.nav`
 		color: ${({ theme }) => theme.main};
 	}
 
-	.logo {
-		color: ${({ theme }) => theme.text};
-		transition: all ease 0.3s;
-		cursor: pointer;
-	}
-
-	.theme-change {
-		font-size: 1rem;
-		border: none;
-		color: ${({ theme }) => theme.text};
-		background-color: transparent;
-		transition: all linear 0.3s;
-		cursor: pointer;
-	}
-
-	@media (max-width: 1000px) {
-		display: none;
+	@media (min-width: 1000px) {
+		display: flex;
 	}
 `;

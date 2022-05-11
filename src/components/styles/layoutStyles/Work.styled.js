@@ -118,16 +118,19 @@ export const StyledWork = styled.section`
 	}
 
 	.btn {
-		padding: 0.5rem 1rem;
+		padding: 0.5rem 1.3rem;
 		border: none;
 		background-color: ${({ theme }) => theme.secondary};
 		border-radius: 5px;
 		cursor: pointer;
+		transition: all 0.4s ease;
 	}
 
 	.btn a {
 		text-decoration: none;
 		color: white;
+		font-weight: 500;
+		letter-spacing: 0.09ch;
 	}
 
 	.github {
@@ -135,16 +138,19 @@ export const StyledWork = styled.section`
 		color: ${({ theme }) => theme.secondary};
 		height: 32px;
 		width: 32px;
+		transition: all 0.4s ease;
 	}
 
 	.github:hover,
 	.github:focus {
 		color: ${({ theme }) => theme.main};
+		/* transform: scale(0.95); */
 	}
 
 	.btn:hover,
 	.btn:focus {
 		background-color: ${({ theme }) => theme.main};
+		/* transform: scale(0.95); */
 	}
 
 	h1 {

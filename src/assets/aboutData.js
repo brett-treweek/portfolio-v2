@@ -41,7 +41,7 @@ const aboutData = [
 		title: 'Passtimes',
 		image: `${img3}`,
 		alt: '',
-		body1: 'I am a new father so I love to spend time with my fiancee and daughter.',
+		body1: 'I love to spend time with my fiancee and daughter.',
 		body2: '',
 		body3: 'My hobbies and interests include',
 		bodyArray: [

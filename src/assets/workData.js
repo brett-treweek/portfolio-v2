@@ -8,7 +8,7 @@ import img6 from './Images/work/insomnia.PNG';
 const workData = [
 	{
 		title: 'Round Report',
-		subtitle: 'MERN stack web app with GraphQl and Google Maps.',
+		subtitle: 'MERN stack web app with GraphQl and Google Maps API.',
 		img: `${img1}`,
 		alt: 'round report',
 		link: 'https://round-report.herokuapp.com/',

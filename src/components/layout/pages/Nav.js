@@ -1,12 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { StyledNav } from '../../styles/layoutStyles/Nav.styled';
+import { StyledNav, DesktopNav } from '../../styles/layoutStyles/Nav.styled';
 import { Icon } from '@iconify/react';
+import { MobileNavLinks } from '../UI/MobileNav';
 
 const Nav = (props) => {
 	return (
 		<StyledNav>
-			<div id="nav-container-inner">
+			<DesktopNav>
 				<NavLink className="link" to="/" activeClassName="logo" exact>
 					brett treweek
 				</NavLink>
@@ -50,7 +51,10 @@ const Nav = (props) => {
 						/>
 					</li>
 				</ul>
-			</div>
+			</DesktopNav>
+			<MobileNavLinks
+				changeColor={props.changeColor}
+			/>
 		</StyledNav>
 	);
 };
