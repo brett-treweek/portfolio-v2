@@ -11,7 +11,7 @@ export const StyledAbout = styled.section`
 	}
 
 	@media (min-width: 1000px) {
-		padding: 10rem 0;
+		padding-top: 10rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;

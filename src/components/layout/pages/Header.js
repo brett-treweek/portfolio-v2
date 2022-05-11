@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Header = (props) => {
 	return (
-		<StyledHeader>
+		<StyledHeader id='header'>
 			<Section>
 				<FlexContainer ai="center" jc="center" gap="4rem">
 					<Card dis="block">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { StyledNav, DesktopNav } from '../../styles/layoutStyles/Nav.styled';
 import { Icon } from '@iconify/react';
 import { MobileNavLinks } from '../UI/MobileNav';
@@ -9,37 +9,48 @@ const Nav = (props) => {
 	return (
 		<StyledNav>
 			<DesktopNav>
-				<Logo/>
+				<Link
+					className="link"
+					to="header"
+					smooth={true}
+					duration={500}
+					offset={-70}
+				>
+					<Logo />
+				</Link>
 				<ul>
 					<li>
-						<NavLink
+						<Link
 							className="link"
-							activeClassName="active"
-							to="/work"
-							exact
+							to="projects"
+							smooth={true}
+							duration={500}
+							offset={-200}
 						>
 							projects
-						</NavLink>
+						</Link>
 					</li>
 					<li>
-						<NavLink
+						<Link
 							className="link"
-							activeClassName="active"
-							to="/about"
-							exact
+							to="about"
+							smooth={true}
+							duration={500}
+							offset={0}
 						>
 							about
-						</NavLink>
+						</Link>
 					</li>
 					<li>
-						<NavLink
+						<Link
 							className="link"
-							activeClassName="active"
-							to="/contact"
-							exact
+							to="contactForm"
+							smooth={true}
+							duration={500}
+							offset={0}
 						>
 							contact
-						</NavLink>
+						</Link>
 					</li>
 					<li>
 						<Icon
@@ -51,9 +62,7 @@ const Nav = (props) => {
 					</li>
 				</ul>
 			</DesktopNav>
-			<MobileNavLinks
-				changeColor={props.changeColor}
-			/>
+			<MobileNavLinks changeColor={props.changeColor} />
 		</StyledNav>
 	);
 };

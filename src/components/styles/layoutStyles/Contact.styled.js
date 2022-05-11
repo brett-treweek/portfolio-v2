@@ -9,7 +9,7 @@ export const StyledContact = styled.section`
 	align-items: center;
 
 	@media (min-width: 1000px) {
-		padding: 10rem 0;
+		padding: 10rem 0 15rem;
 	}
 `;
 

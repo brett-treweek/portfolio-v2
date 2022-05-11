@@ -3,15 +3,14 @@ import styled from 'styled-components';
 export const StyledNav = styled.nav`
 	height: 7vh;
 	position: sticky;
-	top: 0;
+	top: -1px;
+	left: 0;
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	background-color: ${(props) => props.theme.background};
 	z-index: 1000;
 	user-select: none;
 	box-shadow: ${(props) => props.theme.boxShadow};
-
 
 	.logo {
 		color: ${({ theme }) => theme.text};
@@ -29,7 +28,7 @@ export const StyledNav = styled.nav`
 	}
 
 	@media (min-width: 1000px) {
-		
+		justify-content: center;
 	}
 `;
 
@@ -63,10 +62,6 @@ export const DesktopNav = styled.div`
 	li:hover,
 	.logo:hover {
 		color: ${(props) => props.theme.highlight};
-	}
-
-	.active {
-		color: ${({ theme }) => theme.main};
 	}
 
 	@media (min-width: 1000px) {

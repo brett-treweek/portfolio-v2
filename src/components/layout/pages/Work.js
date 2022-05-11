@@ -7,7 +7,7 @@ import projectImage from '../../../assets/Images/projects.svg';
 
 const Work = (props) => {
 	return (
-		<StyledWork id="work">
+		<StyledWork id="projects">
 			<Section>
 				<img
 					src={projectImage}

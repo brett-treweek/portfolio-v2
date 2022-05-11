@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { Icon } from '@iconify/react';
 import styled from 'styled-components';
 import { Hamburger } from './Hamburger';
 import { Logo } from './Logo';
 
 const NavLinksContainer = styled.div`
-	width: 100%;
+	width: 100vw;
+	height: auto;
 	padding: 0 2rem;
 	display: flex;
 	align-items: center;
@@ -37,7 +38,7 @@ const NavLinksContainer = styled.div`
 const LinksWrapper = styled.ul`
 	padding: 1rem;
 	display: flex;
-    align-items: end;
+	align-items: end;
 	width: 100%;
 	list-style: none;
 	background-color: ${({ theme }) => theme.watermarkDark};
@@ -46,7 +47,6 @@ const LinksWrapper = styled.ul`
 	top: 7vh;
 	left: 0;
 `;
-
 
 const LinkItem = styled.li`
 	text-decoration: none;
@@ -61,42 +61,54 @@ export const MobileNavLinks = (props) => {
 
 	return (
 		<NavLinksContainer>
-			<Logo/>
+			<Link
+				className="logo"
+				to="header"
+				smooth={true}
+				duration={500}
+				offset={-70}
+				onClick={() => setOpen(false)}
+			>
+				<Logo />
+			</Link>
 			<Hamburger isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
 			{isOpen && (
 				<LinksWrapper>
 					<LinkItem>
-						<NavLink
+						<Link
 							className="link"
+							to="projects"
+							smooth={true}
+							duration={500}
+							offset={-70}
 							onClick={() => setOpen(false)}
-							activeClassName="active"
-							to="/work"
-							exact
 						>
 							projects
-						</NavLink>
+						</Link>
 					</LinkItem>
 					<LinkItem>
-						<NavLink
+						<Link
 							className="link"
+							to="about"
+							smooth={true}
+							duration={500}
+							offset={-70}
 							onClick={() => setOpen(false)}
-							activeClassName="active"
-							to="/about"
-							exact
 						>
 							about
-						</NavLink>
+						</Link>
 					</LinkItem>
 					<LinkItem>
-						<NavLink
+						<Link
 							className="link"
+							to="contactForm"
+							smooth={true}
+							duration={500}
+							offset={-80}
 							onClick={() => setOpen(false)}
-							activeClassName="active"
-							to="/contact"
-							exact
 						>
 							contact
-						</NavLink>
+						</Link>
 					</LinkItem>
 					<LinkItem>
 						<Icon
