@@ -119,24 +119,3 @@ export const StyledCarousel = styled.div`
 	}
 `;
 
-export const StyledDots = styled.div`
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-`;
-
-export const Dot = styled.span`
-	transform: translateX(-100%);
-	padding: 7px;
-	margin: 20px;
-	border-radius: 100%;
-	background-color: ${(props) =>
-		props.active ? props.theme.highlight : props.theme.text};
-	cursor: pointer;
-	transition: all 0.3s ease;
-
-	&:hover {
-		background-color: ${(props) => props.theme.main};
-	}
-`;

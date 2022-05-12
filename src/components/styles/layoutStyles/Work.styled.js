@@ -144,13 +144,11 @@ export const StyledWork = styled.section`
 	.github:hover,
 	.github:focus {
 		color: ${({ theme }) => theme.main};
-		/* transform: scale(0.95); */
 	}
 
 	.btn:hover,
 	.btn:focus {
 		background-color: ${({ theme }) => theme.main};
-		/* transform: scale(0.95); */
 	}
 
 	h1 {

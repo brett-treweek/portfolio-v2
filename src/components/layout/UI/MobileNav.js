@@ -59,6 +59,11 @@ const LinkItem = styled.li`
 export const MobileNavLinks = (props) => {
 	const [isOpen, setOpen] = useState(false);
 
+	const clickHandler = (props) => {
+		setOpen(false);
+		props.changeColor();
+	}
+
 	return (
 		<NavLinksContainer>
 			<Link
@@ -113,7 +118,7 @@ export const MobileNavLinks = (props) => {
 					<LinkItem>
 						<Icon
 							className="link"
-							onClick={props.changeColor}
+							onClick={() => clickHandler(props)}
 							icon="eos-icons:arrow-rotate"
 							height="25"
 						/>

@@ -14,7 +14,7 @@ const Nav = (props) => {
 					to="header"
 					smooth={true}
 					duration={500}
-					offset={-70}
+					offset={-90}
 				>
 					<Logo />
 				</Link>

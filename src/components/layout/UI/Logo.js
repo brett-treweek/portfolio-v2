@@ -5,6 +5,8 @@ const Smileyface = styled.img`
 	height: 20px;
 	width: 20px;
 	margin-right: 6px;
+	color: black;
+	filter: ${(props) => props.theme.filter};
 `;
 
 const LogoContainer = styled.div`

@@ -1,11 +1,49 @@
-import { Dot, StyledDots } from '../../styles/layoutStyles/About.styled';
+import { Link } from 'react-scroll';
+import styled from 'styled-components';
 
-const Dots = ({ data, dotClick, active }) => (
-	<StyledDots>
-		{data.map((item, index) => (
-			<Dot key={index} onClick={() => dotClick(index)} active={active === index ? true : false} />
-		))}
-	</StyledDots>
-);
+const StyledDots = styled.div`
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.dot {
+		transform: translateX(-100%);
+		padding: 6px;
+		margin: 20px;
+		border-radius: 100%;
+		background-color: ${(props) =>
+			props.highlight ? props.theme.highlight : props.theme.text};
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: ${(props) => props.theme.main};
+		}
+	}
+
+	.active {
+		background-color: ${(props) => props.theme.highlight};
+	}
+`;
+
+const Dots = ({ data, dotClick, active }) => {
+
+	return (
+		<StyledDots>
+			{data.map((item, index) => (
+				<Link
+					to={active}
+					smooth={true}
+					duration={10}
+					offset={-120}
+					className={active === index ? 'active dot' : 'dot'}
+					key={index}
+					onClick={() => dotClick(index)}
+				></Link>
+			))}
+		</StyledDots>
+	);
+};
 
 export default Dots;

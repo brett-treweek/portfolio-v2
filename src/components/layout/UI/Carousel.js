@@ -1,12 +1,10 @@
 import { useState } from 'react';
-import {
-	FlexContainer,
-	Card,
-} from '../../styles/UIStyles/UiStyles';
+import { FlexContainer, Card } from '../../styles/UIStyles/UiStyles';
 import { StyledCarousel } from '../../styles/layoutStyles/About.styled';
 import Dots from './Dots';
 import { motion } from 'framer-motion';
 import { Icon } from '@iconify/react';
+import { Link } from 'react-scroll';
 
 const Carousel = (props) => {
 	const [current, setCurrent] = useState(0);
@@ -30,13 +28,13 @@ const Carousel = (props) => {
 		<StyledCarousel>
 			<div className="carousel-container">
 				{props.data.map((item, index) => (
-					<div key={index} className="item-container">
+					<div key={index} className="item-container" id={index}>
 						{index === current && (
 							<>
 								<div className="item">
 									<FlexContainer ai="center" jc="center">
 										<Card
-											className='about-card'
+											className="about-card"
 											height="clamp(300px, 800px, 800px)"
 											bc={(props) => props.theme.card}
 											bs
@@ -99,18 +97,22 @@ const Carousel = (props) => {
 					</div>
 				))}
 			</div>
-			<Icon
-				icon="eva:arrow-ios-back-fill"
-				height="25"
-				onClick={prevSlide}
-				className="arrow left"
-			/>
-			<Icon
-				icon="eva:arrow-ios-forward-fill"
-				height="25"
-				onClick={nextSlide}
-				className="arrow right"
-			/>
+			<Link to={current} smooth={true} duration={10} offset={-90}>
+				<Icon
+					icon="eva:arrow-ios-back-fill"
+					height="25"
+					onClick={prevSlide}
+					className="arrow left"
+				/>
+			</Link>
+			<Link to={current} smooth={true} duration={10} offset={-90}>
+				<Icon
+					icon="eva:arrow-ios-forward-fill"
+					height="25"
+					onClick={nextSlide}
+					className="arrow right"
+				/>
+			</Link>
 		</StyledCarousel>
 	);
 };

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
 	height: 5vh;
-	width: 100vw;
 	background-color: ${({ theme }) => theme.background};
 	box-shadow: ${({ theme }) => theme.boxShadow};
     display: flex;
