@@ -55,7 +55,9 @@ const Contact = () => {
 								height="30"
 							/>
 							<div>
-								<p>0401 043 178</p>
+								<a href="tel:+61401043178" className="link">
+									0401 043 178
+								</a>
 							</div>
 						</div>
 						<div className="link-container">
@@ -96,7 +98,13 @@ const Contact = () => {
 							</a>
 						</div>
 					</Card>
-					<Box ref={form} component="form" Validate onSubmit={sendEmail} sx={{}}>
+					<Box
+						ref={form}
+						component="form"
+						Validate
+						onSubmit={sendEmail}
+						sx={{}}
+					>
 						<TextField
 							name="name"
 							className="textField"
@@ -152,7 +160,7 @@ const Contact = () => {
 					variant="filled"
 					autoHideDuration={4000}
 					TransitionComponent={Slide}
-					anchorOrigin={{ horizontal: 'center', vertical: 'bottom' }}
+					anchorOrigin={{ horizontal: 'center', vertical: 'top' }}
 				>
 					<Slide direction="up">
 						<Alert

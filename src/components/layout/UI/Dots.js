@@ -33,10 +33,10 @@ const Dots = ({ data, dotClick, active }) => {
 		<StyledDots>
 			{data.map((item, index) => (
 				<Link
-					to={active}
+					to={'about'}
 					smooth={true}
-					duration={10}
-					offset={-120}
+					duration={300}
+					offset={-20}
 					className={active === index ? 'active dot' : 'dot'}
 					key={index}
 					onClick={() => dotClick(index)}

@@ -10,6 +10,16 @@ export const StyledAbout = styled.section`
 		align-self: center;
 	}
 
+	h3 {
+		font-weight: 400;
+		font-size: clamp(0.5rem, 1vw + 0.8rem, 1.5rem);
+	}
+
+	p {
+		font-weight: 300;
+		font-size: clamp(1rem, 2vw + 0.3rem, 1.2rem);
+	}
+
 	@media (min-width: 1000px) {
 		padding-top: 10rem;
 		display: flex;
@@ -44,12 +54,11 @@ export const StyledCarousel = styled.div`
 		max-width: 1200px;
 	}
 
-	.about-card ul{
-		padding: 1rem;
+	.about-card ul {
+		padding: 0.5rem;
 	}
 
 	.about-card li {
-		/* margin: 1rem; */
 		font-size: clamp(0.8rem, 1vw + 0.3rem, 1.1rem);
 		color: ${({ theme }) => theme.text};
 		font-weight: 300;
@@ -118,4 +127,3 @@ export const StyledCarousel = styled.div`
 		}
 	}
 `;
-

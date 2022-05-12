@@ -44,9 +44,9 @@ export const Section = styled.div`
 	p {
 		width: 100%;
 		font-weight: 300;
-		font-size: clamp(1rem, 1.2vw + 0.3rem, 1.3rem);
+		font-size: clamp(1rem, 2vw + 0.3rem, 1.4rem);
 		margin-top: 1rem;
-		line-height: 1.2rem;
+		line-height: 1.3rem;
 		color: ${(props) => props.theme.text};
 	}
 
@@ -55,7 +55,8 @@ export const Section = styled.div`
 	@media (min-width: 1000px) {
 		p {
 			line-height: 1.5rem;
-			letter-spacing: 0.02ch;
+			/* font-weight: 400; */
+			/* letter-spacing: 0.02ch; */
 		}
 
 		

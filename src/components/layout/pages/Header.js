@@ -36,8 +36,8 @@ const Header = (props) => {
 							<p>
 								I have just completed a certificate in web
 								development with the University of Western
-								Australia. I am excited and highly motivated to
-								turn my hobby into my new career. Please check
+								Australia. <br/><br/> I am excited and highly motivated to
+								become a developer. Please check
 								out my work and get in touch.
 							</p>
 						</motion.div>

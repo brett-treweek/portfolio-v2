@@ -27,7 +27,7 @@ export const StyledForm = styled.div`
 
 	h1 {
 		text-align: center;
-		font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+		font-size: clamp(2rem, 2vw + 1rem, 3rem);
 		color: ${({ theme }) => theme.highlight};
 		font-weight: 400;
 		margin: 0 0 2rem;
@@ -40,7 +40,7 @@ export const StyledForm = styled.div`
 	.phone-container {
 		color: ${({ theme }) => theme.text};
 		font-weight: 400;
-		margin-bottom: 1.5rem;
+		margin-bottom: clamp(0.5rem, 2vw + 0.1rem, 2rem);
 	}
 
 	.phone-container,
@@ -57,9 +57,9 @@ export const StyledForm = styled.div`
 	}
 
 	.link:hover {
-		color: ${({theme}) => theme.main}
-	} 
-	
+		color: ${({ theme }) => theme.main};
+	}
+
 	.icon a {
 		width: max-content;
 		margin-right: 1rem;
@@ -87,6 +87,14 @@ export const StyledForm = styled.div`
 
 	@media (min-width: 1000px) {
 		padding: 3rem;
-		width: 1048px
+		width: 1048px;
+
+		h2,
+		h3,
+		h4,
+		.link-container,
+		.phone-container {
+			margin-bottom: 1.5rem;
+		}
 	}
 `;

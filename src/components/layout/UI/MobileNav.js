@@ -4,6 +4,7 @@ import { Icon } from '@iconify/react';
 import styled from 'styled-components';
 import { Hamburger } from './Hamburger';
 import { Logo } from './Logo';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const NavLinksContainer = styled.div`
 	width: 100vw;
@@ -35,7 +36,7 @@ const NavLinksContainer = styled.div`
 	}
 `;
 
-const LinksWrapper = styled.ul`
+const LinksWrapper = motion(styled.ul`
 	padding: 1rem;
 	display: flex;
 	align-items: end;
@@ -46,7 +47,7 @@ const LinksWrapper = styled.ul`
 	position: fixed;
 	top: 7vh;
 	left: 0;
-`;
+`);
 
 const LinkItem = styled.li`
 	text-decoration: none;
@@ -77,54 +78,62 @@ export const MobileNavLinks = (props) => {
 				<Logo />
 			</Link>
 			<Hamburger isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
-			{isOpen && (
-				<LinksWrapper>
-					<LinkItem>
-						<Link
-							className="link"
-							to="projects"
-							smooth={true}
-							duration={500}
-							offset={-70}
-							onClick={() => setOpen(false)}
-						>
-							projects
-						</Link>
-					</LinkItem>
-					<LinkItem>
-						<Link
-							className="link"
-							to="about"
-							smooth={true}
-							duration={500}
-							offset={-70}
-							onClick={() => setOpen(false)}
-						>
-							about
-						</Link>
-					</LinkItem>
-					<LinkItem>
-						<Link
-							className="link"
-							to="contactForm"
-							smooth={true}
-							duration={500}
-							offset={-80}
-							onClick={() => setOpen(false)}
-						>
-							contact
-						</Link>
-					</LinkItem>
-					<LinkItem>
-						<Icon
-							className="link"
-							onClick={() => clickHandler(props)}
-							icon="eos-icons:arrow-rotate"
-							height="25"
-						/>
-					</LinkItem>
-				</LinksWrapper>
-			)}
+			<AnimatePresence>
+				{isOpen && (
+					<LinksWrapper
+					key='mobileNav'
+						initial={{ opacity: 0, scale: 0 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{ delay: 0, duration: 0.6 }}
+						exit={{ opacity: 0, scale: 0}}
+					>
+						<LinkItem>
+							<Link
+								className="link"
+								to="projects"
+								smooth={true}
+								duration={500}
+								offset={-70}
+								onClick={() => setOpen(false)}
+							>
+								projects
+							</Link>
+						</LinkItem>
+						<LinkItem>
+							<Link
+								className="link"
+								to="about"
+								smooth={true}
+								duration={500}
+								offset={-70}
+								onClick={() => setOpen(false)}
+							>
+								about
+							</Link>
+						</LinkItem>
+						<LinkItem>
+							<Link
+								className="link"
+								to="contactForm"
+								smooth={true}
+								duration={500}
+								offset={-80}
+								onClick={() => setOpen(false)}
+							>
+								contact
+							</Link>
+						</LinkItem>
+						<LinkItem>
+							<Icon
+								className="link"
+								onClick={() => clickHandler(props)}
+								icon="eos-icons:arrow-rotate"
+								height="25"
+							/>
+						</LinkItem>
+					</LinksWrapper>
+				)}
+			</AnimatePresence>
 		</NavLinksContainer>
 	);
 };

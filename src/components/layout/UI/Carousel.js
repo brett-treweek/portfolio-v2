@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { FlexContainer, Card } from '../../styles/UIStyles/UiStyles';
 import { StyledCarousel } from '../../styles/layoutStyles/About.styled';
 import Dots from './Dots';
@@ -31,28 +31,32 @@ const Carousel = (props) => {
 					<div key={index} className="item-container" id={index}>
 						{index === current && (
 							<>
-								<div className="item">
+								<motion.div
+									className="item"
+									initial={{
+										opacity: 0,
+									}}
+									animate={{
+										opacity: 1,
+									}}
+									transition={{
+										duration: 1,
+									}}
+								>
 									<FlexContainer ai="center" jc="center">
 										<Card
 											className="about-card"
 											height="clamp(300px, 800px, 800px)"
 											bc={(props) => props.theme.card}
 											bs
-											initial={{
-												opacity: 0,
-												y: '10px',
-											}}
-											animate={{
-												opacity: 1,
-												y: 0,
-											}}
-											transition={{ duration: 0.7 }}
 										>
 											<h2>{item.title}</h2>
-											<h3>{item.subTitle}</h3>
-											<p>{item.body1}</p>
-											<p>{item.body2}</p>
-											<p>{item.body3}</p>
+											{item.subTitle && (
+												<h3>{item.subTitle}</h3>
+											)}
+											{item.body1 && <p>{item.body1}</p>}
+											{item.body2 && <p>{item.body2}</p>}
+											{item.body3 && <p>{item.body3}</p>}
 											{item.body4 && <p>{item.body4}</p>}
 											{item.bodyArray && (
 												<ul>
@@ -68,24 +72,10 @@ const Carousel = (props) => {
 												</ul>
 											)}
 										</Card>
-										<motion.img
-											src={item.image}
-											alt=""
-											initial={{
-												opacity: 0,
-												scale: 0.9,
-											}}
-											animate={{
-												opacity: 1,
-												scale: 1,
-											}}
-											transition={{
-												duration: 0.7,
-												delay: 0.4,
-											}}
-										/>
+
+										<img src={item.image} alt="" />
 									</FlexContainer>
-								</div>
+								</motion.div>
 
 								<Dots
 									data={props.data}
@@ -97,7 +87,7 @@ const Carousel = (props) => {
 					</div>
 				))}
 			</div>
-			<Link to={current} smooth={true} duration={10} offset={-90}>
+			<Link to={'about'} smooth={true} duration={300} offset={-20}>
 				<Icon
 					icon="eva:arrow-ios-back-fill"
 					height="25"
@@ -105,7 +95,7 @@ const Carousel = (props) => {
 					className="arrow left"
 				/>
 			</Link>
-			<Link to={current} smooth={true} duration={10} offset={-90}>
+			<Link to={'about'} smooth={true} duration={300} offset={-20}>
 				<Icon
 					icon="eva:arrow-ios-forward-fill"
 					height="25"
