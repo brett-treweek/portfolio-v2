@@ -54,11 +54,6 @@ export const StyledCarousel = styled.div`
 		max-width: 1200px;
 	}
 
-	.about-card {
-		height:clamp(300px, 800px, 800px);
-		/* backdrop-filter: blur(10px); */
-	}
-
 	.about-card ul {
 		padding: 0.5rem;
 	}
@@ -111,6 +106,8 @@ export const StyledCarousel = styled.div`
 	@media (min-width: 1000px) {
 		.about-card {
 			padding: 3rem;
+			width: clamp(200px, 500px, 45vw);
+			height: clamp(300px, 800px, 800px);
 		}
 
 		.arrow {
@@ -127,7 +124,7 @@ export const StyledCarousel = styled.div`
 		}
 
 		.item img {
-			width: clamp(200px, 500px, 500px);
+			width: clamp(200px, 500px, 45vw);
 			height: clamp(300px, 800px, 800px);
 		}
 	}
