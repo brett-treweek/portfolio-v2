@@ -46,7 +46,6 @@ const Carousel = (props) => {
 									<FlexContainer ai="center" jc="center">
 										<Card
 											className="about-card"
-											height="clamp(300px, 800px, 800px)"
 											bc={(props) => props.theme.card}
 											bs
 										>

@@ -54,6 +54,11 @@ export const StyledCarousel = styled.div`
 		max-width: 1200px;
 	}
 
+	.about-card {
+		height:clamp(300px, 800px, 800px);
+		/* backdrop-filter: blur(10px); */
+	}
+
 	.about-card ul {
 		padding: 0.5rem;
 	}

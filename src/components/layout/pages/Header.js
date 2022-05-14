@@ -1,6 +1,6 @@
 import { StyledHeader } from '../../styles/layoutStyles/Header.styled';
 import { FlexContainer, Card, Section } from '../../styles/UIStyles/UiStyles';
-import img1 from '../../../assets/Images/about/img1.jpg';
+import img1 from '../../../assets/Images/about/img1.webp';
 import { motion } from 'framer-motion';
 
 const Header = (props) => {

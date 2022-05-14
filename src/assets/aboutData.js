@@ -1,5 +1,5 @@
-import img1 from './Images/about/about1.png';
-import img2 from './Images/about/about2.png';
+import img1 from './Images/about/about1.webp';
+import img2 from './Images/about/about2.webp';
 import img3 from './Images/about/about3.webp';
 
 
@@ -8,9 +8,9 @@ const aboutData = [
 		title: 'Current Focus',
 		subTitle: 'Becoming a Developer',
 		image: `${img1}`,
-		alt: '',
-		body1: 'Most of my spare time is currently spent learning Javascript and Web Development. My goal is to become a Developer.',
-		body2: 'I love the problem solving and creative aspects of coding, and I enjoy the process of continuous learning. I wish I had discovered this passion sooner.',
+		alt: 'collage of code',
+		body1: 'Most of my spare time is currently spent learning Javascript and Web Development. My goal is to work as a Developer.',
+		body2: 'I love the problem solving and creative aspects of coding, and I enjoy the process of continuous learning.',
 		body3: 'Technologies I am currently focused on include:',
 		bodyArray: [
 			'Javascript',
@@ -29,8 +29,8 @@ const aboutData = [
 		title: 'Work Experience',
 		subTitle: 'Past and Present',
 		image: `${img2}`,
-		alt: '',
-		body1: 'I am currently a Postie and have worked at Australia Post for ten years. I have enjoyed my time with Post, working in both Melbourne and Perth.',
+		alt: 'collage of work experience',
+		body1: 'I am currently a Postie and have worked at Australia Post for ten years. My time with Post has been enjoyable, working in both Melbourne and Perth.',
 		body2: 'I have previously worked as a croupier at Crown Casino, and as a Cook in an Italian resturant in Fremantle.',
 		body3: 'I studied Biology for two years at Murdoch University.',
 		body4: 'References are available upon request.',
@@ -38,19 +38,18 @@ const aboutData = [
 	{
 		title: 'Passtimes',
 		image: `${img3}`,
-		alt: '',
+		alt: 'collage of brett',
 		subTitle: 'My hobbies and interests include:',
 		bodyArray: [
 			'Spending time with my family.',
 			'Web Development, coding and computers.',
-			'Reading Science Fiction and Fantasy.',
+			'Reading Science Fiction and Fantasy novels.',
 			'Call of Duty Warzone.',
-			'Building and racing drones.',
+			'Building and flying FPV drones.',
 			'Travelling.',
 			'Cooking.',
-			'Snowboarding.',
 			'Tennis.',
-			'Hiking and Nature.',
+			'Formula One.'
 		],
 	}
 ];

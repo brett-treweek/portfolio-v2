@@ -162,7 +162,7 @@ const Contact = () => {
 					TransitionComponent={Slide}
 					anchorOrigin={{ horizontal: 'center', vertical: 'top' }}
 				>
-					<Slide direction="up">
+					<Slide direction="down">
 						<Alert
 							id="alert"
 							variant="outlined"

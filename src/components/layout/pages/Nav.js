@@ -13,7 +13,7 @@ const Nav = (props) => {
 					className="link"
 					to="header"
 					smooth={true}
-					duration={500}
+					duration={400}
 					offset={-90}
 				>
 					<Logo />
@@ -24,7 +24,7 @@ const Nav = (props) => {
 							className="link"
 							to="projects"
 							smooth={true}
-							duration={500}
+							duration={400}
 							offset={-200}
 						>
 							projects
@@ -35,7 +35,7 @@ const Nav = (props) => {
 							className="link"
 							to="about"
 							smooth={true}
-							duration={500}
+							duration={400}
 							offset={0}
 						>
 							about
@@ -46,7 +46,7 @@ const Nav = (props) => {
 							className="link"
 							to="contactForm"
 							smooth={true}
-							duration={500}
+							duration={400}
 							offset={0}
 						>
 							contact

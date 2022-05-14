@@ -45,7 +45,7 @@ const LinksWrapper = motion(styled.ul`
 	background-color: ${({ theme }) => theme.watermarkDark};
 	flex-direction: column;
 	position: fixed;
-	top: 7vh;
+	top: 6vh;
 	left: 0;
 `);
 
@@ -53,7 +53,7 @@ const LinkItem = styled.li`
 	text-decoration: none;
 	padding: 10px 50px;
 	margin: 0 10px;
-	transition: all ease 0.3s;
+	transition: all ease 0.1s;
 	cursor: pointer;
 `;
 
@@ -84,7 +84,7 @@ export const MobileNavLinks = (props) => {
 					key='mobileNav'
 						initial={{ opacity: 0, scale: 0 }}
 						animate={{ opacity: 1, scale: 1 }}
-						transition={{ delay: 0, duration: 0.6 }}
+						transition={{ delay: 0, duration: 0.3 }}
 						exit={{ opacity: 0, scale: 0}}
 					>
 						<LinkItem>
