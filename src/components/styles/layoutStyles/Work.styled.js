@@ -161,6 +161,10 @@ export const StyledWork = styled.section`
 		align-items: center;
 		padding: 0 1rem 1rem;
 
+		.projects-github {
+			margin-bottom: 0;
+		}
+
 		.work-grid {
 			display: grid;
 			gap: 2rem;

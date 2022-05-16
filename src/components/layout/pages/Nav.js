@@ -14,7 +14,7 @@ const Nav = (props) => {
 					to="header"
 					smooth={true}
 					duration={400}
-					offset={-90}
+					offset={-80}
 				>
 					<Logo />
 				</Link>
@@ -25,7 +25,7 @@ const Nav = (props) => {
 							to="projects"
 							smooth={true}
 							duration={400}
-							offset={-150}
+							offset={-120}
 						>
 							projects
 						</Link>
@@ -36,7 +36,7 @@ const Nav = (props) => {
 							to="about"
 							smooth={true}
 							duration={400}
-							offset={0}
+							offset={50}
 						>
 							about me
 						</Link>
