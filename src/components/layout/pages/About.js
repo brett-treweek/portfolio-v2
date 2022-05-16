@@ -9,7 +9,7 @@ const About = (props) => {
 	return (
 		<StyledAbout id="about">
 			<Section>
-			<h1>about</h1>
+			<h1>About Me</h1>
 				<FlexContainer reverse jc="space-evenly">
 					<Carousel data={aboutData} />
 				</FlexContainer>

@@ -41,7 +41,7 @@ const aboutData = [
 		alt: 'collage of brett',
 		subTitle: 'My hobbies and interests include:',
 		bodyArray: [
-			'Spending time with my family.',
+			'Having fun with the family.',
 			'Web Development, coding and computers.',
 			'Reading Science Fiction and Fantasy novels.',
 			'Call of Duty Warzone.',

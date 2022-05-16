@@ -36,6 +36,7 @@ const NavLinksContainer = styled.div`
 	}
 `;
 
+
 const LinksWrapper = motion(styled.ul`
 	padding: 1rem;
 	display: flex;
@@ -45,7 +46,7 @@ const LinksWrapper = motion(styled.ul`
 	background-color: ${({ theme }) => theme.watermarkDark};
 	flex-direction: column;
 	position: fixed;
-	top: 6vh;
+	top: 65px;
 	left: 0;
 `);
 
@@ -81,7 +82,7 @@ export const MobileNavLinks = (props) => {
 			<AnimatePresence>
 				{isOpen && (
 					<LinksWrapper
-					key='mobileNav'
+						key='mobileNav'
 						initial={{ opacity: 0, scale: 0 }}
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ delay: 0, duration: 0.3 }}

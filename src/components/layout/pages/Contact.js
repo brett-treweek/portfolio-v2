@@ -41,8 +41,8 @@ const Contact = () => {
 	};
 
 	return (
-		<StyledContact>
-			<StyledForm id="contactForm">
+		<StyledContact id="contactForm">
+			<StyledForm>
 				<h1>Lets Get In Touch!</h1>
 				<FlexContainer>
 					<Card height="100%" className="contact-card">

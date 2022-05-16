@@ -26,6 +26,7 @@ export const StyledForm = styled.div`
 	}
 
 	h1 {
+		font-family: 'Satisfy', cursive;
 		text-align: center;
 		font-size: clamp(2rem, 2vw + 1rem, 3rem);
 		color: ${({ theme }) => theme.highlight};

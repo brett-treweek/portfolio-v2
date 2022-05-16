@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledNav = styled.nav`
 	height: 7vh;
-	min-height: 70px;
+	min-height: 65px;
 	position: sticky;
 	top: -1px;
 	left: 0;
@@ -28,6 +28,10 @@ export const StyledNav = styled.nav`
 		cursor: pointer;
 	}
 
+	.theme-change > * {
+		margin-right: 5px;
+	}
+
 	@media (min-width: 1000px) {
 		justify-content: center;
 	}
@@ -48,12 +52,14 @@ export const DesktopNav = styled.div`
 		display: flex;
 		align-items: center;
 		padding: 0px 50px;
-		margin: 0 10px;
 		list-style: none;
 		transition: all ease 0.3s;
 	}
 
-	.link {
+	.link,
+	.theme-change {
+		/* font-family: 'Satisfy', cursive;
+		font-size: 1.3rem; */
 		text-decoration: none;
 		color: ${({ theme }) => theme.text};
 		transition: all ease 0.3s;

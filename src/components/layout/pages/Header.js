@@ -23,7 +23,7 @@ const Header = (props) => {
 								animate={{ opacity: 1, scale: [1, 1.05, 1] }}
 								transition={{ delay: 1, duration: 0.7 }}
 							>
-								im brett
+								Im Brett
 							</motion.h6>
 						</div>
 						<motion.div

@@ -7,6 +7,12 @@ export const StyledAbout = styled.section`
 	padding: 3rem 0;
 
 	h1 {
+		font-family: 'Satisfy', cursive;
+		align-self: center;
+	}
+
+	h2 {
+		font-family: 'Satisfy', cursive;
 		align-self: center;
 	}
 
@@ -53,6 +59,9 @@ export const StyledCarousel = styled.div`
 		height: 100%;
 		max-width: 1200px;
 	}
+	.about-card {
+		justify-content: center;
+	}
 
 	.about-card ul {
 		padding: 0.5rem;
@@ -86,7 +95,7 @@ export const StyledCarousel = styled.div`
 		z-index: 100;
 		position: absolute;
 		transform: translateY(-50%);
-		top: 42%;
+		top: 30%;
 		cursor: pointer;
 		transition: all linear 0.2s;
 	}
@@ -106,8 +115,8 @@ export const StyledCarousel = styled.div`
 	@media (min-width: 1000px) {
 		.about-card {
 			padding: 3rem;
-			width: clamp(200px, 500px, 45vw);
-			height: clamp(300px, 800px, 800px);
+			width: clamp(200px, 450px, 40vw);
+			height: clamp(300px, 700px, 700px);
 		}
 
 		.arrow {
@@ -117,15 +126,15 @@ export const StyledCarousel = styled.div`
 		}
 
 		.left {
-			left: -3%;
+			left: -9%;
 		}
 		.right {
-			right: -3%;
+			right: -9%;
 		}
 
 		.item img {
-			width: clamp(200px, 500px, 45vw);
-			height: clamp(300px, 800px, 800px);
+			width: clamp(200px, 450px, 40vw);
+			height: clamp(300px, 700px, 700px);
 		}
 	}
 `;

@@ -5,6 +5,8 @@ export const StyledHeader = styled.header`
 	padding: 3rem 0;
 
 	.brett {
+		font-family: 'Satisfy', cursive;
+
 		text-align: start;
 		margin: 0;
 		font-size: clamp(3.5rem, 5vw + 1rem, 7.8rem);

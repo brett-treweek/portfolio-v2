@@ -1,17 +1,20 @@
 import Smile from '../../../assets/Images/smile.png';
 import styled from 'styled-components';
 
+
 const Smileyface = styled.img`
-	height: 20px;
-	width: 20px;
+	height: 27px;
+	width: 27px;
 	margin-right: 6px;
 	color: black;
 	filter: ${(props) => props.theme.filter};
 `;
 
 const LogoContainer = styled.div`
+	font-family: 'Satisfy', cursive;
+	font-size: 1.3rem;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 `;
 

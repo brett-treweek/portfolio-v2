@@ -5,7 +5,7 @@ export const StyledWork = styled.section`
 	background-color: ${(props) => props.theme.background};
 
 	.projects-github {
-		width: clamp(160px, 160px + 20vw, 450px);
+		width: clamp(160px, 100px + 20vw, 380px);
 		filter: ${(props) => props.theme.filter};
 		margin-bottom: 2.5rem;
 	}

@@ -25,7 +25,7 @@ const Nav = (props) => {
 							to="projects"
 							smooth={true}
 							duration={400}
-							offset={-200}
+							offset={-150}
 						>
 							projects
 						</Link>
@@ -38,7 +38,7 @@ const Nav = (props) => {
 							duration={400}
 							offset={0}
 						>
-							about
+							about me
 						</Link>
 					</li>
 					<li>
@@ -52,13 +52,13 @@ const Nav = (props) => {
 							contact
 						</Link>
 					</li>
-					<li>
+					<li className="theme-change" onClick={props.changeColor}>
 						<Icon
-							className="theme-change"
-							onClick={props.changeColor}
+							// className="theme-change"
 							icon="eos-icons:arrow-rotate"
 							height="25"
 						/>
+						theme
 					</li>
 				</ul>
 			</DesktopNav>
