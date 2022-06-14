@@ -1,4 +1,4 @@
-import img1 from './Images/work/homepage02.webp';
+import img1 from './Images/work/rrv2.webp';
 import img2 from './Images/work/newPost.webp';
 import img3 from './Images/work/readmePort.png';
 import img4 from './Images/work/stats2.webp';
@@ -8,11 +8,11 @@ import img6 from './Images/work/insomnia.webp';
 const workData = [
 	{
 		title: 'Round Report',
-		subtitle: 'MERN stack web app with GraphQl and Google Maps API.',
+		subtitle: 'MERN stack web app with REST API and Google Maps API.',
 		img: `${img1}`,
 		alt: 'round report',
-		link: 'https://round-report.herokuapp.com/',
-		gitHub: 'https://github.com/brett-treweek/Round-Report',
+		link: 'https://round-report.netlify.app/',
+		gitHub: 'https://github.com/brett-treweek/round-report-v2',
 		body: 'Designed to identify and communicate hazards for posties at Australia Post. Currently under further development in order to demo and trial at the request of Australia Post management.',
 	},
 	{
